@@ -21,11 +21,11 @@ class Route extends React.Component {
 
     return (
       <div>
-        <h1>
+        <p>
           Path: <Link to='/form'>{location.pathname}</Link>
-        </h1>
+        </p>
         <div>
-          <button onClick={this.redirect}>Go</button>
+          <button className='btn' onClick={this.redirect}>Go</button>
         </div>
       </div>
     )

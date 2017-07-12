@@ -6,7 +6,7 @@ import { withRouter } from 'react-router'
 
 const PageNotFound = ({ router : { goBack } }) => (
   <div className={classes.container}>
-    <h1>Page not found!!!</h1>
+    <p>Page not found!!!</p>
     <h3>
       <a className={classes.link} onClick={goBack}>Back</a>
     </h3>

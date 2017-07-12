@@ -13,9 +13,9 @@ export default class Elapse extends React.Component {
   render () {
     const { elapse } = this.props
     return (
-      <h1>
+      <h3>
         Seconds Elapsed: {elapse}
-      </h1>
+      </h3>
     )
   }
 }

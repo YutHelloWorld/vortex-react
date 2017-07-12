@@ -6,8 +6,7 @@ import Spinner from 'react-spinkit'
 export const Zen = ({ fetchZen, clearZen, zen : { fetching, text } }) => (
   <div>
     <div className='loading'>
-      { fetching
-        ? <Spinner name='double-bounce' /> : ''
+      { fetching ? <Spinner name='cube-grid' color='purple' /> : ''
       }
     </div>
     <div>
@@ -19,7 +18,7 @@ export const Zen = ({ fetchZen, clearZen, zen : { fetching, text } }) => (
     </div>
     <div>
       {text.map(item => (
-        <h1 key={item.id}>{item.text}</h1>
+        <p key={item.id}>{item.text}</p>
       ))}
     </div>
   </div>
