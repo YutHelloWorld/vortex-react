@@ -2,6 +2,14 @@
 
 基于[React](https://facebook.github.io/react/)、[Redux](http://redux.js.org/)和[React-Router@3.x](https://github.com/ReactTraining/react-router/tree/v3/docs)的前端脚手架。
 
+## 特性
+
+- 支持HMR
+- 动态路由，配合webpack，按需加载
+- 代码检查
+- 单元测试
+
+
 ## 环境
 * node `^5.0.0`
 * yarn `^0.23.0` or npm `^3.0.0`
