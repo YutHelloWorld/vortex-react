@@ -17,7 +17,7 @@
 * yarn `^0.23.0` or npm `^3.0.0`
 * 用[cnpm](https://npm.taobao.org/)或[Yarn](https://yarnpkg.com/)能节约你安装依赖的时间
 
-## 1.安装
+## 安装
 
 在终端执行以下命令，clone这个仓库。
 
@@ -32,7 +32,7 @@ $ cd <my-project-name>
 $ yarn  # Install project dependencies (or `npm install` or `cnpm install`)
 ```
 
-## 2.启动
+## 启动
 
 通过`yarn start`或者`npm start`来启动该应用。
 
@@ -50,7 +50,7 @@ $ yarn start  # Start the development server (or `npm start`)
 |`lint`             |代码检查|
 |`lint:fix`         |代码检查并修复|
 
-## 3.目录结构
+## 目录结构
 
 
 ```
