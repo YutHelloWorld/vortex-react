@@ -22,14 +22,14 @@ describe('(Component) Counter', () => {
     expect(_wrapper.is('div')).to.equal(true)
   })
 
-  it('renders with an <h2> that includes Counter label.', () => {
-    expect(_wrapper.find('h2').text()).to.match(/Counter:/)
+  it('renders with an <h3> that includes Counter label.', () => {
+    expect(_wrapper.find('h3').text()).to.match(/Counter:/)
   })
 
-  it('renders {props.counter} at the end of the sample counter <h2>.', () => {
-    expect(_wrapper.find('h2').text()).to.match(/5$/)
+  it('renders {props.counter} at the end of the sample counter <h3>.', () => {
+    expect(_wrapper.find('h3').text()).to.match(/5$/)
     _wrapper.setProps({ counter: 8 })
-    expect(_wrapper.find('h2').text()).to.match(/8$/)
+    expect(_wrapper.find('h3').text()).to.match(/8$/)
   })
 
   it('renders exactly two buttons.', () => {
