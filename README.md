@@ -13,7 +13,7 @@
 ## 开始之前
 * 确保 node `^5.0.0`
 * yarn `^0.23.0` or npm `^3.0.0`
-* 用[cnpm](https://npm.taobao.org/)或Yarn](https://yarnpkg.com/)能节约你安装依赖的时间
+* 用[cnpm](https://npm.taobao.org/)或[Yarn](https://yarnpkg.com/)能节约你安装依赖的时间
 
 ## 1.安装
 
