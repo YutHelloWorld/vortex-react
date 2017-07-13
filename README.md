@@ -61,8 +61,7 @@ $ yarn start  # Start the development server (or `npm start`)
 │   ├── index.html           # 应用的html容器
 │   ├── main.js              # 应用入口JS
 │   ├── normalize.js         # 浏览器的适配
-│   ├── components           # 全局复用展示组件
-│   ├── containers           # 全局复用容器组件
+│   ├── components           # 应用根组件
 │   ├── layouts              # 主页结构的组件
 │   │   └── PageLayout       # 路由公共导航
 │   ├── routes               # 路由和异步加载
