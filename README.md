@@ -10,28 +10,29 @@
 - 单元测试
 
 
-## 环境
-* node `^5.0.0`
+## 开始之前
+* 确保 node `^5.0.0`
 * yarn `^0.23.0` or npm `^3.0.0`
+* 用[cnpm](https://npm.taobao.org/)或Yarn](https://yarnpkg.com/)能节约你安装依赖的时间
 
-## 安装
+## 1.安装
 
-在我们开始之前，需要先clone这个仓库。
+在终端执行以下命令，clone这个仓库。
 
 ```bash
 $ git clone https://github.com/yuthelloworld/vortex-react.git <my-project-name>
 $ cd <my-project-name>
 ```
 
-然后安装应用模块，你可以选择使用[Yarn](https://yarnpkg.com/)，或者[npm](https://github.com/npm/npm)安装。国内推荐使用淘宝镜像[cnpm](https://npm.taobao.org/)安装。
+安装所有依赖
 
 ```bash
 $ yarn  # Install project dependencies (or `npm install` or `cnpm install`)
 ```
 
-## 启动
+## 2.启动
 
-所有依赖安装完毕，可以通过`yarn start`或者`npm start`来启动该应用。
+通过`yarn start`或者`npm start`来启动该应用。
 
 ```bash
 $ yarn start  # Start the development server (or `npm start`)
@@ -47,7 +48,7 @@ $ yarn start  # Start the development server (or `npm start`)
 |`lint`             |代码检查|
 |`lint:fix`         |代码检查并修复|
 
-## 目录结构
+## 3.目录结构
 
 
 ```
