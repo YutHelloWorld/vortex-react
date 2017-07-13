@@ -1,29 +1,38 @@
 # vortex-react
 
-基于React,Redux,React-Router适用于大型应用的前端脚手架。
+基于[React](https://facebook.github.io/react/)、[Redux](http://redux.js.org/)和[React-Router@3.x](https://github.com/ReactTraining/react-router/tree/v3/docs)的前端脚手架。
 
-## 环境
-* node `^5.0.0`
+## 特性
+
+- 支持HMR
+- 动态路由，配合webpack，按需加载
+- 代码检查
+- 单元测试
+
+
+## 开始之前
+* 确保 node `^5.0.0`
 * yarn `^0.23.0` or npm `^3.0.0`
+* 用[cnpm](https://npm.taobao.org/)或[Yarn](https://yarnpkg.com/)能节约你安装依赖的时间
 
-## 安装
+## 1.安装
 
-克隆仓库到本地
+在终端执行以下命令，clone这个仓库。
 
 ```bash
 $ git clone https://github.com/yuthelloworld/vortex-react.git <my-project-name>
 $ cd <my-project-name>
 ```
 
-安装依赖，可以使用[Yarn](https://yarnpkg.com/)，或者[npm](https://github.com/npm/npm)安装。国内推荐使用淘宝镜像[cnpm](https://npm.taobao.org/)安装。
+安装所有依赖
 
 ```bash
 $ yarn  # Install project dependencies (or `npm install` or `cnpm install`)
 ```
 
-## 启动
+## 2.启动
 
-所有依赖安装完毕，可以通过`yarn start`或者`npm start`来启动该应用。
+通过`yarn start`或者`npm start`来启动该应用。
 
 ```bash
 $ yarn start  # Start the development server (or `npm start`)
@@ -32,14 +41,14 @@ $ yarn start  # Start the development server (or `npm start`)
 
 |`yarn <script>`    |描述|
 |-------------------|-----------|
-|`start`            |服务启动在 `localhost:3000`，并且热更新|
-|`build`            |构建应用到 ./dist|
-|`test`             |通过Karma执行单元测试. See [testing](#testing)|
+|`start`            |启动并热更新 http://localhost:3000|
+|`build`            |构建到目录 ./dist|
+|`test`             |通过Karma执行单元测试|
 |`test:watch`       |代码改变时通过监控模式重新执行单元测试|
-|`lint`             |[Lints](http://stackoverflow.com/questions/8503559/what-is-linting)使用eslint进行代码review|
-|`lint:fix`         |代码review并[修复](http://eslint.org/docs/user-guide/command-line-interface.html#fix)|
+|`lint`             |代码检查|
+|`lint:fix`         |代码检查并修复|
 
-## 目录结构
+## 3.目录结构
 
 
 ```
@@ -50,10 +59,9 @@ $ yarn start  # Start the development server (or `npm start`)
 │   └── main.js              # 服务入口
 ├── src                      # 前端代码目录
 │   ├── index.html           # 应用的html容器
-│   ├── main.js              # 应用JS入口
+│   ├── main.js              # 应用入口JS
 │   ├── normalize.js         # 浏览器的适配
-│   ├── components           # 全局复用展示组件
-│   ├── containers           # 全局复用容器组件
+│   ├── components           # 应用根组件
 │   ├── layouts              # 主页结构的组件
 │   │   └── PageLayout       # 路由公共导航
 │   ├── routes               # 路由和异步加载
@@ -67,11 +75,11 @@ $ yarn start  # Start the development server (or `npm start`)
 │   │       ├── index.js     # 路由定义
 │   │       ├── container    # 容器组件
 │   │       ├── modules      # module层（reducers/constants/actions）
-│   │       └── routes **    # 不规则路由
+│   │       └── routes **    # 子路由
 │   ├── store                # Redux相关模块
 │   │   ├── createStore.js   # 创建和使用redux store
 │   │   └── reducers.js      # Reducer的注册和注入
-│   └── styles               # 样式
+│   └── styles               # 样式表
 └── tests                    # 单元测试
 ```
 
