@@ -1,6 +1,6 @@
 # vortex-react
 
-基于React生态的前端脚手架
+基于React,Redux,React-Router适用于大型应用的前端脚手架。
 
 ## 环境
 * node `^5.0.0`
