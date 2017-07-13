@@ -36,6 +36,9 @@ export function fetchZen () {
     return fetch('https://api.github.com/zen')
       .then(data => data.text())
       .then(text => dispatch(receiveZen(text)))
+      .catch((ex) => {
+        console.log('parsing failed', ex)
+      })
   }
 }
 
