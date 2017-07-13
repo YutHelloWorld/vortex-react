@@ -1,6 +1,6 @@
 # vortex-react
 
-基于React,Redux,React-Router适用于大型应用的前端脚手架。
+基于[React](https://facebook.github.io/react/),[Redux](http://redux.js.org/),[React-Router@3.x](https://github.com/ReactTraining/react-router/tree/v3/docs)的前端脚手架。
 
 ## 环境
 * node `^5.0.0`
