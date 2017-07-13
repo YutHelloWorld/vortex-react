@@ -9,6 +9,7 @@
 - 代码检查
 - 单元测试
 
+![module](./public/module.png)
 
 ## 开始之前
 * 确保 node `^5.0.0`
