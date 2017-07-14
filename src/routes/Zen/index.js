@@ -10,6 +10,7 @@ export default (store) => ({
       /*  Webpack - use require callback to define
           dependencies for bundling   */
       const Zen = require('./containers/ZenContainer').default
+      /*  Add the reducer to the store on key 'zen'  */
       const reducer = require('./modules/zen').default
       injectReducer(store, { key: 'zen', reducer })
       cb(null, Zen)
