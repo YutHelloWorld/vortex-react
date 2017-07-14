@@ -7,6 +7,8 @@ export default (store) => ({
     /*  Webpack - use 'require.ensure' to create a split point
         and embed an async module loader (jsonp) when bundling   */
     require.ensure([], (require) => {
+      /*  Webpack - use require callback to define
+          dependencies for bundling   */
       const Zen = require('./containers/ZenContainer').default
       const reducer = require('./modules/zen').default
       injectReducer(store, { key: 'zen', reducer })
