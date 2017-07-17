@@ -1,6 +1,6 @@
 # vortex-react
 
-基于[React](https://facebook.github.io/react/)、[Redux](http://redux.js.org/)和[React-Router@3.x](https://github.com/ReactTraining/react-router/tree/v3/docs)的前端脚手架。
+基于[React](https://facebook.github.io/react/)、[Redux](http://redux.js.org/)、[React-Router@3.x](https://github.com/ReactTraining/react-router/tree/v3/docs)和[ant-desgin-UI](https://ant.design/index-cn)的前端脚手架。
 
 ## 特性
 
@@ -8,7 +8,6 @@
 - 动态路由，配合webpack，按需加载
 - 代码检查
 - 单元测试
-
 
 ![module](./public/module.png)
 

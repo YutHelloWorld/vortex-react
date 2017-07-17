@@ -10,19 +10,19 @@ export const PageLayout = ({ children }) => (
     {' · '}
     <Link to='/counter' activeClassName='page-layout__nav-item--active'>Counter</Link>
     {' · '}
-    <Link to='/zen' activeClassName='route--active'>
+    <Link to='/zen' activeClassName='page-layout__nav-item--active'>
       Zen
     </Link>
     {' · '}
-    <Link to='/elapse' activeClassName='route--active'>
+    <Link to='/elapse' activeClassName='page-layout__nav-item--active'>
       Elapse
     </Link>
     {' · '}
-    <Link to='/route/88' activeClassName='route--active'>
+    <Link to='/route/88' activeClassName='page-layout__nav-item--active'>
       Route
     </Link>
     {' · '}
-    <Link to='/notFound' activeClassName='route--active'>
+    <Link to='/notFound' activeClassName='page-layout__nav-item--active'>
       404
     </Link>
     <div className='page-layout__viewport'>
