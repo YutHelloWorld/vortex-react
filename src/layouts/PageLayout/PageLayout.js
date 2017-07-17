@@ -1,37 +1,43 @@
 import React from 'react'
-import { IndexLink, Link } from 'react-router'
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'
 import PropTypes from 'prop-types'
 import './PageLayout.scss'
+import { connect } from 'react-redux'
+import { toggle } from '../../store/layout'
 
-export const PageLayout = ({ children }) => (
-  <div className='container text-center' style={{ marginTop: '50px' }}>
-    <h1>Vortex React</h1>
-    <IndexLink to='/' activeClassName='page-layout__nav-item--active'>Home</IndexLink>
-    {' · '}
-    <Link to='/counter' activeClassName='page-layout__nav-item--active'>Counter</Link>
-    {' · '}
-    <Link to='/zen' activeClassName='page-layout__nav-item--active'>
-      Zen
-    </Link>
-    {' · '}
-    <Link to='/elapse' activeClassName='page-layout__nav-item--active'>
-      Elapse
-    </Link>
-    {' · '}
-    <Link to='/route/88' activeClassName='page-layout__nav-item--active'>
-      Route
-    </Link>
-    {' · '}
-    <Link to='/notFound' activeClassName='page-layout__nav-item--active'>
-      404
-    </Link>
-    <div className='page-layout__viewport'>
-      {children}
+export const PageLayout = ({ children, layout : { isOpen }, toggle }) => (
+  <div>
+    <div>
+      <Navbar color='faded' light toggleable>
+        <NavbarToggler right onClick={toggle} />
+        <NavbarBrand href='/'>Vortex React</NavbarBrand>
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className='ml-auto' navbar>
+            <NavItem>
+              <NavLink href='/components/'>Components</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href='https://github.com/reactstrap/reactstrap'>Github</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
     </div>
+
   </div>
 )
 PageLayout.propTypes = {
   children: PropTypes.node,
+  layout  : PropTypes.object.isRequired,
+  toggle  : PropTypes.func.isRequired
 }
 
-export default PageLayout
+const mapDispatchToProps = {
+  toggle
+}
+
+const mapStateToProps = (state) => ({
+  layout : state.layout
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(PageLayout)
