@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import './PageLayout.scss'
 
 export default class PageLayout extends React.Component {
+  // 类的静态属性，不会被实例继承
   static propTypes = {
     children : PropTypes.node
   }
