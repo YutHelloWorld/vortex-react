@@ -10,7 +10,7 @@ const PageNotFound = ({ router : { goBack } }) => (
     <h3>
       <a className='link' onClick={goBack}>Back</a>
     </h3>
-    <img className='img-fluid' style={{ maxWidth : '100%' }} src={NotFoundImage} />
+    <img className='img-fluid' src={NotFoundImage} />
   </div>
 )
 
