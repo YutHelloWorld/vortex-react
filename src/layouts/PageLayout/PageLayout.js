@@ -1,37 +1,50 @@
 import React from 'react'
-import { IndexLink, Link } from 'react-router'
+import { Link, IndexLink } from 'react-router'
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, Container } from 'reactstrap'
 import PropTypes from 'prop-types'
 import './PageLayout.scss'
 
-export const PageLayout = ({ children }) => (
-  <div className='container text-center' style={{ marginTop: '50px' }}>
-    <h1>Vortex React</h1>
-    <IndexLink to='/' activeClassName='page-layout__nav-item--active'>Home</IndexLink>
-    {' · '}
-    <Link to='/counter' activeClassName='page-layout__nav-item--active'>Counter</Link>
-    {' · '}
-    <Link to='/zen' activeClassName='page-layout__nav-item--active'>
-      Zen
-    </Link>
-    {' · '}
-    <Link to='/elapse' activeClassName='page-layout__nav-item--active'>
-      Elapse
-    </Link>
-    {' · '}
-    <Link to='/route/88' activeClassName='page-layout__nav-item--active'>
-      Route
-    </Link>
-    {' · '}
-    <Link to='/notFound' activeClassName='page-layout__nav-item--active'>
-      404
-    </Link>
-    <div className='page-layout__viewport'>
-      {children}
-    </div>
-  </div>
-)
-PageLayout.propTypes = {
-  children: PropTypes.node,
-}
+export default class PageLayout extends React.Component {
+  // 类的静态属性，不会被实例继承
+  static propTypes = {
+    children : PropTypes.node
+  }
 
-export default PageLayout
+  constructor (props) {
+    super(props)
+    this.toggle = this.toggle.bind(this)
+    this.state = {
+      isOpen: false
+    }
+  }
+
+  toggle () {
+    this.setState({
+      isOpen: !this.state.isOpen
+    })
+  }
+
+  render () {
+    return (
+      <div>
+        <Navbar color='faded' light toggleable>
+          <NavbarToggler right onClick={this.toggle} />
+          <NavbarBrand to='/' tag={IndexLink}>Vortex React</NavbarBrand>
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className='ml-auto' navbar>
+              <NavLink to='/counter/' activeClassName='active' tag={Link}>Counter</NavLink>
+              <NavLink to='/zen' activeClassName='active' tag={Link}>Zen</NavLink>
+              <NavLink to='/elapse' activeClassName='active' tag={Link}>Elapse</NavLink>
+              <NavLink to='/route/88' activeClassName='active' tag={Link}>Route</NavLink>
+              <NavLink to='/notFound' activeClassName='active' tag={Link}>404</NavLink>
+              <NavLink href='https://github.com/YutHelloWorld/vortex-react'>Github</NavLink>
+            </Nav>
+          </Collapse>
+        </Navbar>
+        <Container className='text-center page-layout__viewport'>
+          {this.props.children}
+        </Container>
+      </div>
+    )
+  }
+}

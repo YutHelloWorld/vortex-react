@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './Zen.scss'
 import Spinner from 'react-spinkit'
+import { Button } from 'reactstrap'
 
 export const Zen = ({ fetchZen, clearZen, zen : { fetching, text } }) => (
   <div>
@@ -10,12 +11,13 @@ export const Zen = ({ fetchZen, clearZen, zen : { fetching, text } }) => (
       }
     </div>
     <div>
-      <button className='btn btn-default' onClick={fetchZen}>
+      <Button color='success' onClick={fetchZen}>
         {fetching ? 'Fetching...' : 'Fetch'}
-      </button>
-      &nbsp;&nbsp;
-      <button className='btn btn-default' onClick={clearZen}>Clear</button>
+      </Button>
+      {' '}
+      <Button color='danger' onClick={clearZen}>Clear</Button>
     </div>
+    <hr />
     <div>
       {text.map(item => (
         <p key={item.id}>{item.text}</p>

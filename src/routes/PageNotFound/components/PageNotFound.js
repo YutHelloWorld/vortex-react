@@ -1,16 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NotFoundImage from '../assets/404.jpg'
-import classes from './PageNotFound.scss'
+import './PageNotFound.scss'
 import { withRouter } from 'react-router'
+import { Button } from 'reactstrap'
 
 const PageNotFound = ({ router : { goBack } }) => (
-  <div className={classes.container}>
+  <div className='not-found__container'>
     <p>Page not found!!!</p>
-    <h3>
-      <a className={classes.link} onClick={goBack}>Back</a>
-    </h3>
-    <img src={NotFoundImage} />
+    <div>
+      <Button color='link' className='back' onClick={goBack}>Back</Button>
+    </div>
+    <img className='img-fluid' src={NotFoundImage} />
   </div>
 )
 

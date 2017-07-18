@@ -1,11 +1,10 @@
 import React from 'react'
-import VortexImage from '../assets/vortex.png'
+import bgImage from '../assets/bgImage.jpg'
 import './HomeView.scss'
 
 export const HomeView = () => (
   <div>
-    <h4>Welcome!</h4>
-    <img alt='This is a duck, because Redux!' className='duck' src={VortexImage} />
+    <img alt='vortex!' className='vortex img-fluid' src={bgImage} />
   </div>
 )
 
