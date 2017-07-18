@@ -36,6 +36,7 @@ const createStore = (initialState = {}) => {
   store.asyncReducers = {}
 
   // To unsubscribe, invoke `store.unsubscribeHistory()` anytime
+  // when browserHistory location changed,the callback func fire
   store.unsubscribeHistory = browserHistory.listen(updateLocation(store))
 
   if (module.hot) {

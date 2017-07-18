@@ -6,6 +6,7 @@ import { Button } from 'reactstrap'
 class Route extends React.Component {
   static propTypes = {
     location : PropTypes.object.isRequired,
+    params   : PropTypes.object.isRequired,
     router   : PropTypes.object.isRequired
   }
 
@@ -19,13 +20,14 @@ class Route extends React.Component {
   }
 
   render () {
-    const { location } = this.props
+    const { params, location } = this.props
 
     return (
       <div>
-        <p>
-          Path: <Link to='/form'>{location.pathname}</Link>
-        </p>
+        <div>
+          <Link to='/test'>id: {params.id}</Link>
+          <p>Path: {location.pathname} </p>
+        </div>
         <div>
           <Button color='link' style={{ cursor : 'pointer' }} onClick={this.redirect}>Go</Button>
         </div>
