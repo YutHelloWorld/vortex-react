@@ -1,16 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NotFoundImage from '../assets/404.jpg'
-import classes from './PageNotFound.scss'
+import './PageNotFound.scss'
 import { withRouter } from 'react-router'
 
 const PageNotFound = ({ router : { goBack } }) => (
-  <div className={classes.container}>
+  <div className='not-found__container'>
     <p>Page not found!!!</p>
     <h3>
-      <a className={classes.link} onClick={goBack}>Back</a>
+      <a className='link' onClick={goBack}>Back</a>
     </h3>
-    <img src={NotFoundImage} />
+    <img className='img-fluid' style={{ maxWidth : '100%' }} src={NotFoundImage} />
   </div>
 )
 
