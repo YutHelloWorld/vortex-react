@@ -24,10 +24,10 @@ class Route extends React.Component {
 
     return (
       <div>
-        <p>
+        <div>
           <Link to='/test'>id: {params.id}</Link>
           <p>Path: {location.pathname} </p>
-        </p>
+        </div>
         <div>
           <Button color='link' style={{ cursor : 'pointer' }} onClick={this.redirect}>Go</Button>
         </div>
