@@ -39,7 +39,7 @@ export default class PageLayout extends React.Component {
           <NavbarBrand to='/' tag={IndexLink}>Vortex React</NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className='ml-auto' navbar>
-              <NavLink to='/counter/' activeClassName='active' tag={Link}>Counter</NavLink>
+              <NavLink to='/counter' activeClassName='active' tag={Link}>Counter</NavLink>
               <NavLink to='/zen' activeClassName='active' tag={Link}>Zen</NavLink>
               <NavLink to='/elapse' activeClassName='active' tag={Link}>Elapse</NavLink>
               <NavLink to={location} activeClassName='active' tag={Link}>Route</NavLink>
