@@ -4,6 +4,6 @@ export default () => ({
     require.ensure([], (require) => {
       const PageNotFound = require('./components/PageNotFound').default
       cb(null, PageNotFound)
-    })
+    }, 'pageNotFound')
   }
 })

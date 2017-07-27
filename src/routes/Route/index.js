@@ -4,6 +4,6 @@ export default (store) => ({
     require.ensure([], (require) => {
       const Route = require('./components/Route').default
       cb(null, Route)
-    })
+    }, 'route')
   }
 })
