@@ -9,7 +9,7 @@
 - 动态路由，配合webpack，按需加载
 - 代码检查
 - 单元测试
-![Redux](./public/Redux.png)
+![Redux-flow](./public/Redux-flow.png)
 ![module](./public/module.png)
 
 ## 开始之前
