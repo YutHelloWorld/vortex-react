@@ -46,10 +46,10 @@ if (__DEV__) {
       './components/App',
       './routes/index',
     ], () =>
-      setImmediate(() => {
-        ReactDOM.unmountComponentAtNode(MOUNT_NODE)
-        render()
-      })
+        setImmediate(() => {
+          ReactDOM.unmountComponentAtNode(MOUNT_NODE)
+          render()
+        })
     )
   }
 }

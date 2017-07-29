@@ -21,6 +21,6 @@ export default class Elapse extends React.Component {
 }
 
 Elapse.propTypes = {
-  elapse: PropTypes.number.isRequired,
-  plus: PropTypes.func.isRequired
+  elapse : PropTypes.number.isRequired,
+  plus   : PropTypes.func.isRequired
 }

@@ -1,7 +1,7 @@
 import { injectReducer } from '../../store/reducers'
 
 export default (store) => ({
-  path: 'zen',
+  path : 'zen',
   /*  Async getComponent is only invoked when route matches   */
   getComponent (nextState, cb) {
     /*  Webpack - use 'require.ensure' to create a split point
@@ -12,7 +12,7 @@ export default (store) => ({
       const Zen = require('./containers/ZenContainer').default
       /*  Add the reducer to the store on key 'zen'  */
       const reducer = require('./modules/zen').default
-      injectReducer(store, { key: 'zen', reducer })
+      injectReducer(store, { key : 'zen', reducer })
       cb(null, Zen)
     }, 'zen')
   }
