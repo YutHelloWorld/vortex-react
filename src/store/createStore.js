@@ -39,6 +39,7 @@ const createStore = (initialState = {}) => {
   // when browserHistory location changed,the callback func fire
   store.unsubscribeHistory = browserHistory.listen(updateLocation(store))
 
+  // module HMR
   if (module.hot) {
     module.hot.accept('./reducers', () => {
       const reducers = require('./reducers').default
