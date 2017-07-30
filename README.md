@@ -10,7 +10,7 @@
 - 代码检查
 - 单元测试
 ![Redux-flow](./public/Redux-flow.png)
-![module](./public/module.png)
+
 
 ## 开始之前
 * 确保 node `^5.0.0`
