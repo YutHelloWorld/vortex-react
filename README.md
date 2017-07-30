@@ -9,8 +9,12 @@
 - 动态路由，配合webpack，按需加载
 - 代码检查
 - 单元测试
+
+### 数据流
 ![Redux-flow](./public/Redux-flow.png)
 
+### 工程结构
+![vortex-react](./public/vortex-react.png)
 
 ## 开始之前
 * 确保 node `^5.0.0`
