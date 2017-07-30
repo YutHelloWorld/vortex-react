@@ -1,5 +1,5 @@
 export default (store) => ({
-  path: 'route/:id',
+  path : 'route/:id',
   getComponent (nextState, cb) {
     require.ensure([], (require) => {
       const Route = require('./components/Route').default

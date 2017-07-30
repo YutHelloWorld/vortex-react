@@ -9,7 +9,7 @@ export const PLUS = 'PLUS'
 
 export function plus () {
   return {
-    type: PLUS
+    type : PLUS
   }
 }
 
@@ -21,7 +21,7 @@ export const actions = {
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
-  [PLUS]: (state) => {
+  [PLUS] : (state) => {
     return state + 1
   }
 }

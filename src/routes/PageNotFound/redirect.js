@@ -1,6 +1,6 @@
 export default {
-  path: '*',
-  indexRoute: {
+  path       : '*',
+  indexRoute : {
     onEnter (nextState, replace) {
       replace('/404')
     }
