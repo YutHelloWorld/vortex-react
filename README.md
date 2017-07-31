@@ -111,10 +111,13 @@ $ yarn start  # Start the development server (or `npm start`)
 ```
 ## 开发调试
 
+在开发环境，采用了web-dev-middleware和web-hot-middleware。代码实时热更新。
+
 ### Redux DevTools
 
 强烈推荐安装谷歌浏览器插件[Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd),来查看整个应用的状态时光穿梭。
 ![redux-devtool](./public/redux-devtool.jpg)
+
 ### 路由
 我们使用`React-router`的[plainRoute](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute)来定义应用的逻辑单元。[更多](#工程结构)
 
