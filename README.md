@@ -130,4 +130,4 @@ $ yarn start  # Start the development server (or `npm start`)
 
 ## 致谢
 
-这个项目受到[davezuko/react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit)的启发。
+这个项目是受到[davezuko/react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit)的启发而来，在其基础上做的扩展。
