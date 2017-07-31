@@ -51,7 +51,7 @@ $ git clone https://github.com/yuthelloworld/vortex-react.git <my-project-name>
 $ cd <my-project-name>
 ```
 
-然后，安装工程依赖。推荐使用[cnpm](https://npm.taobao.org/)或[Yarn](https://yarnpkg.com/)，这样可以节约你安装依赖的所需的时间，避免出现一些莫名奇妙的错误.
+然后，安装工程依赖。推荐使用[cnpm](https://npm.taobao.org/)或[Yarn](https://yarnpkg.com/)，这样可以节约你安装依赖的所需的时间，避免出现一些莫名奇妙的错误。
 
 ```bash
 $ yarn  # Install project dependencies (or `npm install` or `cnpm install`)
