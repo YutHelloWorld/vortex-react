@@ -132,5 +132,4 @@ $ yarn start  # Start the development server (or `npm start`)
 [知识地图](https://github.com/YutHelloWorld/Blog/issues/1)
 
 ## 致谢
-
-这个项目是受到[davezuko/react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit)的启发。欢迎给这个项目提[PR](https://github.com/YutHelloWorld/vortex-react/pulls)或者[issues](https://github.com/YutHelloWorld/vortex-react/issues)
+欢迎给这个项目提[PR](https://github.com/YutHelloWorld/vortex-react/pulls)或者[issues](https://github.com/YutHelloWorld/vortex-react/issues),谢谢！
