@@ -8,6 +8,12 @@
 - [特性](#特性)
 - [环境](#环境)
 - [开始](#开始)
+- [工程结构](#工程结构)
+- [开发调试](#开发调试)
+- [单元测试](#单元测试)
+- [静态部署](#静态部署)
+- [相关文档](#相关文档)
+- [致谢](#致谢)
 
 ## 前言
 
@@ -15,49 +21,50 @@
 
 ## 特性
 
-- ES6语法
-- Webpack打包和热更新
-- Redux管理应用状态
-- React-router 动态路由
-- 采用基于bootstrap@4.0.0-alpha.6的reactstrap
-- 使用Elint代码review
-- 单元测试
-- 静态部署
+- [ES2015](https://babeljs.io/learn-es2015/)
+- [Webpack](https://webpack.js.org/)
+- [Redux](http://redux.js.org/)
+- [React-router](https://github.com/ReactTraining/react-router/tree/v3/docs)
+- [reactstrap](https://reactstrap.github.io/)
+- [Eslint](http://eslint.cn/)
+- [Express](http://expressjs.com/)
+- [Babel](https://babeljs.io/)
+- [Karma](https://karma-runner.github.io/1.0/index.html)
 
 ### 数据流
 ![Redux-flow](./public/Redux-flow.png)
 
-### 工程结构
-![vortex-react](./public/vortex-react.png)
 
 ## 环境
 
 - node `^5.0.0`
 - yarn `^0.23.0` or npm `^3.0.0`
-- 用[cnpm](https://npm.taobao.org/)或[Yarn](https://yarnpkg.com/)能节约你安装依赖的时间
 
 ## 开始
 
-在确认你
+在确认你的开发环境是以上[环境配置](#环境)，就开始可以基于这个脚手架创建你的应用了:
+
+首先，克隆这个工程。
+
 ```bash
 $ git clone https://github.com/yuthelloworld/vortex-react.git <my-project-name>
 $ cd <my-project-name>
 ```
 
-安装所有依赖
+然后，安装工程依赖。推荐使用[cnpm](https://npm.taobao.org/)或[Yarn](https://yarnpkg.com/)，这样可以节约你安装依赖的所需的时间，避免出现一些莫名奇妙的错误.
 
 ```bash
 $ yarn  # Install project dependencies (or `npm install` or `cnpm install`)
 ```
 
-## 启动
-
-通过`yarn start`或者`npm start`来启动该应用。
+最后，使用命令`yarn start`或者`npm start`来启动该应用。
 
 ```bash
 $ yarn start  # Start the development server (or `npm start`)
 ```
-其他的处理命令:
+![get-start](./public/start.jpg)
+
+这里还有一些其他的处理命令:
 
 |`yarn <script>`    |描述|
 |-------------------|-----------|
@@ -68,8 +75,8 @@ $ yarn start  # Start the development server (or `npm start`)
 |`lint`             |代码检查|
 |`lint:fix`         |代码检查并修复|
 
-## 目录结构
-
+## 工程结构
+![vortex-react](./public/vortex-react.png)
 
 ```
 .
@@ -102,6 +109,25 @@ $ yarn start  # Start the development server (or `npm start`)
 │   └── styles               # 样式表
 └── tests                    # 单元测试
 ```
+## 开发调试
+
+### Redux DevTools
+
+强烈推荐安装谷歌浏览器插件[Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd),来查看整个应用的状态时光穿梭。
+![redux-devtool](./public/redux-devtool.jpg)
+### 路由
+我们使用`React-router`的[plainRoute](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute)来定义应用的逻辑单元。[更多](#工程结构)
+
+## 单元测试
+新增一个单元测试，你只需在`./tests`中创建`.spec.js`文件。
+
+## 静态部署
+
+如果你通过`nginx` web 服务来启动应用，请确保路由指向`~/dist/index.html`，然后让react-router处理剩下的事，更多参考[这个文档](https://github.com/reactjs/react-router/blob/master/docs/guides/Histories.md#configuring-your-server)。Express在脚手架中用于扩展服务和代理API。
+
 ## 相关文档
 [知识地图](https://github.com/YutHelloWorld/Blog/issues/1)
 
+## 致谢
+
+这个项目受到[davezuko/react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit)的启发。
