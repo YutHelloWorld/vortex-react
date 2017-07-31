@@ -80,28 +80,28 @@ $ yarn start  # Start the development server (or `npm start`)
 
 ```
 .
-├── build                    # 构建相关配置代码
-├── public                   # 公共静态文件
+├── build                    # 打包配置
+├── public                   # 公共静态资源
 ├── server                   # express服务
-│   └── main.js              # 服务入口
-├── src                      # 前端代码目录
-│   ├── index.html           # 应用的html容器
-│   ├── main.js              # 应用入口JS
-│   ├── normalize.js         # 浏览器的适配
-│   ├── components           # 应用根组件
-│   ├── layouts              # 主页结构的组件
-│   │   └── PageLayout       # 路由公共导航
-│   ├── routes               # 路由和异步加载
-│   │   ├── index.js         # 工程主路由
-│   │   ├── Home             # 子路由
-│   │   │   ├── index.js     # 路由定义和异步代码分割
+│   └── main.js              # 服务入口js
+├── src                      # 应用源文件
+│   ├── index.html           # html模板
+│   ├── main.js              # 程序启动和渲染
+│   ├── normalize.js         # 浏览器的兼容和垫片
+│   ├── components           # 全局可复用组件
+│   ├── layouts              # 主页布局
+│   │   └── PageLayout       # 导航
+│   ├── routes               # 动态路由
+│   │   ├── index.js         # 主路由
+│   │   ├── Home             # 子路由Home
+│   │   │   ├── index.js     # 路由定义和异步加载
 │   │   │   ├── assets       # 组件的静态文件
 │   │   │   ├── components   # 展示组件
 │   │   │   └── routes **    # 子路由
-│   │   └── Counter          # 子路由
+│   │   └── Counter          # 子路由Couner
 │   │       ├── index.js     # 路由定义
 │   │       ├── container    # 容器组件
-│   │       ├── modules      # module层（reducers/constants/actions）
+│   │       ├── modules      # module(reducers/constants/actions)
 │   │       └── routes **    # 子路由
 │   ├── store                # Redux相关模块
 │   │   ├── createStore.js   # 创建和使用redux store
