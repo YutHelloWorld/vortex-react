@@ -2,9 +2,16 @@
 
 基于[React](https://facebook.github.io/react/)、[Redux](http://redux.js.org/)、[React-Router@3.x](https://github.com/ReactTraining/react-router/tree/v3/docs)、[webpack](https://webpack.js.org/)和[reactstrap](https://reactstrap.github.io/)的前端脚手架。
 
+## 目录
+
+- [前言](#前言)
+- [特性](#特性)
+- [环境](#环境)
+- [开始](#开始)
+
 ## 前言
 
-如果你是一个Reat初学者，这个脚手架可以是很好的教程。如果你在寻找一个React-Redux-Webpack工程脚手架，那么这个脚手架应该能够满足你的需求。
+如果你是一个Reat初学者，这个脚手架可以是很好的教程。如果你在计划使用React技术栈创建一个大型SPA，那么这个脚手架正好适合你。
 
 ## 特性
 
@@ -24,14 +31,14 @@
 ![vortex-react](./public/vortex-react.png)
 
 ## 环境
-* 确保 node `^5.0.0`
-* yarn `^0.23.0` or npm `^3.0.0`
-* 用[cnpm](https://npm.taobao.org/)或[Yarn](https://yarnpkg.com/)能节约你安装依赖的时间
 
-## 安装
+- node `^5.0.0`
+- yarn `^0.23.0` or npm `^3.0.0`
+- 用[cnpm](https://npm.taobao.org/)或[Yarn](https://yarnpkg.com/)能节约你安装依赖的时间
 
-在终端执行以下命令，clone这个仓库。
+## 开始
 
+在确认你
 ```bash
 $ git clone https://github.com/yuthelloworld/vortex-react.git <my-project-name>
 $ cd <my-project-name>
