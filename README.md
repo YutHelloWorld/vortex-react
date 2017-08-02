@@ -1,5 +1,7 @@
 # vortex-react
 
+[![Build Status](https://travis-ci.org/YutHelloWorld/vortex-react.svg?branch=master)](https://travis-ci.org/YutHelloWorld/vortex-react)
+
 基于[React](https://facebook.github.io/react/)、[Redux](http://redux.js.org/)、[React-Router@3.x](https://github.com/ReactTraining/react-router/tree/v3/docs)、[webpack](https://webpack.js.org/)和[reactstrap](https://reactstrap.github.io/)的前端脚手架。
 
 ## 目录
