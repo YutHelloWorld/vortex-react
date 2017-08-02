@@ -126,10 +126,10 @@ $ yarn start  # Start the development server (or `npm start`)
 
 ## 静态部署
 
-如果你通过`nginx` web 服务来启动应用，请确保路由指向`~/dist/index.html`，然后让react-router处理剩下的事，更多参考[这个文档](https://github.com/reactjs/react-router/blob/master/docs/guides/Histories.md#configuring-your-server)。Express在脚手架中用于扩展服务和代理API。
+如果你通过`nginx` web 服务来启动应用，请确保路由指向`~/dist/index.html`，然后让react-router处理剩下的事，更多参考[这个文档](https://github.com/ReactTraining/react-router/blob/v3/docs/guides/Histories.md#configuring-your-server)。Express在脚手架中用于扩展服务和代理API。
 
 ## 相关文档
-[知识地图](https://github.com/YutHelloWorld/Blog/issues/1)
+[React知识地图](https://github.com/YutHelloWorld/Blog/issues/1)
 
 ## 致谢
 欢迎给这个项目提[PR](https://github.com/YutHelloWorld/vortex-react/pulls)或者[issues](https://github.com/YutHelloWorld/vortex-react/issues),谢谢！
