@@ -1,5 +1,8 @@
 # vortex-react
 
+[![Build Status](https://travis-ci.org/YutHelloWorld/vortex-react.svg?branch=master)](https://travis-ci.org/YutHelloWorld/vortex-react)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 基于[React](https://facebook.github.io/react/)、[Redux](http://redux.js.org/)、[React-Router@3.x](https://github.com/ReactTraining/react-router/tree/v3/docs)、[webpack](https://webpack.js.org/)和[reactstrap](https://reactstrap.github.io/)的前端脚手架。
 
 ## 目录
@@ -37,8 +40,8 @@
 
 ## 环境
 
-- node `^5.0.0`
-- yarn `^0.23.0` or npm `^3.0.0`
+- node `^6.11.2`
+- yarn `^0.27.5` or npm `^5.0.3`
 
 ## 开始
 
