@@ -2,6 +2,7 @@ import React from 'react'
 import { bindActionCreators } from 'redux'
 import { Counter } from 'routes/Counter/components/Counter'
 import { shallow } from 'enzyme'
+import { Button } from 'reactstrap'
 
 describe('(Component) Counter', () => {
   let _props, _spies, _wrapper
@@ -32,15 +33,15 @@ describe('(Component) Counter', () => {
     expect(_wrapper.find('h3').text()).to.match(/8$/)
   })
 
-  it('renders exactly two buttons.', () => {
-    expect(_wrapper.find('button')).to.have.length(2)
+  it('renders exactly two <Button />s.', () => {
+    expect(_wrapper.find(Button)).to.have.length(2)
   })
 
   describe('Increment', () => {
     let _button
 
     beforeEach(() => {
-      _button = _wrapper.find('button').filterWhere(a => a.text() === 'Increment')
+      _button = _wrapper.find(Button).first()
     })
 
     it('exists', () => {
@@ -48,7 +49,7 @@ describe('(Component) Counter', () => {
     })
 
     it('is a primary button', () => {
-      expect(_button.hasClass('btn btn-primary')).to.be.true()
+      expect(_button.props().color).to.equal('primary')
     })
 
     it('Calls props.increment when clicked', () => {
@@ -65,7 +66,7 @@ describe('(Component) Counter', () => {
     let _button
 
     beforeEach(() => {
-      _button = _wrapper.find('button').filterWhere(a => a.text() === 'Double (Async)')
+      _button = _wrapper.find(Button).at(1)
     })
 
     it('exists', () => {
@@ -73,7 +74,7 @@ describe('(Component) Counter', () => {
     })
 
     it('is a secondary button', () => {
-      expect(_button.hasClass('btn btn-secondary')).to.be.true()
+      expect(_button.props().color).to.equal('secondary')
     })
 
     it('Calls props.doubleAsync when clicked', () => {

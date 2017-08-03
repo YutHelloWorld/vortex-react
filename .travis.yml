@@ -10,6 +10,7 @@ cache:
 
 script:
   - yarn lint
+  - yarn test
   - yarn build
 
 after_success:
