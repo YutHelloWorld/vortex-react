@@ -132,6 +132,38 @@ $ yarn start  # Start the development server (or `npm start`)
 
 如果你通过`nginx` web 服务来启动应用，请确保路由指向`~/dist/index.html`，然后让react-router处理剩下的事，更多参考[这个文档](https://github.com/ReactTraining/react-router/blob/v3/docs/guides/Histories.md#configuring-your-server)。Express在脚手架中用于扩展服务和代理API。
 
+以ubuntu为例示范如何用nginx设置反向代理，首先安装nginx：
+
+```bash
+sudo apt-get install nginx
+```
+
+然后用你喜欢的编辑器修改配置文件：
+
+```bash
+sudo vi /etc/nginx/sites-available/default
+```
+
+将以下内容粘贴到文件中：
+```
+server{
+	listen 8001;
+	server_name 127.0.0.1;  //这里可以改成服务器地址
+	location / {
+		proxy_pass http://127.0.0.1:3000;
+	}
+}
+```
+
+然后重启nginx服务，并启动项目，打开浏览器访问http://localhost:8081。
+
+```bash
+sudo service nginx restart
+
+// 切换到项目目录
+yarn start
+```
+
 ## 相关文档
 [React知识地图](https://github.com/YutHelloWorld/Blog/issues/1)
 
