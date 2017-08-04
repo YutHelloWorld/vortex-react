@@ -47,20 +47,20 @@
 
 在确认你的开发环境是以上[环境配置](#环境)，就开始可以基于这个脚手架创建你的应用了:
 
-首先，克隆这个工程。
+1. 克隆这个工程。
 
 ```bash
 $ git clone https://github.com/yuthelloworld/vortex-react.git <my-project-name>
 $ cd <my-project-name>
 ```
 
-然后，安装工程依赖。推荐使用[cnpm](https://npm.taobao.org/)或[Yarn](https://yarnpkg.com/)，这样可以减少安装时间，避免出现一些莫名奇妙的错误。
+2. 安装依赖。推荐使用[cnpm](https://npm.taobao.org/)或[Yarn](https://yarnpkg.com/)，这样可以减少安装时间，避免出现一些莫名奇妙的错误。
 
 ```bash
 $ yarn  # Install project dependencies (or `npm install` or `cnpm install`)
 ```
 
-最后，使用命令`yarn start`或者`npm start`来启动该应用。
+3. 使用命令`yarn start`或者`npm start`来启动该应用。
 
 ```bash
 $ yarn start  # Start the development server (or `npm start`)
@@ -122,7 +122,7 @@ $ yarn start  # Start the development server (or `npm start`)
 ![redux-devtool](./public/redux-devtool.jpg)
 
 ### 路由
-这里使用`React-router v3`的[plainRoute](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute)写法来组织逻辑单元。[查看更多](#工程结构)ar
+这里使用`React-router v3`的[plainRoute](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute)写法来组织逻辑单元。[查看更多](#工程结构)
 
 ## 单元测试
 新增一个单元测试，你只需在`./tests`中创建`.spec.js`文件。`Karma`会自动查找并执行。[更多测试用例官方文档](https://github.com/airbnb/enzyme)
