@@ -25,6 +25,7 @@
     "express": "^4.14.0",
     "fetch-jsonp": "^1.1.1",
     "object-assign": "^4.1.1",
+    "opn": "^5.1.0",
     "promise": "^7.1.1",
     "prop-types": "^15.5.10",
     "react": "^15.5.4",
