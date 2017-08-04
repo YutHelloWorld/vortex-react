@@ -144,7 +144,7 @@ sudo apt-get install nginx
 sudo vi /etc/nginx/sites-available/default
 ```
 
-将一下内容粘贴到文件中：
+将以下内容粘贴到文件中：
 ```
 server{
 	listen 8001;
@@ -155,7 +155,7 @@ server{
 }
 ```
 
-然后重启nginx服务，并启动项目，打开浏览器访问http://localhost:8081，即可看到项目首页。
+然后重启nginx服务，并启动项目，打开浏览器访问http://localhost:8081。
 
 ```bash
 sudo service nginx restart
