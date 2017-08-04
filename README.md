@@ -24,11 +24,12 @@
 
 ## 特性
 
+- [React](https://facebook.github.io/react/)
 - [ES2015](https://babeljs.io/learn-es2015/)
 - [Webpack](https://webpack.js.org/)
 - [Redux](http://redux.js.org/)
 - [React-router](https://github.com/ReactTraining/react-router/tree/v3/docs)
-- [reactstrap](https://reactstrap.github.io/)
+- [Reactstrap](https://reactstrap.github.io/)
 - [Eslint](http://eslint.cn/)
 - [Express](http://expressjs.com/)
 - [Babel](https://babeljs.io/)
@@ -122,7 +123,7 @@ $ yarn start  # Start the development server (or `npm start`)
 ![redux-devtool](./public/redux-devtool.jpg)
 
 ### 路由
-我们使用`React-router`的[plainRoute](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute)来定义应用的逻辑单元。[更多](#工程结构)
+我们使用`React-router`的[plainRoute](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute)来定义应用的逻辑单元。[查看更多](#工程结构)
 
 ## 单元测试
 新增一个单元测试，你只需在`./tests`中创建`.spec.js`文件。
