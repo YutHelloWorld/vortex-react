@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/YutHelloWorld/vortex-react.svg?branch=master)](https://travis-ci.org/YutHelloWorld/vortex-react)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-基于[React](https://facebook.github.io/react/)、[Redux](http://redux.js.org/)、[React-Router@3.x](https://github.com/ReactTraining/react-router/tree/v3/docs)、[webpack](https://webpack.js.org/)和[reactstrap](https://reactstrap.github.io/)的前端脚手架。
+基于[React](https://facebook.github.io/react/)、[Redux](http://redux.js.org/)、[React-Router v3](https://github.com/ReactTraining/react-router/tree/v3/docs)、[Webpack v2](https://webpack.js.org/)和[R eactstrap](https://reactstrap.github.io/)的前端脚手架。
 
 ## 目录
 
@@ -20,7 +20,7 @@
 
 ## 前言
 
-如果你是一个React初学者，这个项目可以是很好的教程。如果你在计划使用React技术栈创建一个大型SPA，那么这个项目正好适合你。如果这个项目对你有帮助，请不吝啬的给于star或者watch支持。
+如果你是一个React初学者，这个项目可以是个很好的教程。如果你正在计划使用React技术栈搭建一个大型SPA，那么这个脚手架正好适合你。
 
 ## 特性
 
@@ -38,7 +38,6 @@
 ### 数据流
 ![Redux-flow](./public/Redux-flow.png)
 
-
 ## 环境
 
 - node `^6.11.2`
@@ -55,7 +54,7 @@ $ git clone https://github.com/yuthelloworld/vortex-react.git <my-project-name>
 $ cd <my-project-name>
 ```
 
-然后，安装工程依赖。推荐使用[cnpm](https://npm.taobao.org/)或[Yarn](https://yarnpkg.com/)，这样可以节约你安装依赖的所需的时间，避免出现一些莫名奇妙的错误。
+然后，安装工程依赖。推荐使用[cnpm](https://npm.taobao.org/)或[Yarn](https://yarnpkg.com/)，这样可以减少安装时间，避免出现一些莫名奇妙的错误。
 
 ```bash
 $ yarn  # Install project dependencies (or `npm install` or `cnpm install`)
@@ -68,16 +67,16 @@ $ yarn start  # Start the development server (or `npm start`)
 ```
 ![get-start](./public/start.jpg)
 
-这里还有一些其他的处理命令:
+除此之外还有一些其他的命令脚本:
 
 |`yarn <script>`    |描述|
 |-------------------|-----------|
-|`start`            |启动并热更新 http://localhost:3000|
-|`build`            |构建到目录 ./dist|
-|`test`             |通过Karma执行单元测试|
-|`test:watch`       |代码改变时通过监控模式重新执行单元测试|
-|`lint`             |代码检查|
-|`lint:fix`         |代码检查并修复|
+|`start`            |本地3000端口启动(http://localhost:3000)|
+|`build`            |打包构建到目录 ./dist|
+|`test`             |使用Karma执行单元测试|
+|`test:watch`       |监控模式下进行单元测试|
+|`lint`             |静态检查|
+|`lint:fix`         |静态检查修复|
 
 ## 工程结构
 ![vortex-react](./public/vortex-react.png)
@@ -115,36 +114,37 @@ $ yarn start  # Start the development server (or `npm start`)
 ```
 ## 开发调试
 
-在开发环境，采用了webpack-dev-middleware和webpack-hot-middleware。代码实时热更新。
+在开发环境，采用了`webpack-dev-middleware`和`webpack-hot-middleware`两个中间件。代码实现热更新。
 
 ### Redux DevTools
 
-强烈推荐安装谷歌浏览器插件[Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd),来查看整个应用的状态时光穿梭。
+强烈推荐安装谷歌浏览器插件[Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd),来查看整个应用状态的时光穿梭旅程。
 ![redux-devtool](./public/redux-devtool.jpg)
 
 ### 路由
-我们使用`React-router`的[plainRoute](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute)来定义应用的逻辑单元。[查看更多](#工程结构)
+这里使用`React-router v3`的[plainRoute](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute)写法来组织逻辑单元。[查看更多](#工程结构)ar
 
 ## 单元测试
-新增一个单元测试，你只需在`./tests`中创建`.spec.js`文件。
+新增一个单元测试，你只需在`./tests`中创建`.spec.js`文件。`Karma`会自动查找并执行。
 
 ## 静态部署
 
-如果你通过`nginx` web 服务来启动应用，请确保路由指向`~/dist/index.html`，然后让react-router处理剩下的事，更多参考[这个文档](https://github.com/ReactTraining/react-router/blob/v3/docs/guides/Histories.md#configuring-your-server)。Express在脚手架中用于扩展服务和代理API。
+如果你通过`nginx` 反向代理静态web服务来启动应用，请将路由指向`~/dist/index.html`，然后让`React-Router`处理剩下的事，更多参考[这个文档](https://github.com/ReactTraining/react-router/blob/v3/docs/guides/Histories.md#configuring-your-server)。Express在脚手架中用于扩展服务和代理API。
 
-以ubuntu为例示范如何用nginx设置反向代理，首先安装nginx：
+*Tips:*
+这里以ubuntu为例演示如何用nginx设置反向代理。
+1. 安装nginx：
 
 ```bash
 sudo apt-get install nginx
 ```
-
-然后用你喜欢的编辑器修改配置文件：
+2. 修改配置文件：
 
 ```bash
 sudo vi /etc/nginx/sites-available/default
 ```
 
-将以下内容粘贴到文件中：
+3. 将以下内容粘贴到文件中：
 ```
 server{
 	listen 8001;
@@ -155,12 +155,12 @@ server{
 }
 ```
 
-然后重启nginx服务，并启动项目，打开浏览器访问http://localhost:8081。
+4. 重启nginx服务，并启动应用，打开浏览器访问http://localhost:8081。
 
 ```bash
 sudo service nginx restart
 
-// 切换到项目目录
+// 切换到工程目录
 yarn start
 ```
 
@@ -168,4 +168,4 @@ yarn start
 [React知识地图](https://github.com/YutHelloWorld/Blog/issues/1)
 
 ## 致谢
-欢迎给这个项目提[PR](https://github.com/YutHelloWorld/vortex-react/pulls)或者[issues](https://github.com/YutHelloWorld/vortex-react/issues),谢谢！
+感谢各位奉献的每一个[PR](https://github.com/YutHelloWorld/vortex-react/pulls)和[issues](https://github.com/YutHelloWorld/vortex-react/issues)！
