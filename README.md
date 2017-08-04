@@ -125,7 +125,7 @@ $ yarn start  # Start the development server (or `npm start`)
 这里使用`React-router v3`的[plainRoute](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute)写法来组织逻辑单元。[查看更多](#工程结构)ar
 
 ## 单元测试
-新增一个单元测试，你只需在`./tests`中创建`.spec.js`文件。`Karma`会自动查找并执行。
+新增一个单元测试，你只需在`./tests`中创建`.spec.js`文件。`Karma`会自动查找并执行。[更多测试用例官方文档](https://github.com/airbnb/enzyme)
 
 ## 静态部署
 
