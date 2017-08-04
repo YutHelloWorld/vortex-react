@@ -101,7 +101,7 @@ $ yarn start  # Start the development server (or `npm start`)
 │   │   │   ├── assets       # 组件的静态文件
 │   │   │   ├── components   # 展示组件
 │   │   │   └── routes **    # 子路由
-│   │   └── Counter          # 子路由Couner
+│   │   └── Counter          # 子路由Counter
 │   │       ├── index.js     # 路由定义
 │   │       ├── container    # 容器组件
 │   │       ├── modules      # module(reducers/constants/actions)
@@ -114,7 +114,7 @@ $ yarn start  # Start the development server (or `npm start`)
 ```
 ## 开发调试
 
-在开发环境，采用了web-dev-middleware和web-hot-middleware。代码实时热更新。
+在开发环境，采用了webpack-dev-middleware和webpack-hot-middleware。代码实时热更新。
 
 ### Redux DevTools
 
