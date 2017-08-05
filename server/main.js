@@ -29,8 +29,10 @@ if (project.env === 'development') {
     path: '/__webpack_hmr'
   }))
 
+  // 设置静态资源路径，浏览器会默认请求该路径下favicon.ico
   app.use(express.static(path.resolve(project.basePath, 'public')))
 
+  // 重定向到index.html
   app.use('*', function (req, res, next) {
     const filename = path.join(compiler.outputPath, 'index.html')
     compiler.outputFileSystem.readFile(filename, (err, result) => {

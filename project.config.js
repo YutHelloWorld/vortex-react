@@ -1,19 +1,21 @@
+// 全局变量表
+
 const NODE_ENV = process.env.NODE_ENV || 'development'
 
 module.exports = {
-  /** The environment to use when building the project */
+  /** 运行环境 */
   env        : NODE_ENV,
-  /** The full path to the project's root directory */
+  /** 根路径全名 */
   basePath   : __dirname,
-  /** The name of the directory containing the application source code */
+  /** 源文件目录 */
   srcDir     : 'src',
-  /** The file name of the application's entry point */
+  /** 入口文件 */
   main       : 'main',
-  /** The name of the directory in which to emit compiled assets */
+  /** 打包输出路径 */
   outDir     : 'dist',
-  /** The base path for all projects assets (relative to the website root) */
+  /** 公共路径 */
   publicPath : '/',
-  /** Whether to generate sourcemaps */
+  /** 是否sourcemap */
   sourcemaps : true,
   /** A hash map of keys that the compiler should treat as external to the project */
   externals  : {},
