@@ -8,13 +8,11 @@
 ![redux-devtool](./public/redux-devtool.jpg)
 
 ## 目录
-
 #### &sect; [技术栈](#feature)
 #### &sect; [快速开始](#getting-start)
 - [安装](#installation)
 - [启动](#start)
 - [脚本](#script)
-
 #### &sect; [项目架构](#project-structure)
 - [目录结构](#file-tree)
 - [数据流](#module)
