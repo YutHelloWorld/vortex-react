@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import PropTypes from 'prop-types'
 
 class App extends React.Component {
+  // ES试验特性写法
   static propTypes = {
     store  : PropTypes.object.isRequired,
     routes : PropTypes.object.isRequired

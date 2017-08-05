@@ -14,8 +14,7 @@ export function increment (value = 1) {
   }
 }
 
-// Async Actions
-
+/* 异步action(使用redux-thunk中间件处理) */
 export const doubleAsync = () => {
   return (dispatch, getState) => {
     return new Promise((resolve) => {
