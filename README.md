@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/YutHelloWorld/vortex-react.svg?branch=master)](https://travis-ci.org/YutHelloWorld/vortex-react)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-基于[React](https://facebook.github.io/react/)、[Redux](http://redux.js.org/)、[React-Router v3](https://github.com/ReactTraining/react-router/tree/v3/docs)、[Webpack v2](https://webpack.js.org/)和[Reactstrap](https://reactstrap.github.io/)的前端脚手架。
+基于[React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/)/[React-Router v3](https://github.com/ReactTraining/react-router/tree/v3/docs)/[Webpack v2](https://webpack.js.org/)/[Reactstrap](https://reactstrap.github.io/)的前端脚手架。
 
 ![redux-devtool](./public/redux-devtool.jpg)
 
