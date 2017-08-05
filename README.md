@@ -56,13 +56,12 @@ $ yarn  # Install project dependencies (or `cnpm install`)
 ```bash
 $ yarn start  # Start the development server (or `npm start`)
 ```
-![get-start](./public/start.jpg)
 ### <a name="script">⊙ 脚本</a>
 |`yarn <script>`    |描述|
 |-------------------|-----------|
-|`start`            |本地3000端口启动(http://localhost:3000)|
+|`start`            |启动(http://localhost:3000)|
 |`build`            |打包构建到目录 ./dist|
-|`test`             |使用Karma执行单元测试|
+|`test`             |单元测试|
 |`test:watch`       |监控模式下进行单元测试|
 |`lint`             |静态检查|
 |`lint:fix`         |静态检查修复|
