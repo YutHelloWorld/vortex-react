@@ -5,70 +5,61 @@
 
 基于[React](https://facebook.github.io/react/)、[Redux](http://redux.js.org/)、[React-Router v3](https://github.com/ReactTraining/react-router/tree/v3/docs)、[Webpack v2](https://webpack.js.org/)和[Reactstrap](https://reactstrap.github.io/)的前端脚手架。
 
+![redux-devtool](./public/redux-devtool.jpg)
+
 ## 目录
 
-- [前言](#前言)
-- [特性](#特性)
-- [环境](#环境)
-- [开始](#开始)
-- [工程结构](#工程结构)
-- [开发调试](#开发调试)
-- [单元测试](#单元测试)
-- [静态部署](#静态部署)
-- [相关文档](#相关文档)
-- [致谢](#致谢)
+#### &sect; [技术栈](#feature)
+#### &sect; [快速开始](#getting-start)
+- [安装](#installation)
+- [启动](#start)
+- [脚本](#script)
 
-## 前言
+#### &sect; [项目架构](#project-structure)
+- [目录结构](#file-tree)
+- [数据流](#module)
+- [形式](#logic)
+#### &sect; [开发调试](#devlop)
+- [Redux DevTools](#devtools)
+- [路由](#react-router)
+#### &sect; [单元测试](#test)
+#### &sect; [静态部署](#deploy)
+#### &sect; [更多文档](#doc)
 
-如果你是一个React初学者，这个项目可以是个很好的教程。如果你正在计划使用React技术栈搭建一个大型SPA，那么这个脚手架正好适合你。
 
-## 特性
+## <a name="feature">&sect; 技术栈</a>
 
-- [React](https://facebook.github.io/react/)
-- [ES2015](https://babeljs.io/learn-es2015/)
-- [Webpack](https://webpack.js.org/)
-- [Redux](http://redux.js.org/)
-- [React-router](https://github.com/ReactTraining/react-router/tree/v3/docs)
-- [Reactstrap](https://reactstrap.github.io/)
-- [Eslint](http://eslint.cn/)
-- [Express](http://expressjs.com/)
-- [Babel](https://babeljs.io/)
-- [Karma](https://karma-runner.github.io/1.0/index.html)
+- React ^15.6.1
+- ES6 + Babel
+- Webpack v2
+- Redux ^3.7.2
+- React-Router v3
+- Reactstrap + Bootstrap^4.0.0-alpha (UI)
+- Eslint
+- Express
+- Karma
 
-### 数据流
-![Redux-flow](./public/Redux-flow.png)
+---
 
-## 环境
-
-- node `^6.11.2`
-- yarn `^0.27.5` or npm `^5.0.3`
-
-## 开始
-
-在确认你的开发环境是以上[环境配置](#环境)，就开始可以基于这个脚手架创建你的应用了:
-
-1. 克隆这个工程。
+## <a name="getting-start">&sect; 快速开始</a>
+> 推荐升级到 node 5.x/6.x + npm 5.x + yarn ^0.27.5环境。**强烈推荐**使用 [`cnpm`](https://github.com/cnpm/cnpm) 安装依赖   
+> 或手动切换到淘宝 npm 源：`npm set registry https://registry.npm.taobao.org/`  
+> (经测试，`cnpm` 对于 `node-sass` `PhantomJS`等问题多多的 Package 拥有秒杀能力)
+### <a name="installation">⊙ 安装</a>
 
 ```bash
 $ git clone https://github.com/yuthelloworld/vortex-react.git <my-project-name>
 $ cd <my-project-name>
+$ yarn  # Install project dependencies (or `cnpm install`)
 ```
 
-2. 安装依赖。推荐使用[cnpm](https://npm.taobao.org/)或[Yarn](https://yarnpkg.com/)，这样可以减少安装时间，避免出现一些莫名奇妙的错误。
-
-```bash
-$ yarn  # Install project dependencies (or `npm install` or `cnpm install`)
-```
-
-3. 使用命令`yarn start`或者`npm start`来启动该应用。
+### <a name="start">⊙ 启动</a>
 
 ```bash
 $ yarn start  # Start the development server (or `npm start`)
 ```
 ![get-start](./public/start.jpg)
-
-除此之外还有一些其他的命令脚本:
-
+### <a name="script">⊙ 脚本</a>
 |`yarn <script>`    |描述|
 |-------------------|-----------|
 |`start`            |本地3000端口启动(http://localhost:3000)|
@@ -78,9 +69,11 @@ $ yarn start  # Start the development server (or `npm start`)
 |`lint`             |静态检查|
 |`lint:fix`         |静态检查修复|
 
-## 工程结构
-![vortex-react](./public/vortex-react.png)
+---
 
+## <a name="project-structure">&sect; 项目架构</a>
+
+### <a name="file-tree">⊙ 目录结构</a>
 ```
 .
 ├── build                    # 打包配置
@@ -112,26 +105,31 @@ $ yarn start  # Start the development server (or `npm start`)
 │   └── styles               # 样式表
 └── tests                    # 单元测试
 ```
-## 开发调试
+### <a name="module">⊙ 数据流</a>
+![Redux-flow](./public/Redux-flow.png) 
+### <a name="logic">⊙ 形式</a> 
+![vortex-react](./public/vortex-react.png)
 
-在开发环境，采用了`webpack-dev-middleware`和`webpack-hot-middleware`两个中间件。代码实现热更新。
+---
+## <a name="devlop">&sect; 开发调试</a>
+>在开发环境，采用了`webpack-dev-middleware`和`webpack-hot-middleware`两个中间件，为应用提供Server和HMR。
 
-### Redux DevTools
+### <a name="devtools">⊙ Redux DevTools</a> 
 
 强烈推荐安装谷歌浏览器插件[Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd),来查看整个应用状态的时光穿梭旅程。
-![redux-devtool](./public/redux-devtool.jpg)
 
-### 路由
-这里使用`React-router v3`的[plainRoute](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute)写法来组织逻辑单元。[查看更多](#工程结构)
+### <a name="react-router">⊙ 路由</a> 
+推荐使用`React-router v3`的[plainRoute](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute)写法。
 
-## 单元测试
-新增一个单元测试，你只需在`./tests`中创建`.spec.js`文件。`Karma`会自动查找并执行。[更多测试用例官方文档](https://github.com/airbnb/enzyme)
+---
+## <a name="test">&sect; 单元测试</a>
+新增一个单元测试，只需在`./tests`中创建`.spec.js`文件。`Karma`会自动查找并执行。[更多测试用例官方文档](https://github.com/airbnb/enzyme)
 
-## 静态部署
+---
+## <a name="deploy">&sect; 静态部署</a>
 
-如果你通过`nginx` 反向代理静态web服务来启动应用，请将路由指向`~/dist/index.html`，然后让`React-Router`处理剩下的事，更多参考[这个文档](https://github.com/ReactTraining/react-router/blob/v3/docs/guides/Histories.md#configuring-your-server)。Express在脚手架中用于扩展服务和代理API。
+>推荐使用`nginx` 反向代理静态web服务来启动应用。请将路由指向`~/dist/index.html`，然后让`React-Router`处理剩下的事，更多参考[这个文档](https://github.com/ReactTraining/react-router/blob/v3/docs/guides/Histories.md#configuring-your-server)。Express在脚手架中用于扩展服务和代理API。
 
-*Tips:*
 这里以ubuntu为例演示如何用nginx设置反向代理。
 1. 安装nginx：
 
@@ -164,8 +162,7 @@ sudo service nginx restart
 yarn start
 ```
 
-## 相关文档
+---
+## <a name="doc">&sect; 更多文档</a>
 [React知识地图](https://github.com/YutHelloWorld/Blog/issues/1)
 
-## 致谢
-感谢各位奉献的每一个[PR](https://github.com/YutHelloWorld/vortex-react/pulls)和[issues](https://github.com/YutHelloWorld/vortex-react/issues)！
