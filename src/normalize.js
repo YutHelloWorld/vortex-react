@@ -11,7 +11,6 @@
    1) Object.assign
    2) Promise
    3) Fetch
-   4) Fetch-Jsonp
 
    ====================================================== */
 
@@ -36,10 +35,4 @@ if (typeof Promise === 'undefined') {
 // the feature check / polyfill above.
 if (typeof window.fetch === 'undefined') {
   require('whatwg-fetch')
-}
-
-// 4）Fetch-jsonp
-// -------------------------------------
-if (typeof window.fetchJsonp === 'undefined') {
-  window.fetchJsonp = require('fetch-jsonp')
 }
