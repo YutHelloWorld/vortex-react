@@ -1,8 +1,7 @@
 import { applyMiddleware, compose, createStore as createReduxStore } from 'redux'
 import thunk from 'redux-thunk'
-import { browserHistory } from 'react-router'
 import makeRootReducer from './reducers'
-import { updateLocation } from './location'
+import { updateLocation, history } from './location'
 
 const createStore = (initialState = {}) => {
   // ======================================================
@@ -35,10 +34,8 @@ const createStore = (initialState = {}) => {
   )
   store.asyncReducers = {}
 
-  // To unsubscribe, invoke `store.unsubscribeHistory()` anytime
-  // when browserHistory location changed,the callback func fire
-  store.unsubscribeHistory = browserHistory.listen(updateLocation(store))
-
+  // 监听浏览器history变化，绑定到store。取消监听直接调用store.unsubscribeHistory()
+  store.unsubscribeHistory = history.listen(updateLocation(store))
   // module HMR
   if (module.hot) {
     module.hot.accept('./reducers', () => {
