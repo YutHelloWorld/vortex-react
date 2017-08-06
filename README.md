@@ -11,7 +11,7 @@
 > 今年3月发布的react-router v4相较之前的v2和v3完全重写了，遵循一切皆React组件的理念。本项目从v3升级到v4，重构了routes部分。本次升级关键点如下：
 > - 重写了Store对history的监听
 > - 取消了PlainRoute Object集中配置路由的写法,组件形式嵌套
-> - 取消了API IndexLink
+> - 取消了API `IndexLink`和`IndexRoute`,新增`NavLink`和`Switch`
 > - 新增动态加载高阶组件(AsncComponent)，使用webpack v2 的`import()`代码分割
 > - `history.push('/')`替代`router.push('/')
 > - 新API `match` 
