@@ -8,15 +8,22 @@
 ![redux-devtool](./public/redux-devtool.jpg)
 
 > #### 2017/8/6更新：
-> 今年3月发布的react-router v4相较之前的v2和v3完全重写了，遵循一切皆React组件的理念。本项目从v3升级到v4，重构了routes部分。本次升级关键点如下：
+> 今年3月发布的react-router v4相较之前的v2和v3完全重写了，遵循一切皆React组件的理念。本项目从v3升级到v4(更应该说是迁移)，重构了routes部分。本次升级关键点如下：
 > - 重写了Store对history的监听
 > - 取消了PlainRoute Object集中配置路由的写法,组件形式嵌套
 > - 取消了API `IndexLink`和`IndexRoute`,新增`NavLink`和`Switch`
 > - 新增动态加载高阶组件(AsncComponent)，使用webpack v2 的`import()`代码分割
 > - `history.push('/')`替代`router.push('/')
 > - 新API `match` 
-
+>
 > 详情参阅：https://github.com/YutHelloWorld/vortex-react/pull/20
+> 
+>升级指南：
+> - [译：从react-router v2/v3迁移到v4](https://github.com/YutHelloWorld/Blog/issues/4) 
+> - [Code Splitting in Create React App](http://serverless-stack.com/chapters/code-splitting-in-create-react-app.html) 
+> - [BrowserRouter](https://github.com/ReactTraining/react-router/blob/v4.1.1/packages/react-router-dom/modules/BrowserRouter.js#L18)
+
+---
 
 ## 目录
 #### &sect; [技术栈](#feature)
