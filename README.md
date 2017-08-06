@@ -16,6 +16,8 @@
 > - `history.push('/')`替代`router.push('/')
 > - 新API `match` 
 
+> 详情参阅：https://github.com/YutHelloWorld/vortex-react/pull/20
+
 ## 目录
 #### &sect; [技术栈](#feature)
 #### &sect; [快速开始](#getting-start)
