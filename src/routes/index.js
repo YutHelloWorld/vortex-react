@@ -1,25 +1,19 @@
-import CoreLayout from '../layouts/PageLayout/PageLayout'
+import asyncComponent from '../components/AsyncComponent'
 import Home from './Home'
-import CounterRoute from './Counter'
-import ZenRoute from './Zen'
-import ElapseRoute from './Elapse'
-import RouteRoute from './Route'
-import PageNotFound from './PageNotFound'
-import Redirect from './PageNotFound/redirect'
 
-/* react-router PlainRoute objects */
-export const createRoutes = (store) => ({
-  path        : '/',
-  component   : CoreLayout,
-  indexRoute  : Home,
-  childRoutes : [
-    CounterRoute(store),
-    ZenRoute(store),
-    ElapseRoute(store),
-    RouteRoute(store),
-    PageNotFound(),
-    Redirect
-  ]
-})
-
-export default createRoutes
+export default Home
+export const AsyncCounter = asyncComponent(() => import(
+  /* webpackChunkName: "counter" */
+  './Counter'))
+export const AsyncZen = asyncComponent(() => import(
+  /* webpackChunkName: "zen" */
+  './Zen'))
+export const AsyncElapse = asyncComponent(() => import(
+  /* webpackChunkName: "elapse" */
+  './Elapse'))
+export const AsyncRoute = asyncComponent(() => import(
+  /* webpackChunkName: "route" */
+  './Route'))
+export const AsyncPageNotFound = asyncComponent(() => import(
+  /* webpackChunkName: "pageNotFound" */
+  './PageNotFound'))

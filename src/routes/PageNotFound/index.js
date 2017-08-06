@@ -1,9 +1,3 @@
-export default () => ({
-  path : '404',
-  getComponent (nextState, cb) {
-    require.ensure([], (require) => {
-      const PageNotFound = require('./components/PageNotFound').default
-      cb(null, PageNotFound)
-    }, 'pageNotFound')
-  }
-})
+import PageNotFound from './components/PageNotFound'
+
+export default PageNotFound
