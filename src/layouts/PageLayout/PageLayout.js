@@ -1,9 +1,9 @@
 import React from 'react'
-import { NavLink as Link, Switch, Route, Redirect } from 'react-router-dom'
+import { NavLink as Link } from 'react-router-dom'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, Container } from 'reactstrap'
 import PropTypes from 'prop-types'
 import './PageLayout.scss'
-import Home, { AsyncCounter, AsyncZen, AsyncElapse, AsyncRoute, AsyncPageNotFound } from '../../routes'
+import Routes from '../../routes'
 
 const location = {
   pathname : '/route/8080',
@@ -50,15 +50,7 @@ export default class PageLayout extends React.Component {
           </Collapse>
         </Navbar>
         <Container className='text-center page-layout__viewport'>
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/counter' component={AsyncCounter} />
-            <Route path='/zen' component={AsyncZen} />
-            <Route path='/elapse' component={AsyncElapse} />
-            <Route path='/route/:id' component={AsyncRoute} />
-            <Route path='/404' component={AsyncPageNotFound} />
-            <Redirect from='*' to='/404' />
-          </Switch>
+          <Routes />
         </Container>
       </div>
     )
