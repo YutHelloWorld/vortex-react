@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, withRouter } from 'react-router'
+import { withRouter } from 'react-router-dom'
 import { Button } from 'reactstrap'
 
 class Route extends React.Component {
   static propTypes = {
-    location : PropTypes.object.isRequired,
-    params   : PropTypes.object.isRequired,
-    router   : PropTypes.object.isRequired
+    match   : PropTypes.object.isRequired,
+    history : PropTypes.object.isRequired
   }
 
   constructor (props) {
@@ -15,18 +14,16 @@ class Route extends React.Component {
     this.redirect = this.redirect.bind(this)
   }
 
-  redirect () {
-    this.props.router.push('/form')
+  redirect = () => {
+    this.props.history.push('/form')
   }
 
   render () {
-    const { params, location } = this.props
-
     return (
       <div>
         <div>
-          <Link to='/test'>id: {params.id}</Link>
-          <p>Path: {location.pathname} </p>
+          <h3>id: {this.props.match.params.id}</h3>
+          <p>Path: {this.props.match.url} </p>
         </div>
         <div>
           <Button color='link' style={{ cursor : 'pointer' }} onClick={this.redirect}>Go</Button>

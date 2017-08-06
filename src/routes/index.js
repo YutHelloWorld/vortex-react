@@ -1,25 +1,34 @@
-import CoreLayout from '../layouts/PageLayout/PageLayout'
+import asyncComponent from '../components/AsyncComponent'
 import Home from './Home'
-import CounterRoute from './Counter'
-import ZenRoute from './Zen'
-import ElapseRoute from './Elapse'
-import RouteRoute from './Route'
-import PageNotFound from './PageNotFound'
-import Redirect from './PageNotFound/redirect'
+import { Switch, Route, Redirect } from 'react-router-dom'
+import React from 'react'
 
-/* react-router PlainRoute objects */
-export const createRoutes = (store) => ({
-  path        : '/',
-  component   : CoreLayout,
-  indexRoute  : Home,
-  childRoutes : [
-    CounterRoute(store),
-    ZenRoute(store),
-    ElapseRoute(store),
-    RouteRoute(store),
-    PageNotFound(),
-    Redirect
-  ]
-})
+const AsyncCounter = asyncComponent(() => import(
+  /* webpackChunkName: "counter" */
+  './Counter'))
+const AsyncZen = asyncComponent(() => import(
+  /* webpackChunkName: "zen" */
+  './Zen'))
+const AsyncElapse = asyncComponent(() => import(
+  /* webpackChunkName: "elapse" */
+  './Elapse'))
+const AsyncRoute = asyncComponent(() => import(
+  /* webpackChunkName: "route" */
+  './Route'))
+const AsyncPageNotFound = asyncComponent(() => import(
+  /* webpackChunkName: "pageNotFound" */
+  './PageNotFound'))
 
-export default createRoutes
+const Routes = () => (
+  <Switch>
+    <Route exact path='/' component={Home} />
+    <Route path='/counter' component={AsyncCounter} />
+    <Route path='/zen' component={AsyncZen} />
+    <Route path='/elapse' component={AsyncElapse} />
+    <Route path='/route/:id' component={AsyncRoute} />
+    <Route path='/404' component={AsyncPageNotFound} />
+    <Redirect from='*' to='/404' />
+  </Switch>
+)
+
+export default Routes

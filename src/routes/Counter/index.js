@@ -1,18 +1,8 @@
 import { injectReducer } from '../../store/reducers'
+import { store } from '../../main'
+import Counter from './containers/CounterContainer'
+import reducer from './modules/counter'
 
-export default (store) => ({
-  path : 'counter',
-  /*  动态路由 */
-  getComponent (nextState, cb) {
-    /* 代码分割 */
-    require.ensure([], (require) => {
-      const Counter = require('./containers/CounterContainer').default
-      const reducer = require('./modules/counter').default
+injectReducer(store, { key : 'counter', reducer })
 
-      /*  将counterReducer注入rootReducer  */
-      injectReducer(store, { key : 'counter', reducer })
-
-      cb(null, Counter)
-    }, 'counter')
-  }
-})
+export default Counter

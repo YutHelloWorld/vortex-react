@@ -1,13 +1,8 @@
 import { injectReducer } from '../../store/reducers'
+import { store } from '../../main'
+import Elapse from './containers/ElapseContainer'
+import reducer from './modules/elapse'
 
-export default (store) => ({
-  path : 'elapse',
-  getComponent (nextState, cb) {
-    require.ensure([], (require) => {
-      const Elapse = require('./containers/ElapseContainer').default
-      const reducer = require('./modules/elapse').default
-      injectReducer(store, { key : 'elapse', reducer })
-      cb(null, Elapse)
-    }, 'elapse')
-  }
-})
+injectReducer(store, { key : 'elapse', reducer })
+
+export default Elapse
