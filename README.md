@@ -40,7 +40,17 @@
 ---
 
 ## <a name="getting-start">&sect; 快速开始</a>
-> 推荐升级到 node 5.x/6.x + npm 5.x + yarn ^0.27.5环境。**强烈推荐**使用 [`cnpm`](https://github.com/cnpm/cnpm) 安装依赖   
+在开始之前，希望你已通读以下文档
+- [React](https://facebook.github.io/react/)
+- [Redux](https://github.com/reactjs/redux)
+- [React Router 3 Documentation](https://github.com/ReactTraining/react-router/tree/v3/docs)
+- [ES6](http://babeljs.io/learn-es2015/)
+
+看完一脸还是懵逼请移步参看 [React知识地图系列](https://github.com/YutHelloWorld/Blog/issues/1)
+
+你可以在[Babel REPL](http://babeljs.io/repl/)验证ES6转ES5、JSX语法。
+
+> 推荐升级到 node 5.x/6.x + npm 5.x + yarn ^0.27.5环境。**强烈推荐**使用 [`cnpm`](https://github.com/cnpm/cnpm) 安装依赖   
 > 或手动切换到淘宝 npm 源：`npm set registry https://registry.npm.taobao.org/`  
 > (经测试，`cnpm` 对于 `node-sass` `PhantomJS`等问题多多的 Package 拥有秒杀能力)
 ### <a name="installation">⊙ 安装</a>
@@ -161,5 +171,6 @@ yarn start
 
 ---
 ## <a name="doc">&sect; 更多文档</a>
-[React知识地图](https://github.com/YutHelloWorld/Blog/issues/1)
+[React知识地图系列](https://github.com/YutHelloWorld/Blog/issues/1)
+
 
