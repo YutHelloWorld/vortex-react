@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 // ------------------------------------
 // Constants
 // ------------------------------------
@@ -33,11 +35,13 @@ export function fetchZen () {
     if (getState().zen.fetching) return
 
     dispatch(requestZen())
-    fetch('https://api.github.com/zen')
-      .then(data => data.text())
-      .then(text => dispatch(receiveZen(text)))
-      .catch((ex) => {
-        console.log('parsing failed', ex)
+    axios.get('https://api.github.com/zen')
+      .then((res) => {
+        console.log(res)
+        dispatch(receiveZen(res.data))
+      })
+      .catch(function (error) {
+        console.log(error)
       })
   }
 }
