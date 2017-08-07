@@ -58,7 +58,7 @@ config.module.rules.push({
       cacheDirectory: true,
       plugins: [
         'babel-plugin-transform-class-properties',
-        'babel-plugin-syntax-dynamic-import',
+        'babel-plugin-syntax-dynamic-import', // transform `import()` to `require.ensure()`
         [
           'babel-plugin-transform-runtime',
           {
