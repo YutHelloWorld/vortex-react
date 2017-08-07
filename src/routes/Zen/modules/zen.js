@@ -33,7 +33,7 @@ export function fetchZen () {
     if (getState().zen.fetching) return
 
     dispatch(requestZen())
-    return fetch('https://api.github.com/zen')
+    fetch('https://api.github.com/zen')
       .then(data => data.text())
       .then(text => dispatch(receiveZen(text)))
       .catch((ex) => {
