@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/YutHelloWorld/vortex-react.svg?branch=master)](https://travis-ci.org/YutHelloWorld/vortex-react)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-基于[React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/)/[React-Router v3](https://github.com/ReactTraining/react-router/tree/v3/docs)/[Webpack v2](https://webpack.js.org/)/[Reactstrap](https://reactstrap.github.io/)的前端脚手架。
+基于[React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/)/[React-Router v4](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)/[Webpack v2](https://webpack.js.org/)/[Reactstrap](https://reactstrap.github.io/)的前端脚手架。
 
 ![redux-devtool](./public/redux-devtool.jpg)
 
@@ -45,11 +45,11 @@
 
 ## <a name="feature">&sect; 技术栈</a>
 
-- React ^15.6.1
+- React
 - ES6 + Babel
 - Webpack v2
-- Redux ^3.7.2
-- React-Router v3
+- Redux
+- React-Router v4
 - Reactstrap + Bootstrap^4.0.0-alpha (UI)
 - Eslint
 - Express
@@ -61,14 +61,14 @@
 在开始之前，希望你已通读以下文档
 - [React](https://facebook.github.io/react/)
 - [Redux](https://github.com/reactjs/redux)
-- [React Router 3 Documentation](https://github.com/ReactTraining/react-router/tree/v3/docs)
+- [React](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
 - [ES6](http://babeljs.io/learn-es2015/)
 
 看完一脸还是懵逼请移步参看 [React知识地图系列](https://github.com/YutHelloWorld/Blog/issues/1)
 
 你可以在[Babel REPL](http://babeljs.io/repl/)验证ES6转ES5、JSX语法。
 
-> 推荐升级到 node 5.x/6.x + npm 5.x + yarn ^0.27.5环境。**强烈推荐**使用 [`cnpm`](https://github.com/cnpm/cnpm) 安装依赖   
+> 推荐升级到 node 6.x + npm 5.x + yarn ^0.27.5环境。**强烈推荐**使用 [`cnpm`](https://github.com/cnpm/cnpm) 安装依赖   
 > 或手动切换到淘宝 npm 源：`npm set registry https://registry.npm.taobao.org/`  
 > (经测试，`cnpm` 对于 `node-sass` `PhantomJS`等问题多多的 Package 拥有秒杀能力)
 ### <a name="installation">⊙ 安装</a>
