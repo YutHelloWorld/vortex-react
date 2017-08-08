@@ -4,7 +4,7 @@ import './Zen.scss'
 import Spinner from 'react-spinkit'
 import { Button } from 'reactstrap'
 
-export const Zen = ({ fetchZen, clearZen, zen : { fetching, text } }) => (
+const Zen = ({ fetchZen, clearZen, zen : { fetching, text } }) => (
   <div>
     <div className='loading'>
       {fetching ? <Spinner name='cube-grid' color='purple' /> : ''
