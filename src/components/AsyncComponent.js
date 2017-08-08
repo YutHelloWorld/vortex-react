@@ -4,13 +4,7 @@ import './async.scss'
 
 export default function asyncComponent (importComponent) {
   class AsyncComponent extends React.Component {
-    constructor (props) {
-      super(props)
-
-      this.state = {
-        component: null,
-      }
-    }
+    state = { component : null }
 
     async componentDidMount () {
       const { default : component } = await importComponent()

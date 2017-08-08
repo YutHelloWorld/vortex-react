@@ -9,11 +9,6 @@ class Route extends React.Component {
     history : PropTypes.object.isRequired
   }
 
-  constructor (props) {
-    super(props)
-    this.redirect = this.redirect.bind(this)
-  }
-
   redirect = () => {
     this.props.history.push('/form')
   }
