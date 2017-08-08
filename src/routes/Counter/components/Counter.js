@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Button } from 'reactstrap'
 
 // Stateless Functional Component
-const Counter = ({ counter, increment, doubleAsync }) => (
+export const Counter = ({ counter, increment, doubleAsync }) => (
   <div style={{ margin : '0 auto' }}>
     <h3>Counter: {counter}</h3>
     <Button color='primary' onClick={increment}>
