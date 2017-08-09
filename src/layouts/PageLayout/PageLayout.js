@@ -15,18 +15,14 @@ const location = {
 export default class PageLayout extends React.Component {
   /* 类的静态属性，不会被实例继承。ES试验特性写法:propTypes写入class */
   static propTypes = {
-    store    : PropTypes.object
+    store : PropTypes.object
   }
 
-  constructor (props) {
-    super(props)
-    this.toggle = this.toggle.bind(this)
-    this.state = {
-      isOpen: false
-    }
+  state = {
+    isOpen : false
   }
 
-  toggle () {
+  toggle = () => {
     this.setState({
       isOpen : !this.state.isOpen
     })
