@@ -64,7 +64,7 @@
 在开始之前，希望你已通读以下文档
 - [React](https://facebook.github.io/react/)
 - [Redux](https://github.com/reactjs/redux)
-- [React](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
+- [React-Router-Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
 - [ES6](http://babeljs.io/learn-es2015/)
 
 看完一脸还是懵逼请移步参看 [React知识地图系列](https://github.com/YutHelloWorld/Blog/issues/1)
