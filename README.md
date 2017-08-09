@@ -31,13 +31,16 @@
 - [安装](#installation)
 - [启动](#start)
 - [脚本](#script)
+
 #### &sect; [项目架构](#project-structure)
 - [目录结构](#file-tree)
 - [数据流](#module)
 - [形式](#logic)
+
 #### &sect; [开发调试](#devlop)
 - [Redux DevTools](#devtools)
 - [路由](#react-router)
+
 #### &sect; [单元测试](#test)
 #### &sect; [静态部署](#deploy)
 #### &sect; [更多文档](#doc)
@@ -50,7 +53,7 @@
 - Webpack v2
 - Redux
 - React-Router v4
-- Reactstrap + Bootstrap^4.0.0-alpha (UI)
+- Reactstrap + Bootstrap\^4.0.0-alpha (UI)
 - Eslint
 - Express
 - Karma
@@ -71,6 +74,7 @@
 > 推荐升级到 node 6.x + npm 5.x + yarn ^0.27.5环境。**强烈推荐**使用 [`cnpm`](https://github.com/cnpm/cnpm) 安装依赖   
 > 或手动切换到淘宝 npm 源：`npm set registry https://registry.npm.taobao.org/`  
 > (经测试，`cnpm` 对于 `node-sass` `PhantomJS`等问题多多的 Package 拥有秒杀能力)
+
 ### <a name="installation">⊙ 安装</a>
 
 ```bash
