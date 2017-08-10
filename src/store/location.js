@@ -8,7 +8,7 @@ export const LOCATION_CHANGE = 'LOCATION_CHANGE'
 // ------------------------------------
 // Actions
 // ------------------------------------
-export function locationChange (location = '/') {
+export function locationChange (location = {}) {
   return {
     type    : LOCATION_CHANGE,
     payload : location
@@ -19,7 +19,7 @@ export function locationChange (location = '/') {
 // Specialized Action Creator
 // ------------------------------------
 export const updateLocation = ({ dispatch }) => {
-  return (nextLocation) => dispatch(locationChange(nextLocation))
+  return (location, action) => dispatch(locationChange({ ...location, action }))
 }
 
 // ------------------------------------
@@ -27,8 +27,9 @@ export const updateLocation = ({ dispatch }) => {
 // ------------------------------------
 export const history = createHistory()
 
-// Get the current location.
-const initialState = history.location
+// Get the current location and action
+const { location, action } = history
+const initialState = { ...location, action }
 export default function locationReducer (state = initialState, action) {
   return action.type === LOCATION_CHANGE
     ? action.payload
