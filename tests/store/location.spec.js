@@ -51,10 +51,6 @@ describe('(Internal Module) Location', () => {
       const locationState = { pathname: '/yup' }
       expect(locationChange(locationState)).to.have.property('payload', locationState)
     })
-
-    it('Should default the "payload" property to "/" if not provided.', () => {
-      expect(locationChange()).to.have.property('payload', '/')
-    })
   })
 
   describe('(Specialized Action Creator) updateLocation', () => {
