@@ -1,7 +1,6 @@
 import React from 'react'
 import { NavLink as Link } from 'react-router-dom'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, Container } from 'reactstrap'
-import PropTypes from 'prop-types'
 import './PageLayout.scss'
 import Routes from '../../routes'
 
