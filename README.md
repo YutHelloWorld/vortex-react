@@ -148,7 +148,8 @@ $ yarn start  # Start the development server (or `npm start`)
 强烈推荐安装谷歌浏览器插件[Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd),来查看整个应用状态的时光穿梭旅程。
 
 ### <a name="react-router">⊙ 路由</a> 
-推荐使用`React-router v3`的[plainRoute](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute)写法。
+~~推荐使用`React-router v3`的[plainRoute](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute)写法。~~
+我们使用`react-router-dom`（也就是`react-router` v4）。
 
 ---
 ## <a name="test">&sect; 单元测试</a>
