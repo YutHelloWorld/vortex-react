@@ -12,15 +12,11 @@ export default class Elapse extends React.Component {
 
   render () {
     const { elapse } = this.props
-    return (
-      <h3>
-        Seconds Elapsed: {elapse}
-      </h3>
-    )
+    return <h3>Seconds Elapsed: {elapse}</h3>
   }
 }
 
 Elapse.propTypes = {
-  elapse : PropTypes.number.isRequired,
-  plus   : PropTypes.func.isRequired
+  elapse: PropTypes.number.isRequired,
+  plus: PropTypes.func.isRequired
 }

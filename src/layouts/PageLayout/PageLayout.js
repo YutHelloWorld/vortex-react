@@ -5,41 +5,41 @@ import './PageLayout.scss'
 import Routes from '../../routes'
 
 const location = {
-  pathname : '/route/8080',
-  state    : { fromDashboard : true },
-  query    : {
-    a : 2
+  pathname: '/route/8080',
+  state: { fromDashboard: true },
+  query: {
+    a: 2
   }
 }
 export default class PageLayout extends React.Component {
   state = {
-    isOpen : false
+    isOpen: false
   }
 
   toggle = () => {
     this.setState({
-      isOpen : !this.state.isOpen
+      isOpen: !this.state.isOpen
     })
   }
 
   render () {
     return (
       <div>
-        <Navbar color='faded' light toggleable>
+        <Navbar color="faded" light toggleable>
           <NavbarToggler right onClick={this.toggle} />
-          <NavbarBrand to='/' tag={Link}>Vortex React</NavbarBrand>
+          <NavbarBrand exact to="/" tag={Link}>Vortex React</NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className='ml-auto' navbar>
-              <NavLink to='/counter' activeClassName='active' tag={Link}>Counter</NavLink>
-              <NavLink to='/zen' activeClassName='active' tag={Link}>Zen</NavLink>
-              <NavLink to='/elapse' activeClassName='active' tag={Link}>Elapse</NavLink>
-              <NavLink to={location} activeClassName='active' tag={Link}>Route</NavLink>
-              <NavLink to='/pageNotFound' activeClassName='active' tag={Link}>404</NavLink>
-              <NavLink href='https://github.com/YutHelloWorld/vortex-react'>Github</NavLink>
+            <Nav className="ml-auto" navbar>
+              <NavLink to="/counter" activeClassName="active" tag={Link}>Counter</NavLink>
+              <NavLink to="/zen" activeClassName="active" tag={Link}>Zen</NavLink>
+              <NavLink to="/elapse" activeClassName="active" tag={Link}>Elapse</NavLink>
+              <NavLink to={location} activeClassName="active" tag={Link}>Route</NavLink>
+              <NavLink to="/pageNotFound" activeClassName="active" tag={Link}>404</NavLink>
+              <NavLink href="https://github.com/YutHelloWorld/vortex-react">Github</NavLink>
             </Nav>
           </Collapse>
         </Navbar>
-        <Container className='text-center page-layout__viewport'>
+        <Container className="text-center page-layout__viewport">
           <Routes />
         </Container>
       </div>

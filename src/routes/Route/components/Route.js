@@ -5,8 +5,8 @@ import { Button } from 'reactstrap'
 
 class Route extends React.Component {
   static propTypes = {
-    match   : PropTypes.object.isRequired,
-    history : PropTypes.object.isRequired
+    match: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
   }
 
   redirect = () => {
@@ -21,7 +21,7 @@ class Route extends React.Component {
           <p>Path: {this.props.match.url} </p>
         </div>
         <div>
-          <Button color='link' style={{ cursor : 'pointer' }} onClick={this.redirect}>Go</Button>
+          <Button color="link" style={{ cursor: 'pointer' }} onClick={this.redirect}>Go</Button>
         </div>
       </div>
     )

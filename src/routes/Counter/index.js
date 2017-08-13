@@ -3,6 +3,6 @@ import { store } from '../../main'
 import Counter from './containers/CounterContainer'
 import reducer from './modules/counter'
 
-injectReducer(store, { key : 'counter', reducer })
+injectReducer(store, { key: 'counter', reducer })
 
 export default Counter

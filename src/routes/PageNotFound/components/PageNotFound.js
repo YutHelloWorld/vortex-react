@@ -5,18 +5,27 @@ import './PageNotFound.scss'
 import { withRouter } from 'react-router'
 import { Button } from 'reactstrap'
 
-const PageNotFound = ({ history : { goBack } }) => (
-  <div className='not-found__container'>
+function PageNotFound ({ history: { goBack } }) {
+  return (<div className="not-found__container">
     <p>Page not found!!!</p>
     <div>
-      <Button color='link' className='back' onClick={goBack}>Back</Button>
+      <Button
+        color="link"
+        className="back"
+        onClick={goBack}
+      >
+        Back
+      </Button>
     </div>
-    <img className='img-fluid' src={NotFoundImage} />
-  </div>
-)
+    <img
+      className="img-fluid"
+      src={NotFoundImage}
+    />
+  </div>)
+}
 
 PageNotFound.propTypes = {
-  history : PropTypes.object.isRequired
+  history: PropTypes.object.isRequired
 }
 
 export default withRouter(PageNotFound)

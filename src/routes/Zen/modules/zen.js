@@ -13,21 +13,21 @@ const CLEAR_ZEN = 'CLEAR_ZEN'
 
 function requestZen () {
   return {
-    type : REQUEST_ZEN
+    type: REQUEST_ZEN
   }
 }
 
 let availableId = 0
 export const receiveZen = (value) => ({
-  type    : RECEIVE_ZEN,
-  payload : {
-    text : value,
-    id   : availableId++
+  type: RECEIVE_ZEN,
+  payload: {
+    text: value,
+    id: availableId++
   }
 })
 
 export const clearZen = () => ({
-  type : CLEAR_ZEN
+  type: CLEAR_ZEN
 })
 
 export function fetchZen () {
@@ -57,14 +57,14 @@ export const actions = {
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
-  [REQUEST_ZEN] : (state) => {
-    return ({ ...state, fetching : true })
+  [REQUEST_ZEN]: (state) => {
+    return ({ ...state, fetching: true })
   },
-  [RECEIVE_ZEN] : (state, action) => {
-    return ({ ...state, fetching : false, text : state.text.concat(action.payload) })
+  [RECEIVE_ZEN]: (state, action) => {
+    return ({ ...state, fetching: false, text: state.text.concat(action.payload) })
   },
-  [CLEAR_ZEN]   : (state) => {
-    return ({ ...state, text : [] })
+  [CLEAR_ZEN]: (state) => {
+    return ({ ...state, text: [] })
   }
 }
 
@@ -72,8 +72,8 @@ const ACTION_HANDLERS = {
 // Reducer
 // ------------------------------------
 const initialState = {
-  fetching : false,
-  text     : []
+  fetching: false,
+  text: []
 }
 export default function (state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type]

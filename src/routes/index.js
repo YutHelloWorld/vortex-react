@@ -21,13 +21,13 @@ const AsyncPageNotFound = asyncComponent(() => import(
 
 const Routes = () => (
   <Switch>
-    <Route exact path='/' component={Home} />
-    <Route path='/counter' component={AsyncCounter} />
-    <Route path='/zen' component={AsyncZen} />
-    <Route path='/elapse' component={AsyncElapse} />
-    <Route path='/route/:id' component={AsyncRoute} />
-    <Route path='/404' component={AsyncPageNotFound} />
-    <Redirect from='*' to='/404' />
+    <Route exact path="/" component={Home} />
+    <Route path="/counter" component={AsyncCounter} />
+    <Route path="/zen" component={AsyncZen} />
+    <Route path="/elapse" component={AsyncElapse} />
+    <Route path="/route/:id" component={AsyncRoute} />
+    <Route path="/404" component={AsyncPageNotFound} />
+    <Redirect from="*" to="/404" />
   </Switch>
 )
 

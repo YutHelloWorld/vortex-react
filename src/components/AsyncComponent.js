@@ -4,10 +4,10 @@ import './async.scss'
 
 export default function asyncComponent (importComponent) {
   class AsyncComponent extends React.Component {
-    state = { component : null }
+    state = { component: null }
 
     async componentDidMount () {
-      const { default : component } = await importComponent()
+      const { default: component } = await importComponent()
 
       this.setState({
         component: component
@@ -16,9 +16,9 @@ export default function asyncComponent (importComponent) {
 
     render () {
       const C = this.state.component
-      const loader = <div className='loading'>
-        <Spinner name='ball-clip-rotate-pulse' color='orange' />
-      </div>
+      const loader = (<div className="loading">
+        <Spinner name="ball-clip-rotate-pulse" color="orange" />
+      </div>)
 
       return C
         ? <C {...this.props} />

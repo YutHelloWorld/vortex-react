@@ -9,8 +9,8 @@ export const COUNTER_DOUBLE_ASYNC = 'COUNTER_DOUBLE_ASYNC'
 // ------------------------------------
 export function increment (value = 1) {
   return {
-    type    : COUNTER_INCREMENT,
-    payload : value
+    type: COUNTER_INCREMENT,
+    payload: value
   }
 }
 
@@ -20,8 +20,8 @@ export const doubleAsync = () => {
     return new Promise((resolve) => {
       setTimeout(() => {
         dispatch({
-          type    : COUNTER_DOUBLE_ASYNC,
-          payload : getState().counter
+          type: COUNTER_DOUBLE_ASYNC,
+          payload: getState().counter
         })
         resolve()
       }, 200)
@@ -38,8 +38,8 @@ export const actions = {
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
-  [COUNTER_INCREMENT]    : (state, action) => state + action.payload,
-  [COUNTER_DOUBLE_ASYNC] : (state, action) => state * 2
+  [COUNTER_INCREMENT]: (state, action) => state + action.payload,
+  [COUNTER_DOUBLE_ASYNC]: (state, action) => state * 2
 }
 
 // ------------------------------------

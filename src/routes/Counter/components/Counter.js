@@ -3,22 +3,24 @@ import PropTypes from 'prop-types'
 import { Button } from 'reactstrap'
 
 // Stateless Functional Component
-export const Counter = ({ counter, increment, doubleAsync }) => (
-  <div style={{ margin : '0 auto' }}>
-    <h3>Counter: {counter}</h3>
-    <Button color='primary' onClick={increment}>
-      Increment
-    </Button>
-    {' '}
-    <Button color='secondary' onClick={doubleAsync}>
-      Double (Async)
-    </Button>
-  </div>
-)
+export function Counter ({ counter, increment, doubleAsync }) {
+  return (
+    <div style={{ margin: '0 auto' }}>
+      <h3>Counter: {counter}</h3>
+      <Button color="primary" onClick={increment}>
+        Increment
+      </Button>
+      {' '}
+      <Button color="secondary" onClick={doubleAsync}>
+        Double (Async)
+      </Button>
+    </div>
+  )
+}
 Counter.propTypes = {
-  counter     : PropTypes.number.isRequired,
-  increment   : PropTypes.func.isRequired,
-  doubleAsync : PropTypes.func.isRequired,
+  counter: PropTypes.number.isRequired,
+  increment: PropTypes.func.isRequired,
+  doubleAsync: PropTypes.func.isRequired,
 }
 
 export default Counter

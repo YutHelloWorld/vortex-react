@@ -8,7 +8,7 @@ const mapDispatchToProps = {
 }
 
 const mapStateToProps = (state) => ({
-  elapse : state.elapse
+  elapse: state.elapse
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Elapse)

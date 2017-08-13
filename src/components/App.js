@@ -7,7 +7,7 @@ import { history } from '../store/location'
 
 class App extends React.Component {
   static propTypes = {
-    store : PropTypes.object.isRequired
+    store: PropTypes.object.isRequired
   }
 
   shouldComponentUpdate () {
@@ -20,11 +20,9 @@ class App extends React.Component {
 
     return (
       <Provider store={store}>
-        <div style={{ height : '100%' }}>
+        <div style={{ height: '100%' }}>
           <Router history={history}>
-            <div>
-              <Route path='/' component={CoreLayout} />
-            </div>
+            <Route path="/" component={CoreLayout} />
           </Router>
         </div>
       </Provider>
