@@ -38,6 +38,7 @@
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
+    "ajv": "^4.11.8",
     "babel-core": "^6.24.1",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.0.0",
