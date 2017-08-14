@@ -41,7 +41,6 @@
 - [Redux DevTools](#devtools)
 - [路由](#react-router)
 
-#### &sect; [单元测试](#test)
 #### &sect; [静态部署](#deploy)
 #### &sect; [更多文档](#doc)
 
@@ -56,7 +55,6 @@
 - Reactstrap + Bootstrap\^4.0.0-alpha (UI)
 - Eslint
 - Express
-- Karma
 
 ---
 
