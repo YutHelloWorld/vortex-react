@@ -145,13 +145,9 @@ $ yarn start  # Start the development server (or `npm start`)
 
 强烈推荐安装谷歌浏览器插件[Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd),来查看整个应用状态的时光穿梭旅程。
 
-### <a name="react-router">⊙ 路由</a> 
-~~推荐使用`React-router v3`的[plainRoute](https://github.com/ReactTraining/react-router/blob/v3/docs/API.md#plainroute)写法。~~
-我们使用`react-router-dom`（也就是`react-router` v4）。
+### <a name="react-router">⊙ 路由</a>
 
----
-## <a name="test">&sect; 单元测试</a>
-新增一个单元测试，只需在`./tests`中创建`.spec.js`文件。`Karma`会自动查找并执行。[更多测试用例官方文档](https://github.com/airbnb/enzyme)
+我们使用`react-router-dom`（也就是`react-router` v4）。
 
 ---
 ## <a name="deploy">&sect; 静态部署</a>
