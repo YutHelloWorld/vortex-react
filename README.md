@@ -91,8 +91,6 @@ $ yarn start  # Start the development server (or `npm start`)
 |-------------------|-----------|
 |`start`            |启动(http://localhost:3000)|
 |`build`            |打包构建到目录 ./dist|
-|`test`             |单元测试|
-|`test:watch`       |监控模式下进行单元测试|
 |`lint`             |静态检查|
 |`lint:fix`         |静态检查修复|
 
