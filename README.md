@@ -136,7 +136,7 @@ $ yarn start  # Start the development server (or `npm start`)
 └── tests                    # 单元测试
 ```
 ### <a name="module">⊙ 数据流</a>
-![Redux-flow](./public/Redux-flow.png) 
+![redux-work-flow](https://user-images.githubusercontent.com/20860159/29351951-71ab1a84-8297-11e7-8608-495a32f09437.png)
 ### <a name="logic">⊙ 形式</a> 
 ![vortex-react](./public/vortex-react.png)
 
