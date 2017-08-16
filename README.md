@@ -7,7 +7,6 @@
 
 基于[React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/)/[React-Router v4](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)/[Webpack v2](https://webpack.js.org/)/[Reactstrap](https://reactstrap.github.io/)的前端脚手架。
 
-![redux-devtool](./public/redux-devtool.jpg)
 
 > #### 2017/8/6更新：
 > 今年3月发布的react-router v4相较之前的v2和v3完全重写了，遵循一切皆React组件的理念。本项目从v3升级到v4(更应该说是迁移)，重构了routes部分。本次升级关键点如下：
@@ -136,9 +135,10 @@ $ yarn start  # Start the development server (or `npm start`)
 └── tests                    # 单元测试
 ```
 ### <a name="module">⊙ 数据流</a>
-![redux-work-flow](https://user-images.githubusercontent.com/20860159/29351951-71ab1a84-8297-11e7-8608-495a32f09437.png)
+![redux](https://user-images.githubusercontent.com/20860159/29354186-429b4446-829f-11e7-9a2f-a15c97dafaa3.png)
+
 ### <a name="logic">⊙ 形式</a> 
-![vortex-react](./public/vortex-react.png)
+![vortex-react](https://user-images.githubusercontent.com/20860159/29354203-56f1c672-829f-11e7-9465-2c2b37484823.png)
 
 ---
 ## <a name="devlop">&sect; 开发调试</a>
