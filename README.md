@@ -58,6 +58,7 @@
 - Redux
 - React-Router v4
 - Reactstrap + Bootstrap\^4.0.0-alpha (UI)
+- Sass
 - Eslint
 - Express
 
