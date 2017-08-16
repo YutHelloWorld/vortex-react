@@ -13,4 +13,4 @@ script:
   - yarn build
 
 after_success:
-  - yarn codecov
+  - yarn coverage
