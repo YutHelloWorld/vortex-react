@@ -12,5 +12,3 @@ script:
   - yarn lint
   - yarn build
 
-after_success:
-  - yarn coverage
