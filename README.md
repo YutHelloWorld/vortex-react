@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/YutHelloWorld/vortex-react.svg?branch=master)](https://travis-ci.org/YutHelloWorld/vortex-react)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/YutHelloWorld/vortex-react/blob/master/LICENSE)
+![GitHub stars](https://img.shields.io/github/stars/YutHelloWorld/vortex-react.svg)
 
 基于[React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/)/[React-Router v4](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)/[Webpack v2](https://webpack.js.org/)/[Reactstrap](https://reactstrap.github.io/)的前端脚手架。
 
@@ -43,6 +44,9 @@
 - [路由](#react-router)
 
 #### &sect; [静态部署](#deploy)
+
+#### &sect; [规范](#style)
+
 #### &sect; [更多文档](#doc)
 
 
@@ -186,6 +190,9 @@ yarn start
 ```
 
 ---
+## <a name="style">&sect; 规范</a>
+参照[airbnb/javascript](https://github.com/airbnb/javascript)，设定eslint js和jsx规则。详见`.eslintrc`
+
 ## <a name="doc">&sect; 更多文档</a>
 [React知识地图系列](https://github.com/YutHelloWorld/Blog/issues/1)
 
