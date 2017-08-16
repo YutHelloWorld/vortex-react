@@ -3,6 +3,7 @@ import Home from './Home'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import React from 'react'
 
+// `import()` 异步加载模块，魔法注释写chunkName
 const AsyncCounter = asyncComponent(() => import(
   /* webpackChunkName: "counter" */
   './Counter'))
@@ -19,6 +20,7 @@ const AsyncPageNotFound = asyncComponent(() => import(
   /* webpackChunkName: "pageNotFound" */
   './PageNotFound'))
 
+// 所有路由
 const Routes = () => (
   <Switch>
     <Route exact path="/" component={Home} />

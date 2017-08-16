@@ -10,12 +10,12 @@ class App extends React.Component {
     store: PropTypes.object.isRequired
   }
 
+  //  始终不更新App组件
   shouldComponentUpdate () {
     return false
   }
 
   render () {
-    /* ES6 解构赋值 */
     const { store } = this.props
 
     return (

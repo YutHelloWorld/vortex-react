@@ -6,7 +6,7 @@
   ],
   "plugins": [
     "babel",
-    "react",
+    "react",  //  react校验插件
     "promise"
   ],
   "env": {
@@ -19,9 +19,10 @@
     "__COVERAGE__": false
   },
   "rules": {
+    // 规则基本按照js规范配置：https://github.com/airbnb/javascript
     "key-spacing": "off",
     "jsx-quotes": [2, "prefer-double"], //JSX中使用双引号
-    "max-len": [2, 120, 2],
+    "max-len": [2, 120, 2], //一行最长长度
     "object-curly-spacing": [2, "always"],
     "comma-dangle": "off",
     "react/jsx-curly-spacing": [2, {"when": "never", "children": true}], //不要在JSX {} 引用括号里两边加空格

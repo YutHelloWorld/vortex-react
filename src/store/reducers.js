@@ -8,6 +8,7 @@ export const makeRootReducer = (asyncReducers) => {
   })
 }
 
+// reducer 注入函数
 export const injectReducer = (store, { key, reducer }) => {
   if (Object.hasOwnProperty.call(store.asyncReducers, key)) return
 
