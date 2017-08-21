@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/YutHelloWorld/vortex-react.svg?branch=master)](https://travis-ci.org/YutHelloWorld/vortex-react)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![](https://badge.juejin.im/entry/5981280ef265da3e2c70daef/likes.svg?style=flat)](https://juejin.im/entry/5981280ef265da3e2c70daef/detail)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/YutHelloWorld/vortex-react/blob/master/LICENSE)
 ![GitHub stars](https://img.shields.io/github/stars/YutHelloWorld/vortex-react.svg)
 ![GitHub stars](https://img.shields.io/github/forks/YutHelloWorld/vortex-react.svg)
