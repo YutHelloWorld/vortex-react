@@ -112,7 +112,7 @@ config.module.rules.push({
               browsers: ['last 2 versions'],
             },
             discardComments: {
-              removeAll : true,
+              removeAll: true,
             },
             discardUnused: false,
             mergeIdents: false,
@@ -139,10 +139,10 @@ config.plugins.push(extractStyles)
 // Images
 // ------------------------------------
 config.module.rules.push({
-  test    : /\.(png|jpg|gif)$/,
-  loader  : 'url-loader',
-  options : {
-    limit : 8192,
+  test: /\.(png|jpg|gif)$/,
+  loader: 'url-loader',
+  options: {
+    limit: 8192,
   },
 })
 
@@ -160,11 +160,11 @@ config.module.rules.push({
   const mimetype = font[1]
 
   config.module.rules.push({
-    test    : new RegExp(`\\.${extension}$`),
-    loader  : 'url-loader',
-    options : {
-      name  : 'fonts/[name].[ext]',
-      limit : 10000,
+    test: new RegExp(`\\.${extension}$`),
+    loader: 'url-loader',
+    options: {
+      name: 'fonts/[name].[ext]',
+      limit: 10000,
       mimetype,
     },
   })
