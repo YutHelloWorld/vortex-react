@@ -190,7 +190,7 @@ yarn start
 
 ---
 ## <a name="style">&sect; 规范</a>
-参照[airbnb/javascript](https://github.com/airbnb/javascript)中ES6和React规范，制定js和jsx规则。详见`.eslintrc`
+结合[airbnb/javascript](https://github.com/airbnb/javascript)、[Javascript Standard Style](https://standardjs.com/rules-zhcn.html#javascript-standard-style)以及[standard-react](https://github.com/standard/eslint-config-standard-react)，配置`.eslintrc`
 
 ## <a name="doc">&sect; 更多文档</a>
 [React知识地图系列](https://github.com/YutHelloWorld/Blog/issues/1)
