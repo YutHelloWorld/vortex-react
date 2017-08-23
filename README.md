@@ -2,9 +2,10 @@
 
 [![Build Status](https://travis-ci.org/YutHelloWorld/vortex-react.svg?branch=master)](https://travis-ci.org/YutHelloWorld/vortex-react)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![](https://badge.juejin.im/entry/5981280ef265da3e2c70daef/likes.svg?style=flat)](https://juejin.im/entry/5981280ef265da3e2c70daef/detail)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/YutHelloWorld/vortex-react/blob/master/LICENSE)
-![GitHub stars](https://img.shields.io/github/stars/YutHelloWorld/vortex-react.svg)
-![GitHub stars](https://img.shields.io/github/forks/YutHelloWorld/vortex-react.svg)
+![](https://img.shields.io/github/stars/YutHelloWorld/vortex-react.svg)
+![](https://img.shields.io/github/forks/YutHelloWorld/vortex-react.svg)
 
 基于[React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/)/[React-Router v4](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)/[Webpack v2](https://webpack.js.org/)/[Reactstrap](https://reactstrap.github.io/)的前端脚手架。
 
@@ -20,10 +21,6 @@
 >
 > 详情参阅：https://github.com/YutHelloWorld/vortex-react/pull/20 、 https://github.com/YutHelloWorld/Blog/issues/5
 > 
->升级指南：
-> - [译：从react-router v2/v3迁移到v4](https://github.com/YutHelloWorld/Blog/issues/4) 
-> - [Code Splitting in Create React App](http://serverless-stack.com/chapters/code-splitting-in-create-react-app.html) 
-> - [BrowserRouter](https://github.com/ReactTraining/react-router/blob/v4.1.1/packages/react-router-dom/modules/BrowserRouter.js#L18)
 
 ---
 
@@ -37,7 +34,7 @@
 #### &sect; [项目架构](#project-structure)
 - [目录结构](#file-tree)
 - [数据流](#module)
-- [形式](#logic)
+- [模块逻辑](#logic)
 
 #### &sect; [开发调试](#devlop)
 - [Redux DevTools](#devtools)
@@ -57,7 +54,7 @@
 - Webpack v2
 - Redux
 - React-Router v4
-- Reactstrap + Bootstrap\^4.0.0-alpha (UI)
+- Reactstrap + Bootstrap\^4.0.0-alpha.6 (UI)
 - Sass
 - Eslint
 - Express
@@ -134,12 +131,12 @@ $ yarn start  # Start the development server (or `npm start`)
 │   │   ├── createStore.js   # 创建和使用redux store
 │   │   └── reducers.js      # Reducer的注册和注入
 │   └── styles               # 样式表
-└── tests                    # 单元测试
+└── tests                    # 单元测试(自行添加)
 ```
 ### <a name="module">⊙ 数据流</a>
 ![redux](https://user-images.githubusercontent.com/20860159/29354186-429b4446-829f-11e7-9a2f-a15c97dafaa3.png)
 
-### <a name="logic">⊙ 形式</a> 
+### <a name="logic">⊙ 模块逻辑</a> 
 ![vortex-react](https://user-images.githubusercontent.com/20860159/29354203-56f1c672-829f-11e7-9465-2c2b37484823.png)
 
 ---
@@ -152,7 +149,7 @@ $ yarn start  # Start the development server (or `npm start`)
 
 ### <a name="react-router">⊙ 路由</a>
 
-我们使用`react-router-dom`（也就是`react-router` v4）。
+`react-router-dom`（也就是`react-router` v4）。
 
 ---
 ## <a name="deploy">&sect; 静态部署</a>
@@ -193,7 +190,7 @@ yarn start
 
 ---
 ## <a name="style">&sect; 规范</a>
-参照[airbnb/javascript](https://github.com/airbnb/javascript)，设定eslint js和jsx规则。详见`.eslintrc`
+结合[airbnb/javascript](https://github.com/airbnb/javascript)、[Javascript Standard Style](https://standardjs.com/rules-zhcn.html#javascript-standard-style)以及[standard-react](https://github.com/standard/eslint-config-standard-react)，配置`.eslintrc`
 
 ## <a name="doc">&sect; 更多文档</a>
 [React知识地图系列](https://github.com/YutHelloWorld/Blog/issues/1)
