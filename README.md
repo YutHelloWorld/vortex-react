@@ -2,27 +2,10 @@
 
 [![Build Status](https://travis-ci.org/YutHelloWorld/vortex-react.svg?branch=master)](https://travis-ci.org/YutHelloWorld/vortex-react)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-[![](https://badge.juejin.im/entry/5981280ef265da3e2c70daef/likes.svg?style=flat)](https://juejin.im/entry/5981280ef265da3e2c70daef/detail)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/YutHelloWorld/vortex-react/blob/master/LICENSE)
-![](https://img.shields.io/github/stars/YutHelloWorld/vortex-react.svg)
-![](https://img.shields.io/github/forks/YutHelloWorld/vortex-react.svg)
 
 基于[React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/)/[React-Router v4](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)/[Webpack v2](https://webpack.js.org/)/[Reactstrap](https://reactstrap.github.io/)的前端脚手架。
 
-
-> #### 2017/8/6更新：
-> 今年3月发布的react-router v4相较之前的v2和v3完全重写了，遵循一切皆React组件的理念。本项目从v3升级到v4(更应该说是迁移)，重构了routes部分。本次升级关键点如下：
-> - 重写了Store对history的监听
-> - 取消了PlainRoute Object集中配置路由的写法,组件形式嵌套
-> - 取消了API `IndexLink`和`IndexRoute`,新增`NavLink`和`Switch`
-> - 新增动态加载高阶组件(AsncComponent)，使用webpack v2 的`import()`代码分割
-> - `history.push('/')`替代`router.push('/')
-> - 新API `match` 
->
-> 详情参阅：https://github.com/YutHelloWorld/vortex-react/pull/20 、 https://github.com/YutHelloWorld/Blog/issues/5
-> 
-
----
 
 ## 目录
 #### &sect; [技术栈](#feature)
@@ -50,7 +33,7 @@
 ## <a name="feature">&sect; 技术栈</a>
 
 - React
-- ES6 + Babel
+- ES6/7/8 + Babel
 - Webpack v2
 - Redux
 - React-Router v4
@@ -141,7 +124,7 @@ $ yarn start  # Start the development server (or `npm start`)
 
 ---
 ## <a name="devlop">&sect; 开发调试</a>
->在开发环境，采用了`webpack-dev-middleware`和`webpack-hot-middleware`两个中间件，为应用提供Server和HMR。
+在开发环境，采用了`webpack-dev-middleware`和`webpack-hot-middleware`两个中间件，为应用提供Server和HMR。
 
 ### <a name="devtools">⊙ Redux DevTools</a> 
 
@@ -149,7 +132,7 @@ $ yarn start  # Start the development server (or `npm start`)
 
 ### <a name="react-router">⊙ 路由</a>
 
-`react-router-dom`（也就是`react-router` v4）。
+`react-router-dom`（也就是`react-router` v4）。最小的逻辑单元为路由，路由内部子组件数据由路由父组件传递。
 
 ---
 ## <a name="deploy">&sect; 静态部署</a>
