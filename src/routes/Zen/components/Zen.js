@@ -4,6 +4,12 @@ import './Zen.scss'
 import Spinner from 'react-spinkit'
 import { Button } from 'reactstrap'
 
+Zen.propTypes = {
+  fetchZen: PropTypes.func.isRequired,
+  clearZen: PropTypes.func.isRequired,
+  zen: PropTypes.object.isRequired
+}
+
 function Zen ({ fetchZen, clearZen, zen: { fetching, text } }) {
   return (<div>
     <div className="loading">
@@ -24,12 +30,6 @@ function Zen ({ fetchZen, clearZen, zen: { fetching, text } }) {
       ))}
     </div>
   </div>)
-}
-
-Zen.propTypes = {
-  fetchZen: PropTypes.func.isRequired,
-  clearZen: PropTypes.func.isRequired,
-  zen: PropTypes.object.isRequired
 }
 
 export default Zen
