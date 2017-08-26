@@ -11,7 +11,7 @@ Counter.propTypes = {
   doubleAsync: func.isRequired
 }
 
-function Counter ({ counter, increment, doubleAsync }) {
+function Counter({ counter, increment, doubleAsync }) {
   return (<div style={{ margin: '0 auto' }}>
     <h3>Counter: {counter}</h3>
     <Button color="primary" onClick={increment}>

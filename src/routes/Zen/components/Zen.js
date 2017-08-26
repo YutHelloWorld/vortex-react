@@ -10,7 +10,7 @@ Zen.propTypes = {
   zen: PropTypes.object.isRequired
 }
 
-function Zen ({ fetchZen, clearZen, zen: { fetching, text } }) {
+function Zen({ fetchZen, clearZen, zen: { fetching, text } }) {
   return (<div>
     <div className="loading">
       {fetching

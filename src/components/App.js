@@ -11,11 +11,11 @@ class App extends React.Component {
   }
 
   //  始终不更新App组件
-  shouldComponentUpdate () {
+  shouldComponentUpdate() {
     return false
   }
 
-  render () {
+  render() {
     const { store } = this.props
 
     return (

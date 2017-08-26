@@ -22,7 +22,7 @@ export default class PageLayout extends React.Component {
     })
   }
 
-  render () {
+  render() {
     return (
       <div>
         <Navbar color="faded" light toggleable>
