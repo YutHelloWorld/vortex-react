@@ -9,7 +9,7 @@ PageNotFound.propTypes = {
   history: object.isRequired,
 }
 
-function PageNotFound ({ history: { goBack } }) {
+function PageNotFound({ history: { goBack } }) {
   return (<div className="not-found__container">
     <p>Page not found!!!</p>
     <div>

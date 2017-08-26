@@ -23,6 +23,7 @@
     "comma-dangle": "off", // standard 默认禁止使用拖尾逗号，但是ES8新特性支持拖尾逗号，所以关闭
     "jsx-quotes": [2, "prefer-double"], // JSX中使用双引号
     "max-len": [2, 120, 2], // 一行最长长度
+    "space-before-function-paren":[2,{"anonymous": "always", "named": "never", "asyncArrow": "always"}], // 函数圆括号之前有一个空格
     "object-curly-spacing": [2, "always"],  // 对象花括号总是包裹空格
     "react/jsx-curly-spacing": [2, {"when": "never", "children": true}], // 不要在JSX {} 引用括号里两边加空格
     "react/jsx-closing-bracket-location": [2, "line-aligned"],  // JSX对齐方式

@@ -15,7 +15,7 @@ const CLEAR_ZEN = 'CLEAR_ZEN'
 |--------------------------------------------------
 */
 
-function requestZen () {
+function requestZen() {
   return {
     type: REQUEST_ZEN
   }
@@ -34,7 +34,7 @@ export const clearZen = () => ({
   type: CLEAR_ZEN
 })
 
-export function fetchZen () {
+export function fetchZen() {
   return (dispatch, getState) => {
     if (getState().zen.fetching) return
 

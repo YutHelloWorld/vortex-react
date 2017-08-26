@@ -7,15 +7,15 @@ export default class Elapse extends React.Component {
     plus: func.isRequired
   }
 
-  componentDidMount () {
+  componentDidMount() {
     this.interval = setInterval(this.props.plus, 1000)
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     clearInterval(this.interval)
   }
 
-  render () {
+  render() {
     const { elapse } = this.props
     return <h3>Seconds Elapsed: {elapse}</h3>
   }

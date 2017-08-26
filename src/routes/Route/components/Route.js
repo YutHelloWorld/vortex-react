@@ -13,7 +13,7 @@ class Route extends React.Component {
     this.props.history.push('/form')
   }
 
-  render () {
+  render() {
     return (
       <div>
         <div>
