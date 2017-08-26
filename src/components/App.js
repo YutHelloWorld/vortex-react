@@ -1,13 +1,13 @@
 import React from 'react'
 import { Router, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import PropTypes from 'prop-types'
+import { object } from 'prop-types'
 import CoreLayout from '../layouts/PageLayout/PageLayout'
 import { history } from '../store/location'
 
 class App extends React.Component {
   static propTypes = {
-    store: PropTypes.object.isRequired
+    store: object.isRequired
   }
 
   //  始终不更新App组件

@@ -13,7 +13,8 @@ Zen.propTypes = {
 function Zen ({ fetchZen, clearZen, zen: { fetching, text } }) {
   return (<div>
     <div className="loading">
-      {fetching ? <Spinner name="cube-grid" color="purple" /> : ''
+      {fetching
+        ? <Spinner name="cube-grid" color="purple" /> : ''
       }
     </div>
     <div>

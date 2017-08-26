@@ -1,14 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { number, func } from 'prop-types'
 import { Button } from 'reactstrap'
 
 // 这里是一个展示组件，只负责UI
 // Stateless Functional Component, 按照react规范使用普通函数写法（非箭头函数）
 // React规范：https://github.com/airbnb/javascript/tree/master/react
 Counter.propTypes = {
-  counter: PropTypes.number.isRequired,
-  increment: PropTypes.func.isRequired,
-  doubleAsync: PropTypes.func.isRequired
+  counter: number.isRequired,
+  increment: func.isRequired,
+  doubleAsync: func.isRequired
 }
 
 function Counter ({ counter, increment, doubleAsync }) {
