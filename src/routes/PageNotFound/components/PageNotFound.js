@@ -1,9 +1,13 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { object } from 'prop-types'
 import NotFoundImage from '../assets/404.jpg'
 import './PageNotFound.scss'
 import { withRouter } from 'react-router'
 import { Button } from 'reactstrap'
+
+PageNotFound.propTypes = {
+  history: object.isRequired,
+}
 
 function PageNotFound ({ history: { goBack } }) {
   return (<div className="not-found__container">
@@ -22,10 +26,6 @@ function PageNotFound ({ history: { goBack } }) {
       src={NotFoundImage}
     />
   </div>)
-}
-
-PageNotFound.propTypes = {
-  history: PropTypes.object.isRequired
 }
 
 export default withRouter(PageNotFound)
