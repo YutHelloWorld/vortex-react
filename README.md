@@ -80,12 +80,12 @@ yarn start  # Start the development server (or `npm start`)
 
 ### <a name="script">⊙ 脚本</a>
 
-|`yarn <script>`    |描述|
-|-------------------|-----------|
-|`start`            |启动<http://localhost:3000>|
-|`build`            |打包构建到目录 ./dist|
-|`lint`             |静态检查|
-|`lint:fix`         |静态检查修复|
+| `yarn <script>` | 描述                        |
+| --------------- | --------------------------- |
+| `start`         | 启动<http://localhost:3000> |
+| `build`         | 打包构建到目录 ./dist       |
+| `lint`          | 静态检查                    |
+| `lint:fix`      | 静态检查修复                |
 
 ---
 
@@ -130,6 +130,7 @@ yarn start  # Start the development server (or `npm start`)
 ![redux](https://user-images.githubusercontent.com/20860159/29354186-429b4446-829f-11e7-9a2f-a15c97dafaa3.png)
 
 ### <a name="logic">⊙ 模块逻辑</a>
+
 ![vortex-react](https://user-images.githubusercontent.com/20860159/29354203-56f1c672-829f-11e7-9465-2c2b37484823.png)
 
 ---
