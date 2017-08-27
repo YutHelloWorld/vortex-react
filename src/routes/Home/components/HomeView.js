@@ -1,11 +1,11 @@
 import React from 'react'
-import bgImage from '../assets/bgImage.jpg'
+import sky from '../assets/sky.jpg'
 import './HomeView.scss'
 
 export function HomeView() {
   return (
     <div>
-      <img alt="vortex!" className="vortex img-fluid" src={bgImage} />
+      <img alt="sky" className="bg img-fluid" src={sky} />
     </div>
   )
 }

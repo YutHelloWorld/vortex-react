@@ -3,7 +3,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const project = require('../project.config')
-
+const DashboardPlugin = require('webpack-dashboard/plugin')
 const inProject = path.resolve.bind(path, project.basePath)
 const inProjectSrc = (file) => inProject(project.srcDir, file)
 
@@ -188,7 +188,8 @@ if (__DEV__) {
   )
   config.plugins.push(
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
+    new DashboardPlugin()
   )
 }
 
