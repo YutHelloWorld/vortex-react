@@ -180,9 +180,6 @@ config.plugins.push(new HtmlWebpackPlugin({
   },
 }))
 
-// Webpack-Dashboard
-config.plugins.push(new DashboardPlugin())
-
 // Development Tools
 // ------------------------------------
 if (__DEV__) {
@@ -191,7 +188,8 @@ if (__DEV__) {
   )
   config.plugins.push(
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NamedModulesPlugin()
+    new webpack.NamedModulesPlugin(),
+    new DashboardPlugin()
   )
 }
 
