@@ -6,6 +6,10 @@
 
 基于[React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/)/[React-Router v4](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)/[Webpack v3](https://webpack.js.org/)/[Reactstrap](https://reactstrap.github.io/)的前端脚手架。
 
+>2017/8/29  
+切换到分支mobx查看mobx替代redux的版本  
+checkout branch mobx to see the version mobx instead of redux!
+
 ## 目录
 
 ### &sect; [技术栈](#feature)
