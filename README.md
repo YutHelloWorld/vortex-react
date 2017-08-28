@@ -37,7 +37,7 @@
 
 - React
 - ES6/7/8 + Babel
-- Webpack v2
+- Webpack 3
 - Redux
 - React-Router v4
 - Reactstrap + Bootstrap\^4.0.0-alpha.6 (UI)
