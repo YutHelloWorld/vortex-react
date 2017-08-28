@@ -56,6 +56,7 @@ config.module.rules.push({
     query: {
       cacheDirectory: true,
       plugins: [
+        'babel-plugin-transform-decorators-legacy',
         'babel-plugin-transform-class-properties',
         'babel-plugin-syntax-dynamic-import', // transform `import()` to `require.ensure()`
         [
@@ -71,7 +72,7 @@ config.module.rules.push({
           {
             useBuiltIns: true // we polyfill Object.assign in src/normalize.js
           },
-        ]
+        ],
       ],
       presets: [
         'babel-preset-react',

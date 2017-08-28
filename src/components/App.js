@@ -1,29 +1,22 @@
 import React from 'react'
-import { Router, Route } from 'react-router-dom'
-import { Provider } from 'react-redux'
-import { object } from 'prop-types'
+import { BrowserRouter, Route } from 'react-router-dom'
+import { Provider } from 'mobx-react'
 import CoreLayout from '../layouts/PageLayout/PageLayout'
-import { history } from '../store/location'
+import stores from '../store/stores'
 
 class App extends React.Component {
-  static propTypes = {
-    store: object.isRequired
-  }
-
   //  始终不更新App组件
   shouldComponentUpdate() {
     return false
   }
 
   render() {
-    const { store } = this.props
-
     return (
-      <Provider store={store}>
+      <Provider {...stores}>
         <div style={{ height: '100%' }}>
-          <Router history={history}>
+          <BrowserRouter>
             <Route path="/" component={CoreLayout} />
-          </Router>
+          </BrowserRouter>
         </div>
       </Provider>
     )

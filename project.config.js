@@ -27,11 +27,8 @@ module.exports = {
   vendors: [
     'react',
     'react-dom',
-    'redux',
-    'react-redux',
-    'redux-thunk',
+    'mobx-react',
+    'mobx',
     'react-router-dom',
-    'reactstrap',
-    'react-spinkit'
   ],
 }

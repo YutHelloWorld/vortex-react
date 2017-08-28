@@ -1,27 +1,39 @@
-import React from 'react'
-import { number, func } from 'prop-types'
+import React, { Component } from 'react'
+import { object } from 'prop-types'
 import { Button } from 'reactstrap'
+import { inject, observer } from 'mobx-react'
 
 // 这里是一个展示组件，只负责UI
 // Stateless Functional Component, 按照react规范使用普通函数写法（非箭头函数）
 // React规范：https://github.com/airbnb/javascript/tree/master/react
-Counter.propTypes = {
-  counter: number.isRequired,
-  increment: func.isRequired,
-  doubleAsync: func.isRequired
-}
+@inject('counterStore')
+@observer
+export default class Counter extends Component {
+  static propTypes = {
+    counterStore: object
+  }
 
-function Counter({ counter, increment, doubleAsync }) {
-  return (<div style={{ margin: '0 auto' }}>
-    <h3>Counter: {counter}</h3>
-    <Button color="primary" onClick={increment}>
-      Increment
-    </Button>
-    {' '}
-    <Button color="secondary" onClick={doubleAsync}>
-      Double (Async)
-    </Button>
-  </div>)
-}
+  handlerIncrement = () => {
+    this.props.counterStore.increment()
+  }
 
-export default Counter
+  handlerDoubleAsync = () => {
+    this.props.counterStore.doubleAsync()
+  }
+
+  render() {
+    const { counterStore } = this.props
+    return (
+      <div style={{ margin: '0 auto' }}>
+        <h3>Counter: {counterStore.counter}</h3>
+        <Button color="primary" onClick={this.handlerIncrement}>
+          Increment
+        </Button>
+        {' '}
+        <Button color="secondary" onClick={this.handlerDoubleAsync}>
+          Double (Async)
+        </Button>
+      </div>
+    )
+  }
+}

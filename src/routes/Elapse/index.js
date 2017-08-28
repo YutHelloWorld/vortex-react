@@ -1,8 +1,3 @@
-import { injectReducer } from '../../store/reducers'
-import { store } from '../../main'
-import Elapse from './containers/ElapseContainer'
-import reducer from './modules/elapse'
-
-injectReducer(store, { key: 'elapse', reducer })
+import Elapse from './components/Elapse'
 
 export default Elapse

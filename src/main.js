@@ -1,11 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import createStore from './store/createStore'
 import './styles/main.scss'
-
-// Store Initialization
-// ------------------------------------
-export const store = createStore(window.__INITIAL_STATE__)
 
 // Render Setup
 // ------------------------------------
@@ -15,7 +10,7 @@ let render = () => {
   const App = require('./components/App').default
 
   ReactDOM.render(
-    <App store={store} />,
+    <App />,
     MOUNT_NODE
   )
 }
