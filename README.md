@@ -23,9 +23,9 @@ checkout branch mobx to see the version mobx instead of redux!
 
 - [Project Structure](#project-structure)
 
-  - File Tree
-  - Data Flow
-  - Logic
+  - [File Tree](#file-tree)
+  - [Data Flow](#data-flow)
+  - [Logic](#logic)
 
 - [Live Development](#live-development)
 
