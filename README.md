@@ -1,10 +1,10 @@
-# vortex-react
+# vortex-react-mobx
 
 [![Build Status](https://travis-ci.org/YutHelloWorld/vortex-react.svg?branch=master)](https://travis-ci.org/YutHelloWorld/vortex-react)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/YutHelloWorld/vortex-react/blob/master/LICENSE)
 
-基于[React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/)/[React-Router v4](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)/[Webpack v3](https://webpack.js.org/)/[Reactstrap](https://reactstrap.github.io/)的前端脚手架。
+基于[React](https://facebook.github.io/react/)/[Mobx](http://redux.js.org/)/[React-Router v4](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)/[Webpack v3](https://webpack.js.org/)的脚手架。
 
 ## 目录
 
@@ -38,7 +38,7 @@
 - React
 - ES6/7/8 + Babel
 - Webpack 3
-- Redux
+- Mobx
 - React-Router v4
 - Reactstrap + Bootstrap\^4.0.0-alpha.6 (UI)
 - Sass
@@ -52,7 +52,7 @@
 在开始之前，希望你已通读以下文档
 
 - [React](https://facebook.github.io/react/)
-- [Redux](https://github.com/reactjs/redux)
+- [Mobx](https://github.com/mobxjs/mobx)
 - [React-Router-Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)
 - [ES6](http://babeljs.io/learn-es2015/)
 
@@ -111,23 +111,22 @@ yarn start  # Start the development server (or `npm start`)
 │   │   ├── Home             # 子路由Home
 │   │   │   ├── index.js     # 路由定义和异步加载
 │   │   │   ├── assets       # 组件的静态文件
-│   │   │   ├── components   # 展示组件
+│   │   │   ├── components   # 组件
 │   │   │   └── routes **    # 子路由
 │   │   └── Counter          # 子路由Counter
 │   │       ├── index.js     # 路由定义
-│   │       ├── container    # 容器组件
-│   │       ├── modules      # module(reducers/constants/actions)
+│   │       ├── components   # 组件
 │   │       └── routes **    # 子路由
-│   ├── store                # Redux相关模块
-│   │   ├── createStore.js   # 创建和使用redux store
-│   │   └── reducers.js      # Reducer的注册和注入
+│   ├── store                # Mobx stores
+│   │   ├── stores.js
+│   │   └── counterStore.js
 │   └── styles               # 样式表
 └── tests                    # 单元测试(自行添加)
 ```
 
 ### <a name="module">⊙ 数据流</a>
 
-![redux](https://user-images.githubusercontent.com/20860159/29354186-429b4446-829f-11e7-9a2f-a15c97dafaa3.png)
+![mobx-flow](https://i.loli.net/2017/08/29/59a4bd2f1d578.png)
 
 ### <a name="logic">⊙ 模块逻辑</a>
 
@@ -139,9 +138,9 @@ yarn start  # Start the development server (or `npm start`)
 
 在开发环境，采用了`webpack-dev-middleware`和`webpack-hot-middleware`两个中间件，为应用提供Server和HMR。
 
-### <a name="devtools">⊙ Redux DevTools</a>
+### <a name="devtools">⊙ Mobx DevTools</a>
 
-强烈推荐安装谷歌浏览器插件[Redux DevTools Chrome Extension](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd),来查看整个应用状态的时光穿梭旅程。
+安装Mobx devtools查看应用的数据变化
 
 ### <a name="react-router">⊙ 路由</a>
 
