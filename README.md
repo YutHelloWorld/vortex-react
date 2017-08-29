@@ -188,4 +188,4 @@ Refrence [airbnb/javascript](https://github.com/airbnb/javascript)、[Javascript
 
 ## More
 
-Welcom PR and issues!
+Welcome PR and issues!
