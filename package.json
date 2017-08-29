@@ -4,6 +4,7 @@
   "description": "Get started with React, Redux, and React-Router!",
   "main": "index.js",
   "scripts": {
+    "precommit": "lint-staged",
     "clean": "rimraf dist",
     "compile": "node build/scripts/compile",
     "build": "npm run clean && cross-env NODE_ENV=production npm run compile",
@@ -22,6 +23,8 @@
     "bootstrap": "4.0.0-alpha.6",
     "compression": "^1.6.2",
     "express": "^4.14.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.4",
     "object-assign": "^4.1.1",
     "promise": "^7.1.1",
     "prop-types": "^15.5.10",
@@ -67,6 +70,7 @@
     "fs-extra": "^3.0.1",
     "html-webpack-plugin": "^2.24.1",
     "node-sass": "^4.5.3",
+    "prettier": "^1.6.0",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
@@ -74,5 +78,11 @@
     "webpack": "^3.5.5",
     "webpack-dev-middleware": "^1.8.4",
     "webpack-hot-middleware": "^2.13.2"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --single-quote --no-semi --list-different --write",
+      "git add"
+    ]
   }
 }
