@@ -13,15 +13,15 @@ checkout branch mobx to see the version mobx instead of redux!
 
 ## Table of Contents
 
-- [Feture](#Feture)
+- [Feture](#feture)
 
-- [Get Start](#Get-Start)
+- [Get Start](#get-start)
 
   - Install
   - Run
   - Scripts
 
-- [Project Structure](#Project-Structure)
+- [Project Structure](#project-structure)
 
   - File Tree
   - Data Flow
