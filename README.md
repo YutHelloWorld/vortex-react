@@ -4,7 +4,7 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/YutHelloWorld/vortex-react/blob/master/LICENSE)
 
-Get start with [React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/)/[React-Router v4](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)/[Webpack v3](https://webpack.js.org/)/[Reactstrap](https://reactstrap.github.io/)
+Get start with [React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/)/[React-Router-Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)/[Webpack3](https://webpack.js.org/)/[Reactstrap](https://reactstrap.github.io/)
 
 >2017/8/29
 checkout branch mobx to see the version mobx instead of redux!
@@ -39,9 +39,9 @@ checkout branch mobx to see the version mobx instead of redux!
 
 - React
 - ES6/7/8 + Babel
-- Webpack 3
+- Webpack3
 - Redux
-- React-Router v4
+- React-Router-Dom
 - Reactstrap + Bootstrap\^4.0.0-alpha.6 (UI)
 - Sass
 - Eslint
@@ -188,4 +188,4 @@ Refrence [airbnb/javascript](https://github.com/airbnb/javascript)、[Javascript
 
 ## More
 
-Welcome PR and issues!
+Welcome PRs and issues!
