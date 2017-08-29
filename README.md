@@ -13,13 +13,13 @@ checkout branch mobx to see the version mobx instead of redux!
 
 ## Table of Contents
 
-- [Feture](#feture)
+- [Feature](#feature)
 
 - [Get Start](#get-start)
 
-  - Install
-  - Run
-  - Scripts
+  - [Install](#install)
+  - [Run](#run)
+  - [Scripts](#scripts)
 
 - [Project Structure](#project-structure)
 
@@ -27,13 +27,13 @@ checkout branch mobx to see the version mobx instead of redux!
   - Data Flow
   - Logic
 
-- **Live Development**
+- [Live Development](#live-development)
 
-- **Deploy**
+- [Deploy](#deploy)
 
-- **Code Style**
+- [Code Style](#code-style)
 
-- **More**
+- [More](#more)
 
 ## Feature
 
