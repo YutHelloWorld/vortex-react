@@ -80,8 +80,8 @@
     "webpack-hot-middleware": "^2.13.2"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --no-semi --write",
+    "src/**/*.js": [
+      "prettier --single-quote --no-semi --list-different --write",
       "git add"
     ]
   }
