@@ -20,12 +20,6 @@
 
 - [目录结构](#file-tree)
 - [数据流](#module)
-- [模块逻辑](#logic)
-
-### &sect; [开发调试](#devlop)
-
-- [Redux DevTools](#devtools)
-- [路由](#react-router)
 
 ### &sect; [静态部署](#deploy)
 
@@ -127,24 +121,6 @@ yarn start  # Start the development server (or `npm start`)
 ### <a name="module">⊙ 数据流</a>
 
 ![mobx-flow](https://i.loli.net/2017/08/29/59a4bd2f1d578.png)
-
-### <a name="logic">⊙ 模块逻辑</a>
-
-![vortex-react](https://user-images.githubusercontent.com/20860159/29354203-56f1c672-829f-11e7-9465-2c2b37484823.png)
-
----
-
-## <a name="devlop">&sect; 开发调试</a>
-
-在开发环境，采用了`webpack-dev-middleware`和`webpack-hot-middleware`两个中间件，为应用提供Server和HMR。
-
-### <a name="devtools">⊙ Mobx DevTools</a>
-
-安装Mobx devtools查看应用的数据变化
-
-### <a name="react-router">⊙ 路由</a>
-
-`react-router-dom`（也就是`react-router` v4）。最小的逻辑单元为路由，路由内部子组件数据由路由父组件传递。
 
 ---
 
