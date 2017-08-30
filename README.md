@@ -174,7 +174,7 @@ server{
 ```bash
 sudo service nginx restart
 
-// `cd your app`
+// cd your root file
 yarn start
 ```
 
