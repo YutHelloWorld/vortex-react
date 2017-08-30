@@ -6,6 +6,7 @@
 
 Get start with [React](https://facebook.github.io/react/), [Redux](http://redux.js.org/), [RR4](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom), [Webpack3](https://webpack.js.org/) 🚀
 
+
 >2017/8/29
 checkout branch mobx to see the version mobx instead of redux!
 
@@ -38,7 +39,7 @@ checkout branch mobx to see the version mobx instead of redux!
 - ES6 + Babel
 - Webpack3
 - Redux
-- React-Router v4
+- React-Router-Dom
 - Reactstrap + Bootstrap\^4.0.0-alpha.6 (UI)
 - Sass
 - Eslint
