@@ -44,11 +44,10 @@ if (__DEV__) {
     module.hot.accept([
       './components/App',
       './routes/index',
-    ], () =>
-        setImmediate(() => {
-          ReactDOM.unmountComponentAtNode(MOUNT_NODE)
-          render()
-        })
+    ], () => setImmediate(() => {
+      ReactDOM.unmountComponentAtNode(MOUNT_NODE)
+      render()
+    })
     )
   }
 }
