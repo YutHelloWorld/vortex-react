@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink as Link } from 'react-router-dom'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink, Container } from 'reactstrap'
 import './PageLayout.scss'
-import Routes from '../../routes'
+import Routes from 'routes'
 
 const location = {
   pathname: '/route/8080',

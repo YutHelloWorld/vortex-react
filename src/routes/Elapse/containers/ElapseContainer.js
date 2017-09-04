@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
-import { plus } from './../modules/elapse'
+import { plus } from '../modules/elapse'
 
-import Elapse from './../components/Elapse'
+import Elapse from '../components/Elapse'
 
 const mapDispatchToProps = {
   plus

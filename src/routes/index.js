@@ -1,4 +1,4 @@
-import asyncComponent from '../components/AsyncComponent'
+import asyncComponent from 'components/AsyncComponent'
 import Home from './Home'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import React from 'react'

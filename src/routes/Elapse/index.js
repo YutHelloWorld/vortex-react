@@ -1,5 +1,5 @@
-import { injectReducer } from '../../store/reducers'
-import { store } from '../../main'
+import { injectReducer } from 'store/reducers'
+import { store } from 'main'
 import Elapse from './containers/ElapseContainer'
 import reducer from './modules/elapse'
 
