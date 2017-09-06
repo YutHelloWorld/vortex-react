@@ -23,7 +23,11 @@ if (project.env === 'development') {
     quiet: false,
     noInfo: false,
     lazy: false,
-    stats: 'normal',
+    stats: {
+      colors: true,
+      // hidden modules
+      modules: false,
+    },
   }))
   app.use(require('webpack-hot-middleware')(compiler, {
     path: '/__webpack_hmr'
