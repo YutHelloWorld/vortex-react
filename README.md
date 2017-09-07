@@ -8,9 +8,9 @@ Get start with [React](https://facebook.github.io/react/), [Redux](http://redux.
 
 
 >2017/09/07
-add proxy with `http-proxy-middleware`
+>add proxy with `http-proxy-middleware`  
 >2017/8/29
-checkout branch mobx to see the version mobx instead of redux!
+>checkout branch mobx to see the version mobx instead of redux!
 
 [中文](https://github.com/YutHelloWorld/vortex-react/blob/master/README-zh.md)
 
