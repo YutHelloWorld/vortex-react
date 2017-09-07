@@ -32,6 +32,7 @@ module.exports = {
     'redux-thunk',
     'react-router-dom',
     'reactstrap',
-    'react-spinkit'
+    'react-spinkit',
+    'prop-types'
   ],
 }
