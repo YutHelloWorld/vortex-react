@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Router, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { object } from 'prop-types'
 import CoreLayout from '../layouts/PageLayout/PageLayout'
 import { history } from '../store/location'
 
-class App extends React.Component {
+class App extends Component {
   static propTypes = {
     store: object.isRequired
   }
