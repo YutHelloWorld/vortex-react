@@ -4,14 +4,18 @@ import makeRootReducer from './reducers'
 import { updateLocation, history } from './location'
 
 const createStore = (initialState = {}) => {
-  // ======================================================
-  // Middleware Configuration
-  // ======================================================
+  /**
+  |--------------------------------------------------
+  | Middleware Configuration
+  |--------------------------------------------------
+  */
   const middleware = [thunk]
 
-  // ======================================================
-  // Store Enhancers
-  // ======================================================
+  /**
+  |--------------------------------------------------
+  | Store Enhancers
+  |--------------------------------------------------
+  */
   const enhancers = []
   let composeEnhancers = compose
 
@@ -21,9 +25,11 @@ const createStore = (initialState = {}) => {
     }
   }
 
-  // ======================================================
-  // Store Instantiation and HMR Setup
-  // ======================================================
+  /**
+  |--------------------------------------------------
+  | Store Instantiation and HMR Setup
+  |--------------------------------------------------
+  */
   const store = createReduxStore(
     makeRootReducer(),
     initialState,

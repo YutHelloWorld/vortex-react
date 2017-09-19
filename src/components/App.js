@@ -10,7 +10,6 @@ class App extends React.Component {
     store: object.isRequired
   }
 
-  //  始终不更新App组件
   shouldComponentUpdate() {
     return false
   }
