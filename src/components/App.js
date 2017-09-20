@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Router, Route } from 'react-router-dom'
+import { Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { object } from 'prop-types'
 import CoreLayout from '../layouts/PageLayout/PageLayout'
@@ -21,7 +21,7 @@ class App extends Component {
       <Provider store={store}>
         <div style={{ height: '100%' }}>
           <Router history={history}>
-            <Route path="/" component={CoreLayout} />
+            <CoreLayout />
           </Router>
         </div>
       </Provider>
