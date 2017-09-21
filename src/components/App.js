@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { object } from 'prop-types'
-import CoreLayout from '../layouts/PageLayout/PageLayout'
+import Layout from '../layouts'
 import { history } from '../store/location'
 
 class App extends Component {
@@ -21,7 +21,7 @@ class App extends Component {
       <Provider store={store}>
         <div style={{ height: '100%' }}>
           <Router history={history}>
-            <CoreLayout />
+            <Layout />
           </Router>
         </div>
       </Provider>
