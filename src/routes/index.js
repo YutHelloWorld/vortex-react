@@ -27,7 +27,7 @@ const AsyncLogin = asyncComponent(() => import(
   './Login'))
 
 // 所有路由
-const Routes = () => (
+const AllRoutes = () => (
   <Switch>
     <Route exact path="/" component={Home} />
     <PrivateRoute path="/counter" component={AsyncCounter} />
@@ -40,4 +40,4 @@ const Routes = () => (
   </Switch>
 )
 
-export default Routes
+export default AllRoutes
