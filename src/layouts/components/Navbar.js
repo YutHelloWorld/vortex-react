@@ -33,7 +33,7 @@ export default class CustomNavbar extends Component {
   }
 
   render() {
-    return (
+    return this.props.isAuthenticated ? (
       <Navbar color="faded" light toggleable>
         <NavbarToggler right onClick={this.toggle} />
         <NavbarBrand exact to="/" tag={Link}>Vortex React</NavbarBrand>
@@ -45,13 +45,10 @@ export default class CustomNavbar extends Component {
             <NavLink to={location} activeClassName="active" tag={Link}>Route</NavLink>
             <NavLink to="/pageNotFound" activeClassName="active" tag={Link}>404</NavLink>
             <NavLink href="https://github.com/YutHelloWorld/vortex-react">Github</NavLink>
-            {
-              this.props.isAuthenticated ? <NavLink href="javascript:;" onClick={this.signOut}>Sign out</NavLink>
-                : <NavLink to="/login" activeClassName="active" tag={Link}>Sign in</NavLink>
-            }
+            <NavLink href="javascript:;" onClick={this.signOut}>Sign out</NavLink>
           </Nav>
         </Collapse>
       </Navbar>
-    )
+    ) : null
   }
 }
