@@ -47,7 +47,7 @@ export default class CustomNavbar extends Component {
             <NavLink href="https://github.com/YutHelloWorld/vortex-react">Github</NavLink>
             {
               this.props.isAuthenticated ? <NavLink href="javascript:;" onClick={this.signOut}>Sign out</NavLink>
-                : <NavLink to="/login" tag={Link}>Sign in</NavLink>
+                : <NavLink to="/login" activeClassName="active" tag={Link}>Sign in</NavLink>
             }
           </Nav>
         </Collapse>

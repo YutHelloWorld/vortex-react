@@ -6,11 +6,7 @@
 
 Get start with [React](https://facebook.github.io/react/), [Redux](http://redux.js.org/), [RR4](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom), [Webpack3](https://webpack.js.org/) 🚀
 
->2017/9/21 add authenticate route  
->2017/09/07
->add proxy with `http-proxy-middleware`  
->2017/8/29
->checkout branch mobx to see the version mobx instead of redux!
+![logo](./.Github/logo.png)
 
 [中文](https://github.com/YutHelloWorld/vortex-react/blob/master/README-zh.md)
 
