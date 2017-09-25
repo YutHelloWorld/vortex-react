@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import './Layout.scss'
-import CustomHome from '../containers/CustomHomeContainer'
+import CustomHome from '../components/CustomHome'
 
 import PrivateRoute from 'components/PrivateRoute'
 import Login from 'routes/Login'
