@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'
-import { Button } from 'reactstrap'
+import { Button, Container } from 'reactstrap'
 
 export default class Login extends Component {
   static propTypes = {
@@ -30,10 +30,10 @@ export default class Login extends Component {
     }
 
     return (
-      <div>
+      <Container className="text-center page-layout__viewport">
         <p>You must log in to view the page at {from.pathname}</p>
         <Button color="primary" onClick={this.login}>Log in</Button>
-      </div>
+      </Container>
     )
   }
 }

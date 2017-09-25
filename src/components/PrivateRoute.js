@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Route, Redirect, withRouter } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 PrivateRoute.propTypes = {
@@ -31,4 +31,4 @@ const mapStateToProps = (state) => ({
   isAuthenticated: state.isAuthenticated
 })
 
-export default withRouter(connect(mapStateToProps)(PrivateRoute))
+export default connect(mapStateToProps)(PrivateRoute)

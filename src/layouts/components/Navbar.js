@@ -13,8 +13,7 @@ const location = {
 
 export default class CustomNavbar extends Component {
   static propTypes = {
-    signOutWithCb: PropTypes.func.isRequired,
-    history: PropTypes.object.isRequired,
+    signOut: PropTypes.func.isRequired,
   }
 
   state = {
@@ -25,10 +24,6 @@ export default class CustomNavbar extends Component {
     this.setState({
       isOpen: !this.state.isOpen
     })
-  }
-
-  signOut = (e) => {
-    this.props.signOutWithCb(() => this.props.history.push('/'))
   }
 
   render() {
@@ -44,7 +39,7 @@ export default class CustomNavbar extends Component {
             <NavLink to={location} activeClassName="active" tag={Link}>Route</NavLink>
             <NavLink to="/pageNotFound" activeClassName="active" tag={Link}>404</NavLink>
             <NavLink href="https://github.com/YutHelloWorld/vortex-react">Github</NavLink>
-            <NavLink href="javascript:;" onClick={this.signOut}>Sign out</NavLink>
+            <NavLink href="javascript:;" onClick={this.props.signOut}>Sign out</NavLink>
           </Nav>
         </Collapse>
       </Navbar>

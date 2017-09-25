@@ -14,16 +14,9 @@ export function authenticateWithCb(cb) {
   }
 }
 
-function signOut() {
+export function signOut() {
   return {
     type: SIGN_OUT
-  }
-}
-
-export function signOutWithCb(cb) {
-  return (dispatch) => {
-    dispatch(signOut())
-    setTimeout(cb, 100)
   }
 }
 
