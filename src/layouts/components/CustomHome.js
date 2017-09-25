@@ -55,11 +55,11 @@ export default class CustomHome extends Component {
           <NavbarBrand exact to="/" tag={Link}>Vortex React</NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavLink to="/counter" activeClassName="active" tag={Link}>Counter</NavLink>
-              <NavLink to="/zenPage" activeClassName="active" tag={Link}>Zen</NavLink>
-              <NavLink to="/elapse" activeClassName="active" tag={Link}>Elapse</NavLink>
-              <NavLink to={location} activeClassName="active" tag={Link}>Route</NavLink>
-              <NavLink to="/pageNotFound" activeClassName="active" tag={Link}>404</NavLink>
+              <NavLink to="/counter" tag={Link}>Counter</NavLink>
+              <NavLink to="/zenPage" tag={Link}>Zen</NavLink>
+              <NavLink to="/elapse" tag={Link}>Elapse</NavLink>
+              <NavLink to={location} tag={Link}>Route</NavLink>
+              <NavLink to="/pageNotFound" tag={Link}>404</NavLink>
               <NavLink href="https://github.com/YutHelloWorld/vortex-react">Github</NavLink>
               <NavLink href="javascript:;" onClick={this.props.signOut}>Sign out</NavLink>
             </Nav>
