@@ -26,22 +26,30 @@ const AsyncPageNotFound = asyncComponent(() => import(
   /* webpackChunkName: "pageNotFound" */
   'routes/PageNotFound'))
 
-export default function Layout() {
+function CustomHome() {
   return (
     <div>
       <Navbar />
       <Container className="text-center page-layout__viewport">
         <Switch>
-          <PrivateRoute exact path="/" component={Home} />
-          <PrivateRoute path="/counter" component={AsyncCounter} />
-          <PrivateRoute path="/zenPage" component={AsyncZen} />
-          <PrivateRoute path="/elapse" component={AsyncElapse} />
-          <PrivateRoute path="/route/:id" component={AsyncRoute} />
-          <PrivateRoute path="/404" component={AsyncPageNotFound} />
-          <Route path="/login" component={Login} />
-          <Redirect from="*" to="/404" />
+          <Route exact path="/" component={Home} />
+          <Route path="/counter" component={AsyncCounter} />
+          <Route path="/zenPage" component={AsyncZen} />
+          <Route path="/elapse" component={AsyncElapse} />
+          <Route path="/route/:id" component={AsyncRoute} />
+          <Route path="/404" component={AsyncPageNotFound} />
+          <Redirect to="/404" />
         </Switch>
       </Container>
     </div>
+  )
+}
+
+export default function Layout() {
+  return (
+    <Switch>
+      <Route exact path="/login" component={Login} />
+      <PrivateRoute path="/" component={CustomHome} />
+    </Switch>
   )
 }

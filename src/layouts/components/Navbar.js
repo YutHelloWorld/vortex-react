@@ -13,7 +13,6 @@ const location = {
 
 export default class CustomNavbar extends Component {
   static propTypes = {
-    isAuthenticated: PropTypes.bool.isRequired,
     signOutWithCb: PropTypes.func.isRequired,
     history: PropTypes.object.isRequired,
   }
@@ -33,7 +32,7 @@ export default class CustomNavbar extends Component {
   }
 
   render() {
-    return this.props.isAuthenticated ? (
+    return (
       <Navbar color="faded" light toggleable>
         <NavbarToggler right onClick={this.toggle} />
         <NavbarBrand exact to="/" tag={Link}>Vortex React</NavbarBrand>
@@ -49,6 +48,6 @@ export default class CustomNavbar extends Component {
           </Nav>
         </Collapse>
       </Navbar>
-    ) : null
+    )
   }
 }
