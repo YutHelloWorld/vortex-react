@@ -2,28 +2,33 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { Container } from 'reactstrap'
 
-import asyncComponent from 'components/AsyncComponent'
+import AsyncLoad from '../../components/AsyncLoad'
 import Navbar from '../containers/NavbarContainer'
 
 // `import()` 异步加载模块，魔法注释写chunkName
-const AsyncCounter = asyncComponent(() => import(
-  /* webpackChunkName: "counter" */
-  'routes/Counter'))
-const AsyncZen = asyncComponent(() => import(
-  /* webpackChunkName: "zen" */
-  'routes/Zen'))
-const AsyncElapse = asyncComponent(() => import(
-  /* webpackChunkName: "elapse" */
-  'routes/Elapse'))
-const AsyncRoute = asyncComponent(() => import(
-  /* webpackChunkName: "route" */
-  'routes/Route'))
-const AsyncPageNotFound = asyncComponent(() => import(
-  /* webpackChunkName: "pageNotFound" */
-  'routes/PageNotFound'))
-const AsyncHome = asyncComponent(() => import(
-  /* webpackChunkName: "pageNotFound" */
-  'routes/home'))
+export const AsyncCounter = AsyncLoad({
+  loader: () => import(/* webpackChunkName: "counter" */'routes/Counter'),
+})
+
+const AsyncZen = AsyncLoad({
+  loader: () => import(/* webpackChunkName: "zen" */'routes/Zen'),
+})
+
+const AsyncElapse = AsyncLoad({
+  loader: () => import(/* webpackChunkName: "elapse" */'routes/Elapse'),
+})
+
+const AsyncRoute = AsyncLoad({
+  loader: () => import(/* webpackChunkName: "route" */'routes/Route'),
+})
+
+const AsyncPageNotFound = AsyncLoad({
+  loader: () => import(/* webpackChunkName: "pageNotFound" */'routes/PageNotFound'),
+})
+
+export const AsyncHome = AsyncLoad({
+  loader: () => import(/* webpackChunkName: "home" */'routes/Home'),
+})
 
 export default function CustomHome() {
   return (

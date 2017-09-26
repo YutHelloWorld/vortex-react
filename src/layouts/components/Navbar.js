@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { func } from 'prop-types'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink } from 'reactstrap'
 import { NavLink as Link } from 'react-router-dom'
+import { AsyncCounter } from './CustomHome'
 
 export default class CustomNavbar extends Component {
   static propTypes = {
@@ -23,6 +24,10 @@ export default class CustomNavbar extends Component {
     localStorage.setItem('LoginState', 'false')
   }
 
+  onMouseOver = () => {
+    AsyncCounter.preload()
+  }
+
   render() {
     return (
       <Navbar color="faded" light toggleable>
@@ -30,7 +35,7 @@ export default class CustomNavbar extends Component {
         <NavbarBrand exact to="/" tag={Link}>Vortex React</NavbarBrand>
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
-            <NavLink to="/counter" tag={Link}>Counter</NavLink>
+            <NavLink to="/counter" tag={Link} onMouseOver={this.onMouseOver}>Counter</NavLink>
             <NavLink to="/zenPage" tag={Link}>Zen</NavLink>
             <NavLink to="/elapse" tag={Link}>Elapse</NavLink>
             <NavLink to="/route/8080" tag={Link}>Route</NavLink>

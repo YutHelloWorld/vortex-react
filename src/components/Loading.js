@@ -17,7 +17,7 @@ export default function Loading(props) {
       return <div>Loader timed out!</div>
     } else if (props.pastDelay) {
       // Display a loading screen after a set delay.
-      return <Spinner name="cube-grid" color="purple" />
+      return <Spinner name="cube-grid" color="purple" style={{ margin: 'auto' }} />
     } else {
       // Don't flash "Loading..." when we don't need to.
       return null
