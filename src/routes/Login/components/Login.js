@@ -7,23 +7,20 @@ export default class Login extends Component {
   static propTypes = {
     authenticateWithCb: PropTypes.func.isRequired,
     location: PropTypes.object.isRequired,
-  }
-
-  state = {
-    redirectToReferrer: false
+    isAuthenticated: PropTypes.bool.isRequired,
   }
 
   login = () => {
     this.props.authenticateWithCb(() => {
-      this.setState({ redirectToReferrer: true })
+      localStorage.setItem('LoginState', 'true')
     })
   }
 
   render() {
     const { from } = this.props.location.state || { from: { pathname: '/' } }
-    const { redirectToReferrer } = this.state
+    const { isAuthenticated } = this.props
 
-    if (redirectToReferrer) {
+    if (isAuthenticated) {
       return (
         <Redirect to={from} />
       )
