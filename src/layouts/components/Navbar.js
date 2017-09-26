@@ -17,6 +17,12 @@ export default class CustomNavbar extends Component {
       isOpen: !this.state.isOpen
     })
   }
+
+  signOut = () => {
+    this.props.signOut()
+    localStorage.setItem('LoginState', 'false')
+  }
+
   render() {
     return (
       <Navbar color="faded" light toggleable>
@@ -29,7 +35,7 @@ export default class CustomNavbar extends Component {
             <NavLink to="/elapse" tag={Link}>Elapse</NavLink>
             <NavLink to="/route/8080" tag={Link}>Route</NavLink>
             <NavLink to="/pageNotFound" tag={Link}>404</NavLink>
-            <NavLink href="javascript:;" onClick={this.props.signOut}>Sign out</NavLink>
+            <NavLink href="javascript:;" onClick={this.signOut}>Sign out</NavLink>
             <NavLink href="https://github.com/YutHelloWorld/vortex-react">Github</NavLink>
           </Nav>
         </Collapse>
