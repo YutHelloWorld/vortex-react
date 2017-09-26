@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './Zen.scss'
 import Spinner from 'react-spinkit'
 import { Button } from 'reactstrap'
 
@@ -11,26 +10,23 @@ Zen.propTypes = {
 }
 
 function Zen({ fetchZen, clearZen, zen: { fetching, text } }) {
-  return (<div>
-    <div className="loading">
-      {fetching
-        ? <Spinner name="cube-grid" color="purple" /> : ''
-      }
-    </div>
+  return (
     <div>
-      <Button color="success" onClick={fetchZen}>
-        {fetching ? 'Fetching...' : 'Fetch'}
-      </Button>
-      {' '}
-      <Button color="danger" onClick={clearZen}>Clear</Button>
-    </div>
-    <hr />
-    <div>
-      {text.map(item => (
-        <p key={item.id}>{item.text}</p>
-      ))}
-    </div>
-  </div>)
+      {fetching && <Spinner name="cube-grid" color="purple" style={{ margin: 'auto' }} />}
+      <div style={{ marginTop: '20px' }}>
+        <Button color="success" onClick={fetchZen}>
+          {fetching ? 'Fetching...' : 'Fetch'}
+        </Button>
+        {' '}
+        <Button color="danger" onClick={clearZen}>Clear</Button>
+      </div>
+      <hr />
+      <div>
+        {text.map(item => (
+          <p key={item.id}>{item.text}</p>
+        ))}
+      </div>
+    </div>)
 }
 
 export default Zen
