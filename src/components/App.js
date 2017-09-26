@@ -1,16 +1,15 @@
-import React from 'react'
-import { Router, Route } from 'react-router-dom'
+import React, { Component } from 'react'
+import { Router } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { object } from 'prop-types'
-import CoreLayout from '../layouts/PageLayout/PageLayout'
+import Layout from '../layouts'
 import { history } from '../store/location'
 
-class App extends React.Component {
+class App extends Component {
   static propTypes = {
     store: object.isRequired
   }
 
-  //  始终不更新App组件
   shouldComponentUpdate() {
     return false
   }
@@ -22,7 +21,7 @@ class App extends React.Component {
       <Provider store={store}>
         <div style={{ height: '100%' }}>
           <Router history={history}>
-            <Route path="/" component={CoreLayout} />
+            <Layout />
           </Router>
         </div>
       </Provider>

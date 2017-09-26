@@ -43,7 +43,7 @@ if (__DEV__) {
     // Setup hot module replacement
     module.hot.accept([
       './components/App',
-      './routes/index',
+      './layouts/index',
     ], () => setImmediate(() => {
       ReactDOM.unmountComponentAtNode(MOUNT_NODE)
       render()

@@ -56,10 +56,10 @@ config.module.rules.push({
     query: {
       cacheDirectory: true,
       plugins: [
-        'babel-plugin-transform-class-properties',
-        'babel-plugin-syntax-dynamic-import', // transform `import()` to `require.ensure()`
+        'transform-class-properties',
+        'syntax-dynamic-import', // transform `import()` to `require.ensure()`
         [
-          'babel-plugin-transform-runtime',
+          'transform-runtime',
           {
             helpers: true,
             polyfill: false, // we polyfill needed features in src/normalize.js
@@ -67,7 +67,7 @@ config.module.rules.push({
           },
         ],
         [
-          'babel-plugin-transform-object-rest-spread',
+          'transform-object-rest-spread',
           {
             useBuiltIns: true // we polyfill Object.assign in src/normalize.js
           },

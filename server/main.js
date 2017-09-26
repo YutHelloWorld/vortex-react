@@ -5,13 +5,16 @@ const logger = require('../build/lib/logger')
 const webpackConfig = require('../build/webpack.config')
 const project = require('../project.config')
 const compress = require('compression')
+const proxy = require('http-proxy-middleware')
 
 const app = express()
 app.use(compress())
 
-// ------------------------------------
-// Apply Webpack HMR Middleware
-// ------------------------------------
+/**
+|--------------------------------------------------
+| Apply Webpack HMR Middleware
+|--------------------------------------------------
+*/
 if (project.env === 'development') {
   const compiler = webpack(webpackConfig)
 
@@ -23,16 +26,25 @@ if (project.env === 'development') {
     quiet: false,
     noInfo: false,
     lazy: false,
-    stats: 'normal',
+    stats: {
+      colors: true,
+      // hidden modules
+      modules: false,
+    },
   }))
   app.use(require('webpack-hot-middleware')(compiler, {
     path: '/__webpack_hmr'
   }))
 
-  // 设置静态资源路径，浏览器会默认请求该路径下favicon.ico
   app.use(express.static(path.resolve(project.basePath, 'public')))
 
-  // 重定向到index.html
+  // Proxy api requests
+  app.use('/zen', proxy({
+    target: 'https://api.github.com',
+    changeOrigin: true
+  }))
+
+  // redirect to index.html
   app.use('*', function (req, res, next) {
     const filename = path.join(compiler.outputPath, 'index.html')
     compiler.outputFileSystem.readFile(filename, (err, result) => {

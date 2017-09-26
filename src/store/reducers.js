@@ -1,14 +1,15 @@
 import { combineReducers } from 'redux'
 import locationReducer from './location'
+import fakeAuthReducer from './fakeAuth'
 
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
     location: locationReducer,
+    isAuthenticated: fakeAuthReducer,
     ...asyncReducers
   })
 }
 
-// reducer 注入函数
 export const injectReducer = (store, { key, reducer }) => {
   if (Object.hasOwnProperty.call(store.asyncReducers, key)) return
 

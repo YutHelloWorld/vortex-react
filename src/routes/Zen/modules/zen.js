@@ -39,7 +39,7 @@ export function fetchZen() {
     if (getState().zen.fetching) return
 
     dispatch(requestZen())
-    axios.get('https://api.github.com/zen')
+    axios.get('/zen')
       .then((res) => {
         console.log(res)
         dispatch(receiveZen(res.data))

@@ -1,12 +1,12 @@
 {
   "parser": "babel-eslint",
   "extends": [
-    "standard", // standard style扩展eslint-config-standard
+    "standard", // eslint-config-standard
     "standard-react" // eslint-config-standard-react
   ],
   "plugins": [
     "babel",
-    "react",  // react校验插件
+    "react",
     "promise"
   ],
   "env": {
