@@ -3,7 +3,7 @@ import Login from '../components/Login'
 import { authenticateWithCb } from 'store/fakeAuth'
 
 const mapStateToProps = (state) => ({
-
+  isAuthenticated: state.isAuthenticated
 })
 
 const mapDispatchToProps = {

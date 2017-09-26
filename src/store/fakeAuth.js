@@ -25,7 +25,8 @@ const ACTION_HANDLERS = {
   [SIGN_OUT]: state => false,
 }
 
-const initialState = false
+const initialState = !(localStorage.getItem('LoginState') == null ||
+  localStorage.getItem('LoginState') === 'false')
 
 export default function (state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type]
