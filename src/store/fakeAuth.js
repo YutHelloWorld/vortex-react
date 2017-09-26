@@ -7,10 +7,10 @@ function authenticate() {
   }
 }
 
-export function authenticateWithCb(cb) {
+export function authenticateWithCb() {
   return (dispatch) => {
     dispatch(authenticate())
-    setTimeout(cb, 100)
+    localStorage.setItem('LoginState', 'true')
   }
 }
 
