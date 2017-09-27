@@ -24,7 +24,7 @@ Get start with [React](https://facebook.github.io/react/), [Redux](http://redux.
 * [Live Development](#live-development)
 * [Deploy](#deploy)
 * [Code Style](#code-style)
-* [More](#more)
+* [Contribution](#contribution)
 
 </details>
 
@@ -181,6 +181,10 @@ yarn start
 
 Refrence [airbnb/javascript](https://github.com/airbnb/javascript)、[Javascript Standard Style](https://standardjs.com/rules-zhcn.html#javascript-standard-style) and [standard-react](https://github.com/standard/eslint-config-standard-react)，we set up [.eslintrc](https://github.com/YutHelloWorld/vortex-react/blob/master/.eslintrc)
 
-## More
+## Contribution
 
-Welcome PRs and issues!
+Thank you to all the people who already contributed to vortex-react!
+
+- [Mrsususu](https://github.com/Mrsususu/)
+- [liadbiz](https://github.com/liadbiz)
+
