@@ -2,6 +2,12 @@ import React from 'react'
 import { bool } from 'prop-types'
 import Spinner from 'react-spinkit'
 
+const propTypes = {
+  isLoading: bool,
+  timedOut: bool,
+  pastDelay: bool,
+  error: bool
+}
 function Loading(props) {
   if (props.isLoading) {
     // While our other component is loading...
@@ -24,11 +30,6 @@ function Loading(props) {
   }
 }
 
-Loading.propTypes = {
-  isLoading: bool,
-  timedOut: bool,
-  pastDelay: bool,
-  error: bool
-}
+Loading.propTypes = propTypes
 
 export default Loading
