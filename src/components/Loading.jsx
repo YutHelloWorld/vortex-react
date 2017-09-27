@@ -7,7 +7,7 @@ function Loading(props) {
     // While our other component is loading...
     if (props.timedOut) {
       // In case we've timed out loading our other component.
-      return <div>Loader timed out!</div>
+      return 'Loader timed out!'
     } else if (props.pastDelay) {
       // Display a loading screen after a set delay.
       return <Spinner name="cube-grid" color="purple" style={{ margin: 'auto' }} />
@@ -17,7 +17,7 @@ function Loading(props) {
     }
   } else if (props.error) {
     // If we aren't loading, maybe
-    return <div>Error! Component failed to load</div>
+    return 'Error! Component failed to load'
   } else {
     // This case shouldn't happen... but we'll return null anyways.
     return null
