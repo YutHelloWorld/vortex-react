@@ -2628,6 +2628,18 @@ ignore@^3.3.3:
   version "3.3.5"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.5.tgz#c4e715455f6073a8d7e5dae72d2fc9d71663dba6"
 
+immutability-helper-x@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/immutability-helper-x/-/immutability-helper-x-1.0.4.tgz#0ab21d373ac613ee8ef8b040af8c2a665e357c7f"
+  dependencies:
+    immutability-helper "^2.2.2"
+
+immutability-helper@^2.2.2:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/immutability-helper/-/immutability-helper-2.4.0.tgz#00d421e2957c17f0f0781475f05ffd837e73458d"
+  dependencies:
+    invariant "^2.2.0"
+
 import-inspector@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/import-inspector/-/import-inspector-2.0.0.tgz#ce75fdb6a277d2800effe097e2295bc8690b2923"

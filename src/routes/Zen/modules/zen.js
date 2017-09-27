@@ -1,4 +1,5 @@
 import axios from 'axios'
+import update, { updateChain } from 'immutability-helper-x'
 
 /**
 |--------------------------------------------------
@@ -63,14 +64,20 @@ export const actions = {
 |--------------------------------------------------
 */
 const ACTION_HANDLERS = {
-  [REQUEST_ZEN]: (state) => {
-    return ({ ...state, fetching: true })
+  [REQUEST_ZEN]: state => {
+    // return ({ ...state, fetching: true })
+    return update.$set(state, 'fetching', true)
   },
   [RECEIVE_ZEN]: (state, action) => {
-    return ({ ...state, fetching: false, text: state.text.concat(action.payload) })
+    // return ({ ...state, fetching: false, text: state.text.concat(action.payload) })
+    return updateChain(state)
+      .$set('fetching', false)
+      .$push('text', [action.payload])
+      .value()
   },
-  [CLEAR_ZEN]: (state) => {
-    return ({ ...state, text: [] })
+  [CLEAR_ZEN]: state => {
+    // return ({ ...state, text: [] })
+    return update.$set(state, 'text', [])
   }
 }
 

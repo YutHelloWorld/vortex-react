@@ -22,6 +22,7 @@
     "bootstrap": "4.0.0-alpha.6",
     "compression": "^1.6.2",
     "express": "^4.15.4",
+    "immutability-helper-x": "^1.0.4",
     "object-assign": "^4.1.1",
     "promise": "^8.0.1",
     "prop-types": "^15.5.10",
