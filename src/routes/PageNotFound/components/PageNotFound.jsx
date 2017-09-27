@@ -5,10 +5,6 @@ import './PageNotFound.scss'
 import { withRouter } from 'react-router'
 import { Button } from 'reactstrap'
 
-PageNotFound.propTypes = {
-  history: object.isRequired,
-}
-
 function PageNotFound({ history: { goBack } }) {
   return (<div className="not-found__container">
     <p>Page not found!!!</p>
@@ -26,6 +22,10 @@ function PageNotFound({ history: { goBack } }) {
       src={NotFoundImage}
     />
   </div>)
+}
+
+PageNotFound.propTypes = {
+  history: object.isRequired,
 }
 
 export default withRouter(PageNotFound)

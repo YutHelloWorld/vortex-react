@@ -3,13 +3,7 @@ import PropTypes from 'prop-types'
 import { Redirect } from 'react-router-dom'
 import { Button, Container } from 'reactstrap'
 
-Login.propTypes = {
-  authenticateWithCb: PropTypes.func.isRequired,
-  location: PropTypes.object.isRequired,
-  isAuthenticated: PropTypes.bool.isRequired,
-}
-
-export default function Login({ location, isAuthenticated, authenticateWithCb }) {
+function Login({ location, isAuthenticated, authenticateWithCb }) {
   const { from } = location.state || { from: { pathname: '/' } }
   return isAuthenticated ? <Redirect to={from} />
     : (
@@ -19,3 +13,12 @@ export default function Login({ location, isAuthenticated, authenticateWithCb })
       </Container>
     )
 }
+Login.propTypes = {
+  authenticateWithCb: PropTypes.func.isRequired,
+  location: PropTypes.shape({
+    state: PropTypes.object,
+  }).isRequired,
+  isAuthenticated: PropTypes.bool.isRequired,
+}
+
+export default Login

@@ -3,10 +3,13 @@ import PropTypes from 'prop-types'
 import Spinner from 'react-spinkit'
 import { Button } from 'reactstrap'
 
-Zen.propTypes = {
+const propTypes = {
   fetchZen: PropTypes.func.isRequired,
   clearZen: PropTypes.func.isRequired,
-  zen: PropTypes.object.isRequired
+  zen: PropTypes.shape({
+    fetching: PropTypes.bool.isRequired,
+    text: PropTypes.array,
+  }).isRequired,
 }
 
 function Zen({ fetchZen, clearZen, zen: { fetching, text } }) {
@@ -28,5 +31,7 @@ function Zen({ fetchZen, clearZen, zen: { fetching, text } }) {
       </div>
     </div>)
 }
+
+Zen.propTypes = propTypes
 
 export default Zen
