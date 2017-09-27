@@ -9,12 +9,15 @@
     "build": "npm run clean && cross-env NODE_ENV=production npm run compile",
     "start": "cross-env NODE_ENV=development node build/scripts/start",
     "lint": "eslint . --ext .js,.jsx",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "deploy": "gh-pages -d dist",
+    "preDeploy": "npm run clean && cross-env NODE_ENV=production ASSET_PATH=./ npm run compile"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YutHelloWorld/vortex-react.git"
   },
+  "homepage": "https://YutHelloWorld.github.io/vortex-react",
   "author": "Sven <sven@139.com>",
   "license": "MIT",
   "dependencies": {
@@ -66,6 +69,7 @@
     "figures": "^2.0.0",
     "file-loader": "^0.11.1",
     "fs-extra": "^4.0.1",
+    "gh-pages": "^1.0.0",
     "html-webpack-plugin": "^2.24.1",
     "http-proxy-middleware": "^0.17.4",
     "node-sass": "^4.5.3",

@@ -1,6 +1,7 @@
 // 全局变量表
 
 const NODE_ENV = process.env.NODE_ENV || 'development'
+const ASSET_PATH = process.env.ASSET_PATH || '/'
 
 module.exports = {
   /** 运行环境 */
@@ -14,7 +15,7 @@ module.exports = {
   /** 打包输出路径 */
   outDir: 'dist',
   /** 公共路径 */
-  publicPath: '/',
+  publicPath: ASSET_PATH,
   /** 是否sourcemap */
   sourcemaps: true,
   /** A hash map of keys that the compiler should treat as external to the project */
