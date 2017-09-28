@@ -51,40 +51,7 @@ const config = {
 config.module.rules.push({
   test: /\.(js|jsx)$/,
   exclude: /node_modules/,
-  use: [{
-    loader: 'babel-loader',
-    query: {
-      cacheDirectory: true,
-      plugins: [
-        'transform-class-properties',
-        'syntax-dynamic-import', // transform `import()` to `require.ensure()`
-        [
-          'transform-runtime',
-          {
-            helpers: true,
-            polyfill: false, // we polyfill needed features in src/normalize.js
-            regenerator: true,
-          },
-        ],
-        [
-          'transform-object-rest-spread',
-          {
-            useBuiltIns: true // we polyfill Object.assign in src/normalize.js
-          },
-        ]
-      ],
-      presets: [
-        'babel-preset-react',
-        ['babel-preset-env', {
-          modules: false,
-          targets: {
-            ie9: true,
-          },
-          uglify: true,
-        }],
-      ]
-    },
-  }],
+  loader: 'babel-loader?cacheDirectory'
 })
 
 // Styles

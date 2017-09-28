@@ -6,12 +6,11 @@
   "scripts": {
     "clean": "rimraf dist",
     "compile": "node build/scripts/compile",
-    "build": "npm run clean && cross-env NODE_ENV=production npm run compile",
+    "build": "npm run clean && cross-env NODE_ENV=production ASSET_PATH=/vortex-react/ npm run compile",
     "start": "cross-env NODE_ENV=development node build/scripts/start",
     "lint": "eslint . --ext .js,.jsx",
     "lint:fix": "npm run lint -- --fix",
-    "deploy": "gh-pages -d dist",
-    "preDeploy": "npm run clean && cross-env NODE_ENV=production ASSET_PATH=./ npm run compile"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",

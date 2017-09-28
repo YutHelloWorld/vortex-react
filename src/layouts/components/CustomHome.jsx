@@ -33,7 +33,7 @@ export const AsyncHome = AsyncLoad({
 export default function CustomHome() {
   return (
     <div>
-      <Navbar />
+      <Route component={Navbar} />
       <Container className="text-center page-layout__viewport">
         <Switch>
           <Route exact path="/" component={AsyncHome} />
