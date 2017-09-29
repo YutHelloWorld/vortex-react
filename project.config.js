@@ -1,4 +1,6 @@
 const NODE_ENV = process.env.NODE_ENV || 'development'
+const GENERATE_SOURCEMAP = process.env.GENERATE_SOURCEMAP !== 'false'
+const PUBLIC_URL = process.env.PUBLIC_URL || '/'
 
 module.exports = {
   /** The environment to use when building the project */
@@ -12,9 +14,9 @@ module.exports = {
   /** The name of the directory in which to emit compiled assets */
   outDir: 'dist',
   /** The base path for all projects assets (relative to the website root) */
-  publicPath: '/',
+  publicPath: PUBLIC_URL,
   /** Whether to generate sourcemaps */
-  sourcemaps: true,
+  sourcemaps: GENERATE_SOURCEMAP,
   /** A hash map of keys that the compiler should treat as external to the project */
   externals: {},
   /** A hash map of variables and their values to expose globally */
