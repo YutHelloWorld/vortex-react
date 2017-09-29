@@ -1,22 +1,19 @@
-// 全局变量表
-
 const NODE_ENV = process.env.NODE_ENV || 'development'
-const ASSET_PATH = process.env.ASSET_PATH || '/'
 
 module.exports = {
-  /** 运行环境 */
+  /** The environment to use when building the project */
   env: NODE_ENV,
-  /** 根路径全名 */
+  /** The full path to the project's root directory */
   basePath: __dirname,
-  /** 源文件目录 */
+  /** The name of the directory containing the application source code */
   srcDir: 'src',
-  /** 入口文件 */
+  /** The file name of the application's entry point */
   main: 'main',
-  /** 打包输出路径 */
+  /** The name of the directory in which to emit compiled assets */
   outDir: 'dist',
-  /** 公共路径 */
-  publicPath: ASSET_PATH,
-  /** 是否sourcemap */
+  /** The base path for all projects assets (relative to the website root) */
+  publicPath: '/',
+  /** Whether to generate sourcemaps */
   sourcemaps: true,
   /** A hash map of keys that the compiler should treat as external to the project */
   externals: {},
@@ -26,6 +23,7 @@ module.exports = {
   verbose: false,
   /** The list of modules to bundle separately from the core application code */
   vendors: [
+    'axios',
     'react',
     'react-dom',
     'redux',
@@ -34,6 +32,7 @@ module.exports = {
     'react-router-dom',
     'reactstrap',
     'react-spinkit',
-    'prop-types'
+    'prop-types',
+    'immutability-helper-x',
   ],
 }

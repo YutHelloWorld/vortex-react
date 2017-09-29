@@ -3,6 +3,8 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const project = require('../project.config')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+
 const inProject = path.resolve.bind(path, project.basePath)
 const inProjectSrc = (file) => inProject(project.srcDir, file)
 
@@ -146,6 +148,10 @@ config.plugins.push(new HtmlWebpackPlugin({
   },
 }))
 
+// Bundle Analyzer
+// ------------------------------------
+config.plugins.push(new BundleAnalyzerPlugin())
+
 // Development Tools
 // ------------------------------------
 if (__DEV__) {
@@ -192,6 +198,7 @@ if (__PROD__) {
         evaluate: true,
         if_return: true,
         join_vars: true,
+        drop_console: true,
       },
     })
   )

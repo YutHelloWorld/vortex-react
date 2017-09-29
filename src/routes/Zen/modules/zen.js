@@ -42,7 +42,6 @@ export function fetchZen() {
     dispatch(requestZen())
     axios.get('/zen')
       .then((res) => {
-        console.log(res)
         dispatch(receiveZen(res.data))
       })
       .catch(function (error) {
