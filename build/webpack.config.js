@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const project = require('../project.config')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 const inProject = path.resolve.bind(path, project.basePath)
@@ -148,10 +147,6 @@ config.plugins.push(new HtmlWebpackPlugin({
     collapseWhitespace: true,
   },
 }))
-
-// Bundle Analyzer
-// ------------------------------------
-config.plugins.push(new BundleAnalyzerPlugin())
 
 // Development Tools
 // ------------------------------------

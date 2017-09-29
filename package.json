@@ -10,6 +10,7 @@
     "start": "cross-env NODE_ENV=development node build/scripts/start",
     "lint": "eslint . --ext .js,.jsx",
     "lint:fix": "npm run lint -- --fix",
+    "analyze": "source-map-explorer dist/main.*.js",
     "preDeploy": "npm run clean && cross-env NODE_ENV=production GENERATE_SOURCEMAP=false PUBLIC_URL=/vortex-react/ npm run compile",
     "deploy": "gh-pages -d dist"
   },
@@ -76,10 +77,10 @@
     "node-sass": "^4.5.3",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.5",
+    "source-map-explorer": "^1.5.0",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.8",
     "webpack": "^3.5.5",
-    "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-middleware": "^1.12.0",
     "webpack-hot-middleware": "^2.18.2"
   }
