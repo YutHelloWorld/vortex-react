@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const project = require('../project.config')
-const CompressionWebpackPlugin = require('compression-webpack-plugin')
 
 const inProject = path.resolve.bind(path, project.basePath)
 const inProjectSrc = (file) => inProject(project.srcDir, file)
@@ -196,15 +195,6 @@ if (__PROD__) {
         join_vars: true,
         drop_console: true,
       },
-    }),
-    new CompressionWebpackPlugin({ // gzip 压缩
-      asset: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: new RegExp(
-        '\\.(js|css|html)$' // 压缩 js 与 css
-      ),
-      threshold: 10240,
-      minRatio: 0.8
     })
   )
 }

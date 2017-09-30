@@ -44,6 +44,7 @@ const compile = () => Promise.resolve()
       logger.log(stats.toString({
         colors: true,
         chunks: false,
+        modules: false
       }))
     }
     logger.success(`Compiler finished successfully! See ./${project.outDir}.`)
