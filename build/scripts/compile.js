@@ -29,7 +29,10 @@ const runWebpackCompiler = (webpackConfig) =>
 
 const compile = () => Promise.resolve()
   .then(() => logger.info('Starting compiler...'))
-  .then(() => logger.info('Target application environment: ' + chalk.bold(project.env)))
+  .then(() => {
+    logger.info('Target application environment: ' + chalk.bold(project.env))
+    logger.info(`PublicPath is ${project.publicPath}`)
+  })
   .then(() => runWebpackCompiler(webpackConfig))
   .then((stats) => {
     logger.info(`Copying static assets from ./public to ./${project.outDir}.`)

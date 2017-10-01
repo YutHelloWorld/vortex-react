@@ -11,7 +11,7 @@
     "lint": "eslint . --ext .js,.jsx",
     "lint:fix": "npm run lint -- --fix",
     "analyze": "source-map-explorer dist/main.*.js",
-    "preDeploy": "npm run clean && cross-env NODE_ENV=production GENERATE_SOURCEMAP=false PUBLIC_URL=/vortex-react/ npm run compile",
+    "preDeploy": "npm run clean && cross-env NODE_ENV=production PUBLIC_URL=/vortex-react/ npm run compile",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
