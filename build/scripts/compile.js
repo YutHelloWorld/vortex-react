@@ -30,8 +30,9 @@ const runWebpackCompiler = (webpackConfig) =>
 const compile = () => Promise.resolve()
   .then(() => logger.info('Starting compiler...'))
   .then(() => {
-    logger.info('Target application environment: ' + chalk.bold(project.env))
-    logger.info(`PublicPath is ${project.publicPath}`)
+    logger.info(`Target application environment: ${chalk.bold(project.env)}`)
+    logger.info(`PublicPath: ${chalk.bold(project.publicPath)}`)
+    logger.info(`Sourcemaps: ${chalk.bold(project.sourcemaps)}`)
   })
   .then(() => runWebpackCompiler(webpackConfig))
   .then((stats) => {
