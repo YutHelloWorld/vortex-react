@@ -1,6 +1,6 @@
 {
   "name": "vortex-react",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Get started with React, Redux, and React-Router!",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "compile": "node build/scripts/compile",
     "build": "npm run clean && cross-env NODE_ENV=production npm run compile",
     "start": "cross-env NODE_ENV=development node build/scripts/start",
-    "lint": "eslint . --ext .js,.jsx",
+    "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "analyze": "source-map-explorer dist/main.*.js",
     "preDeploy": "npm run clean && cross-env NODE_ENV=production PUBLIC_URL=/vortex-react/ npm run compile",

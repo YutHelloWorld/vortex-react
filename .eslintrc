@@ -33,7 +33,6 @@
     "react/prefer-stateless-function": 2,
     "react/jsx-boolean-value": 2,
     "react/no-string-refs": 2,
-    "react/jsx-filename-extension": 2,
     "react/default-props-match-prop-types": 2
   }
 }
