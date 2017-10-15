@@ -5,7 +5,7 @@ import fakeAuthReducer from './fakeAuth'
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
     location: locationReducer,
-    isAuthenticated: fakeAuthReducer,
+    logged: fakeAuthReducer,
     ...asyncReducers
   })
 }

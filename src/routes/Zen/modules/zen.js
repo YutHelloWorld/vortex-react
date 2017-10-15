@@ -36,17 +36,12 @@ export const clearZen = () => ({
 })
 
 export function fetchZen() {
-  return (dispatch, getState) => {
+  return async (dispatch, getState) => {
     if (getState().zen.fetching) return
 
     dispatch(requestZen())
-    axios.get('/zen')
-      .then((res) => {
-        dispatch(receiveZen(res.data))
-      })
-      .catch(function (error) {
-        console.log(error)
-      })
+    const { data } = await axios.get('/zen')
+    dispatch(receiveZen(data))
   }
 }
 
@@ -89,6 +84,7 @@ const initialState = {
   fetching: false,
   text: []
 }
+
 export default function (state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type]
 

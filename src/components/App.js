@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Router } from 'react-router-dom'
+import { Router, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { object } from 'prop-types'
 import Layout from '../layouts'
@@ -19,11 +19,9 @@ class App extends Component {
 
     return (
       <Provider store={store}>
-        <div style={{ height: '100%' }}>
-          <Router history={history}>
-            <Layout />
-          </Router>
-        </div>
+        <Router history={history}>
+          <Route component={Layout} />
+        </Router>
       </Provider>
     )
   }

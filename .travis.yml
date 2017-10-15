@@ -7,6 +7,9 @@ cache:
   yarn: true
   directories:
     - node_modules
+before_install:
+  # CI server install taobao npm packages too slow.
+  - rm -rf ./yarn.lock
 
 script:
   - yarn lint

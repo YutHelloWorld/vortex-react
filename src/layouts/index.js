@@ -1,3 +1,3 @@
-import Layout from './components/Layout'
+import Layout from './containers/Layout'
 
 export default Layout

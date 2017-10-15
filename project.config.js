@@ -18,7 +18,10 @@ module.exports = {
   /** Whether to generate sourcemaps */
   sourcemaps: GENERATE_SOURCEMAP,
   /** A hash map of keys that the compiler should treat as external to the project */
-  externals: {},
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
   /** A hash map of variables and their values to expose globally */
   globals: {},
   /** Whether to enable verbose logging */
@@ -26,13 +29,11 @@ module.exports = {
   /** The list of modules to bundle separately from the core application code */
   vendors: [
     'axios',
-    'react',
-    'react-dom',
     'redux',
     'react-redux',
+    'reactstrap',
     'redux-thunk',
     'react-router-dom',
-    'reactstrap',
     'react-spinkit',
     'prop-types',
     'immutability-helper-x',

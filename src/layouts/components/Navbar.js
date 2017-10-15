@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import { func } from 'prop-types'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavLink } from 'reactstrap'
 import { NavLink as Link } from 'react-router-dom'
-import { AsyncZen } from './CustomHome'
 
-export default class CustomNavbar extends Component {
+import { AsyncZen } from '../../routes'
+
+class CustomNavbar extends Component {
   static propTypes = {
     signOut: func.isRequired,
   }
@@ -19,11 +20,6 @@ export default class CustomNavbar extends Component {
     })
   }
 
-  signOut = () => {
-    this.props.signOut()
-    localStorage.setItem('LoginState', 'false')
-  }
-
   onMouseOver = () => {
     AsyncZen.preload()
   }
@@ -36,7 +32,7 @@ export default class CustomNavbar extends Component {
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavLink to="/zenPage" onMouseOver={this.onMouseOver} tag={Link}>Zen</NavLink>
-            <NavLink href="javascript:;" onClick={this.signOut}>Sign out</NavLink>
+            <NavLink href="javascript:;" onClick={this.props.signOut}>Sign out</NavLink>
             <NavLink href="https://github.com/YutHelloWorld/vortex-react">Github</NavLink>
           </Nav>
         </Collapse>
@@ -44,3 +40,5 @@ export default class CustomNavbar extends Component {
     )
   }
 }
+
+export default CustomNavbar

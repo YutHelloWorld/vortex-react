@@ -1,32 +1,39 @@
-const AUTHENTICATE = 'AUTHENTICATE'
+const SIGN_IN = 'SIGN_IN'
 const SIGN_OUT = 'SIGN_OUT'
 
-function authenticate() {
+function signIn() {
   return {
-    type: AUTHENTICATE
+    type: SIGN_IN
   }
 }
 
-export function authenticateWithCb() {
+export function signInWithCb() {
   return (dispatch) => {
-    dispatch(authenticate())
-    localStorage.setItem('LoginState', 'true')
+    dispatch(signIn())
+    localStorage.setItem('logged', 'true')
   }
 }
 
-export function signOut() {
+function signOut() {
   return {
     type: SIGN_OUT
   }
 }
 
+export function signOutWithCb() {
+  return (dispatch) => {
+    dispatch(signOut())
+    localStorage.setItem('logged', 'false')
+  }
+}
+
 const ACTION_HANDLERS = {
-  [AUTHENTICATE]: state => true,
+  [SIGN_IN]: state => true,
   [SIGN_OUT]: state => false,
 }
 
-const initialState = !(localStorage.getItem('LoginState') == null ||
-  localStorage.getItem('LoginState') === 'false')
+const initialState = !(localStorage.getItem('logged') == null ||
+  localStorage.getItem('logged') === 'false')
 
 export default function (state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type]
