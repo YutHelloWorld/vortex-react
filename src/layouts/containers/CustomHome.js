@@ -1,16 +1,16 @@
-import React from 'react'
-import { func } from 'prop-types'
-import { Switch, Route } from 'react-router-dom'
-import { Container } from 'reactstrap'
-import { connect } from 'react-redux'
+import React from 'react';
+import { func } from 'prop-types';
+import { Switch, Route } from 'react-router-dom';
+import { Container } from 'reactstrap';
+import { connect } from 'react-redux';
 
-import Navbar from '../components/Navbar'
-import { AsyncHome, AsyncZen } from '../../routes'
-import { signOutWithCb } from 'store/fakeAuth'
+import Navbar from '../components/Navbar';
+import { AsyncHome, AsyncZen } from '../../routes';
+import { signOutWithCb } from '../../store/fakeAuth';
 
 const propTypes = {
-  signOut: func.isRequired,
-}
+  signOut: func.isRequired
+};
 
 function CustomHome({ signOut }) {
   return (
@@ -23,15 +23,15 @@ function CustomHome({ signOut }) {
         </Switch>
       </Container>
     </div>
-  )
+  );
 }
 
-CustomHome.propTypes = propTypes
+CustomHome.propTypes = propTypes;
 
-const mapStateToProps = state => ({})
+const mapStateToProps = state => ({});
 
 const mapDispatchToProps = {
   signOut: signOutWithCb
-}
+};
 
-export default connect(mapStateToProps, mapDispatchToProps)(CustomHome)
+export default connect(mapStateToProps, mapDispatchToProps)(CustomHome);
