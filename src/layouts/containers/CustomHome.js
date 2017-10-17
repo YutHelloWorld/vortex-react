@@ -12,7 +12,7 @@ const propTypes = {
   signOut: func.isRequired
 };
 
-function CustomHome({ signOut }) {
+export function CustomHome({ signOut }) {
   return (
     <div>
       <Navbar signOut={signOut} />

@@ -27,9 +27,9 @@ class CustomNavbar extends Component {
     });
   };
 
-  onMouseOver = () => {
+  onMouseOver() {
     AsyncZen.preload();
-  };
+  }
 
   render() {
     return (
