@@ -21,7 +21,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # css
-src/**/*.css
+#src/**/*.css
 
 # chrome
 chrome

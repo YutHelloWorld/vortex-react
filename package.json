@@ -41,7 +41,7 @@
     "analyze": "source-map-explorer build/static/js/main.*",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "coverage": "npm test -- --coverage",
     "codecov": "codecov",
