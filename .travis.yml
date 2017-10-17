@@ -2,14 +2,13 @@ language: node_js
 node_js:
   - 6
 cache:
-  yarn: true
   directories:
     - node_modules
 script:
-  - yarn build
-  - yarn coverage
+  - npm run build
+  - npm run coverage
 after_script:
-  - yarn codecov
+  - npm run codecov
 deploy:
   provider: pages
   skip_cleanup: true

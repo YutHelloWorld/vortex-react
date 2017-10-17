@@ -1,6 +1,6 @@
 {
-  "name": "v-react",
-  "version": "0.1.0",
+  "name": "vortex-react",
+  "version": "2.0.0",
   "private": true,
   "homepage": "https://YutHelloWorld.github.io/v-react",
   "dependencies": {
