@@ -5,11 +5,10 @@
 [![codecov](https://codecov.io/gh/YutHelloWorld/vortex-react/branch/master/graph/badge.svg)](https://codecov.io/gh/YutHelloWorld/vortex-react)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-基于[React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/)/[React-Router v4](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)/[Webpack v3](https://webpack.js.org/)/[Reactstrap](https://reactstrap.github.io/)的前端脚手架。
+基于[React](https://facebook.github.io/react/)/[Redux](http://redux.js.org/)/[React-Router v4](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)/[Reactstrap](https://reactstrap.github.io/)的前端脚手架。
 
->2017/8/29  
-切换到分支mobx查看mobx替代redux的版本  
-checkout branch mobx to see the version mobx instead of redux!
+>2017/10/17 使用create-react-app进行了重构  
+>2017/8/29  切换到分支mobx查看mobx替代redux的版本  
 
 ## 目录
 
@@ -34,21 +33,16 @@ checkout branch mobx to see the version mobx instead of redux!
 
 ### &sect; [静态部署](#deploy)
 
-### &sect; [规范](#style)
-
 ### &sect; [更多文档](#doc)
 
 ## <a name="feature">&sect; 技术栈</a>
 
 - React
 - ES6/7/8 + Babel
-- Webpack 3
 - Redux
 - React-Router v4
 - Reactstrap + Bootstrap\^4.0.0-alpha.6 (UI)
 - Sass
-- Eslint
-- Express
 
 ---
 
@@ -88,9 +82,10 @@ yarn start  # Start the development server (or `npm start`)
 | `yarn <script>` | 描述                        |
 | --------------- | --------------------------- |
 | `start`         | 启动<http://localhost:3000> |
-| `build`         | 打包构建到目录 ./dist       |
-| `lint`          | 静态检查                    |
-| `lint:fix`      | 静态检查修复                |
+| `build`         | 打包到 ./build                   |
+| `test`          | 单元测试             |
+| `coverage`      | 运行单元测试并生成覆盖率 |
+| `analyze`      | 分析bundle大小 |
 
 ---
 
@@ -100,34 +95,28 @@ yarn start  # Start the development server (or `npm start`)
 
 ```bash
 .
-├── build                    # 打包配置
-├── public                   # 公共静态资源
-├── server                   # express服务
-│   └── main.js              # 服务入口js
-├── src                      # 应用源文件
-│   ├── index.html           # html模板
-│   ├── main.js              # 程序启动和渲染
-│   ├── normalize.js         # 浏览器的兼容和垫片
-│   ├── components           # 全局可复用组件
-│   ├── layouts              # 主页布局
-│   │   └── PageLayout       # 导航
-│   ├── routes               # 动态路由
-│   │   ├── index.js         # 主路由
-│   │   ├── Home             # 子路由Home
-│   │   │   ├── index.js     # 路由定义和异步加载
-│   │   │   ├── assets       # 组件的静态文件
-│   │   │   ├── components   # 展示组件
-│   │   │   └── routes **    # 子路由
-│   │   └── Counter          # 子路由Counter
-│   │       ├── index.js     # 路由定义
-│   │       ├── container    # 容器组件
-│   │       ├── modules      # module(reducers/constants/actions)
-│   │       └── routes **    # 子路由
-│   ├── store                # Redux相关模块
-│   │   ├── createStore.js   # 创建和使用redux store
-│   │   └── reducers.js      # Reducer的注册和注入
-│   └── styles               # 样式表
-└── tests                    # 单元测试(自行添加)
+├── public                  # 公共静态资源
+└── src                     # 应用源文件
+   ├── index.js             # 程序启动和渲染入口
+   ├── components           # 全局可复用组件
+   ├── layouts              # 主页布局
+   │   └── PageLayout       # 导航
+   ├── routes               # 路由
+   │   ├── index.js         # 主路由
+   │   ├── Home             # 子路由Home
+   │   │   ├── index.js     # 路由定义和异步加载
+   │   │   ├── assets       # 组件的静态文件
+   │   │   ├── components   # 展示组件
+   │   │   └── routes **    # 子路由
+   │   └── Zen              # 路由页面Zen
+   │       ├── index.js     # 路由定义
+   │       ├── container    # 容器组件
+   │       ├── modules      # module(reducers/constants/actions)
+   │       └── routes **    # 子路由
+   ├── store                # Redux相关模块
+   │   ├── createStore.js   # 创建和使用redux store  
+   │   └── reducers.js      # Reducer的注册和注入
+   └── styles               # 样式表
 ```
 
 ### <a name="module">⊙ 数据流</a>
@@ -195,9 +184,6 @@ yarn start
 
 ---
 
-## <a name="style">&sect; 规范</a>
-
-结合[airbnb/javascript](https://github.com/airbnb/javascript)、[Javascript Standard Style](https://standardjs.com/rules-zhcn.html#javascript-standard-style)以及[standard-react](https://github.com/standard/eslint-config-standard-react)，配置`.eslintrc`
 
 ## <a name="doc">&sect; 更多文档</a>
 

@@ -2,7 +2,7 @@
   "name": "vortex-react",
   "version": "2.0.0",
   "private": true,
-  "homepage": "https://YutHelloWorld.github.io/v-react",
+  "homepage": "https://YutHelloWorld.github.io/vortex-react",
   "dependencies": {
     "axios": "^0.16.2",
     "bootstrap": "4.0.0-alpha.6",

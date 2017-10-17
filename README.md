@@ -77,7 +77,7 @@ yarn start  # Start the development server (or `npm start`)
 | `build`         | Builds the application to ./build                   |
 | `test`          | Runs unit tests             |
 | `coverage`      | Gets coverage |
-| `analyze`      | analyze the bundle size |
+| `analyze`      | Analyze the bundle size |
 
 ---
 
