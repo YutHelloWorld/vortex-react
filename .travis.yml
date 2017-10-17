@@ -8,6 +8,7 @@ cache:
 script:
   - yarn add --force node-sass
   - yarn build
+  - yarn test -- -u
   - yarn coverage
 after_script:
   - yarn codecov
