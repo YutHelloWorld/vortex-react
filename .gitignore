@@ -25,3 +25,6 @@ src/**/*.css
 
 # chrome
 chrome
+
+#snapshots
+__snapshots__
