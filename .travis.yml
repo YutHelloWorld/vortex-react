@@ -1,16 +1,19 @@
-sudo: false
 language: node_js
 node_js:
-  - "6"
-
+  - 6
 cache:
   yarn: true
   directories:
     - node_modules
-before_install:
-  # CI server install taobao npm packages too slow.
-  - rm -rf ./yarn.lock
-
 script:
-  - yarn lint
   - yarn build
+  - yarn coverage
+after_script:
+  - yarn codecov
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  local_dir: build
+  on:
+    branch: master

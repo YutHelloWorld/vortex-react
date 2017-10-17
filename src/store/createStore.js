@@ -1,7 +1,10 @@
-import { applyMiddleware, compose, createStore as createReduxStore } from 'redux'
-import thunk from 'redux-thunk'
-import makeRootReducer from './reducers'
-import { updateLocation, history } from './location'
+import {
+  applyMiddleware,
+  compose,
+  createStore as createReduxStore
+} from 'redux';
+import thunk from 'redux-thunk';
+import makeRootReducer from './reducers';
 
 const createStore = (initialState = {}) => {
   /**
@@ -9,19 +12,19 @@ const createStore = (initialState = {}) => {
   | Middleware Configuration
   |--------------------------------------------------
   */
-  const middleware = [thunk]
+  const middleware = [thunk];
 
   /**
   |--------------------------------------------------
   | Store Enhancers
   |--------------------------------------------------
   */
-  const enhancers = []
-  let composeEnhancers = compose
+  const enhancers = [];
+  let composeEnhancers = compose;
 
-  if (__DEV__) {
+  if (process.env.NODE_ENV === 'development') {
     if (typeof window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ === 'function') {
-      composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+      composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
     }
   }
 
@@ -33,24 +36,11 @@ const createStore = (initialState = {}) => {
   const store = createReduxStore(
     makeRootReducer(),
     initialState,
-    composeEnhancers(
-      applyMiddleware(...middleware),
-      ...enhancers
-    )
-  )
-  store.asyncReducers = {}
+    composeEnhancers(applyMiddleware(...middleware), ...enhancers)
+  );
+  store.asyncReducers = {};
 
-  // 监听浏览器history变化，绑定到store。取消监听直接调用store.unsubscribeHistory()
-  store.unsubscribeHistory = history.listen(updateLocation(store))
-  // module HMR
-  if (module.hot) {
-    module.hot.accept('./reducers', () => {
-      const reducers = require('./reducers').default
-      store.replaceReducer(reducers(store.asyncReducers))
-    })
-  }
+  return store;
+};
 
-  return store
-}
-
-export default createStore
+export default createStore();

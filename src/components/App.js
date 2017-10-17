@@ -1,30 +1,17 @@
-import React, { Component } from 'react'
-import { Router, Route } from 'react-router-dom'
-import { Provider } from 'react-redux'
-import { object } from 'prop-types'
-import Layout from '../layouts'
-import { history } from '../store/location'
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Layout from '../layouts';
+import store from '../store/createStore';
 
-class App extends Component {
-  static propTypes = {
-    store: object.isRequired
-  }
-
-  shouldComponentUpdate() {
-    return false
-  }
-
-  render() {
-    const { store } = this.props
-
-    return (
-      <Provider store={store}>
-        <Router history={history}>
-          <Route component={Layout} />
-        </Router>
-      </Provider>
-    )
-  }
+function App() {
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
+        <Route component={Layout} />
+      </BrowserRouter>
+    </Provider>
+  );
 }
 
-export default App
+export default App;
