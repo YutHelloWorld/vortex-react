@@ -6,7 +6,7 @@ cache:
   directories:
     - node_modules
 script:
-  - yarn install --force node-sass
+  - yarn add --force node-sass
   - yarn build
   - yarn coverage
 after_script:
