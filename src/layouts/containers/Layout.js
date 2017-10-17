@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import './layout.css';
+import '../styles/layout.css';
 import CustomHome from './CustomHome';
 
 import PrivateRoute from '../../components/PrivateRoute';
