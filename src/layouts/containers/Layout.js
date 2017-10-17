@@ -1,18 +1,18 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import { Switch, Route } from 'react-router-dom'
-import { connect } from 'react-redux'
+import { Switch, Route } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-import './Layout.scss'
-import CustomHome from './CustomHome'
+import '../styles/layout.css';
+import CustomHome from './CustomHome';
 
-import PrivateRoute from '../../components/PrivateRoute'
-import { Login } from '../../routes'
+import PrivateRoute from '../../components/PrivateRoute';
+import { Login } from '../../routes';
 
 const propTypes = {
-  logged: PropTypes.bool.isRequired,
-}
+  logged: PropTypes.bool.isRequired
+};
 
 function Layout({ logged }) {
   return (
@@ -20,13 +20,13 @@ function Layout({ logged }) {
       <Route exact path="/login" component={Login} />
       <PrivateRoute isAuthenticated={logged} component={CustomHome} />
     </Switch>
-  )
+  );
 }
 
-Layout.propTypes = propTypes
+Layout.propTypes = propTypes;
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   logged: state.logged
-})
+});
 
-export default connect(mapStateToProps)(Layout)
+export default connect(mapStateToProps)(Layout);
