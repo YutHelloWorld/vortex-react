@@ -33,11 +33,11 @@ class CustomNavbar extends Component {
 
   render() {
     return (
-      <Navbar color="faded" light toggleable>
-        <NavbarToggler right onClick={this.toggle} />
+      <Navbar color="faded" light expand="md">
         <NavbarBrand exact to="/" tag={Link}>
           Vortex React
         </NavbarBrand>
+        <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavLink to="/zenPage" onMouseOver={this.onMouseOver} tag={Link}>

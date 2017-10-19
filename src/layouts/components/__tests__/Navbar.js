@@ -18,4 +18,10 @@ it('(Layout) Navbar', () => {
   // re-rendering
   tree = component.toJSON();
   expect(tree).toMatchSnapshot();
+
+  // manually trigger the callback
+  tree.children[1].props.onClick();
+  // re-rendering
+  tree = component.toJSON();
+  expect(tree).toMatchSnapshot();
 });
