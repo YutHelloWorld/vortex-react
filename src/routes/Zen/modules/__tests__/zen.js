@@ -1,7 +1,7 @@
 import reducer, { requestZen, receiveZen, clearZen } from '../zen';
 import update, { updateChain } from 'immutability-helper-x';
 
-describe('(Redux Module) Counter', () => {
+describe('(Redux Module) Zen', () => {
   describe('(Reducer)', () => {
     it('(Action) requestZen', () => {
       let state = {

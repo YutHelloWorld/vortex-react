@@ -5,7 +5,7 @@
   "homepage": "https://YutHelloWorld.github.io/vortex-react",
   "dependencies": {
     "axios": "^0.16.2",
-    "bootstrap": "4.0.0-alpha.6",
+    "bootstrap": "4.0.0-beta",
     "codecov": "^2.3.1",
     "husky": "^0.14.3",
     "immutability-helper-x": "^1.0.5",
@@ -14,7 +14,6 @@
     "npm-run-all": "^4.1.1",
     "prettier": "^1.7.4",
     "prop-types": "^15.6.0",
-    "raf": "^3.4.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-loadable": "^5.2.2",
@@ -24,7 +23,7 @@
     "react-spinkit": "^3.0.0",
     "react-test-renderer": "^16.0.0",
     "react-transition-group": "^1.1.2",
-    "reactstrap": "4.8.0",
+    "reactstrap": "^5.0.0-alpha.3",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "source-map-explorer": "^1.5.0"
