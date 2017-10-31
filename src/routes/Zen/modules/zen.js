@@ -38,7 +38,7 @@ export function fetchZen() {
     if (getState().zen.fetching) return;
 
     dispatch(requestZen());
-    const { data } = await axios.get('https://api.github.com/zen');
+    const { data } = await axios.get('/zen');
     dispatch(receiveZen(data));
   };
 }

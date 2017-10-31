@@ -3,6 +3,12 @@
   "version": "2.0.0",
   "private": true,
   "homepage": "https://YutHelloWorld.github.io/vortex-react",
+  "proxy": {
+    "/zen": {
+      "target": "https://api.github.com",
+      "changeOrigin": true
+    }
+  },
   "dependencies": {
     "axios": "^0.16.2",
     "bootstrap": "4.0.0-beta",
