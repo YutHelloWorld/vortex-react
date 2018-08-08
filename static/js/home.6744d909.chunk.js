@@ -1,0 +1,2 @@
+webpackJsonp([1],{154:function(e,t,a){"use strict";function n(){return i.a.createElement("div",null,i.a.createElement("img",{alt:"sky",className:"bg img-fluid",src:l.a}))}Object.defineProperty(t,"__esModule",{value:!0});var c=a(0),i=a.n(c),s=a(191),l=a.n(s);t.default=n},191:function(e,t,a){e.exports=a.p+"static/media/sky.e9f74daf.jpg"}});
+//# sourceMappingURL=home.6744d909.chunk.js.map
