@@ -7,7 +7,7 @@ import store from '../store/createStore';
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/vortex-react/">
         <Route component={Layout} />
       </BrowserRouter>
     </Provider>
